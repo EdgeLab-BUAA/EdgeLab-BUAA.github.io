@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const gallery = document.querySelector("[data-masonry-gallery][data-dynamic]");
-  if (!gallery) return;
+  const galleries = Array.from(
+    document.querySelectorAll("[data-masonry-gallery][data-dynamic]")
+  );
+  if (!galleries.length) return;
+
   const i18n = window.labI18n;
 
   const esc = (v) =>
@@ -15,35 +18,44 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let data;
   try {
-    const res = await fetch("./activities/data/photos.json");
+    const res = await fetch("./activities/team-building.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
   } catch {
     data = window.__LAB_ACTIVITIES__;
     if (!data?.photos) {
-      gallery.innerHTML = `<p style="text-align:center;color:#9a9a9a;padding:60px">${esc(t("dynamic.activities.error"))}</p>`;
+      galleries.forEach((g) => {
+        g.innerHTML = `<p style="text-align:center;color:#9a9a9a;padding:60px">${esc(t("dynamic.activities.error"))}</p>`;
+      });
       return;
     }
   }
 
-  const render = () => {
+  const renderCard = (p) => {
     const lang = getLang();
-    gallery.innerHTML = data.photos
-      .map((p) => {
-        const title = lang === "zh" ? p.title_zh || p.title_en : p.title_en || p.title_zh;
-        const location = lang === "zh" ? p.location_zh || p.location_en : p.location_en || p.location_zh;
-        const caption = [title, location].filter(Boolean).join(" · ");
-        return `
-          <div class="item-wrapper" data-key="${esc(p.id)}" data-height="${p.height}" data-img="./${esc(p.image)}">
-            <div class="item-img" role="img" aria-label="${esc(title || t("dynamic.activities.photoAria"))}"></div>
-            <div class="item-caption">
-              <p class="item-caption-date">${esc(p.date)}${p.photographer ? " · " + esc(p.photographer) : ""}</p>
-              ${caption ? `<p class="item-caption-title">${esc(caption)}</p>` : ""}
-            </div>
-          </div>`;
-      })
-      .join("\n");
+    const title = lang === "zh" ? p.title_zh || p.title_en : p.title_en || p.title_zh;
+    const location = lang === "zh" ? p.location_zh || p.location_en : p.location_en || p.location_zh;
+    const caption = [title, location].filter(Boolean).join(" · ");
+    return `
+      <div class="item-wrapper" data-key="${esc(p.id)}" data-height="${p.height}" data-img="./${esc(p.image)}">
+        <div class="item-img" role="img" aria-label="${esc(title || t("dynamic.activities.photoAria"))}"></div>
+        <div class="item-caption">
+          <p class="item-caption-date">${esc(p.date)}${p.photographer ? " · " + esc(p.photographer) : ""}</p>
+          ${caption ? `<p class="item-caption-title">${esc(caption)}</p>` : ""}
+        </div>
+      </div>`;
+  };
 
-    document.dispatchEvent(new CustomEvent("gallery:ready", { detail: { el: gallery } }));
+  const render = () => {
+    galleries.forEach((gallery) => {
+      const category = gallery.dataset.category || null;
+      const photos = category
+        ? data.photos.filter((p) => p.category === category)
+        : data.photos;
+
+      gallery.innerHTML = photos.map(renderCard).join("\n");
+      document.dispatchEvent(new CustomEvent("gallery:ready", { detail: { el: gallery } }));
+    });
   };
 
   render();

@@ -54,12 +54,16 @@ const photos = photoDirs.map((dirName) => {
   const imgRaw = info.image || "";
   let image = "";
   if (imgRaw) {
-    const abs = path.isAbsolute(imgRaw) ? imgRaw : path.join(ROOT, imgRaw);
-    image = fs.existsSync(abs) ? path.relative(ROOT, abs).replace(/\\/g, "/") : imgRaw;
+    // Try relative to photo dir first (bare filename), then relative to ROOT
+    const absLocal = path.join(photoDir, imgRaw);
+    const absRoot = path.isAbsolute(imgRaw) ? imgRaw : path.join(ROOT, imgRaw);
+    const resolved = fs.existsSync(absLocal) ? absLocal : absRoot;
+    image = fs.existsSync(resolved) ? path.relative(ROOT, resolved).replace(/\\/g, "/") : imgRaw;
   }
 
   return {
     id: info.id || dirName,
+    category: info.category || "outdoor",
     title_en: info.title_en || "",
     title_zh: info.title_zh || "",
     location_en: info.location_en || "",

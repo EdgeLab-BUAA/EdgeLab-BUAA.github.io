@@ -77,7 +77,7 @@ const guessLink = (id, info, image) => {
     "";
   if (directLink) return String(directLink);
   if (/^A\d+/i.test(id)) return `./activities.html#${id}`;
-  if (/^P\d+/i.test(id)) return `./publications.html#${id}`;
+  if (/^P\d+/i.test(id)) return `./publication./publications/publications.html#${id}`;
   return image ? `./${image}` : "./news.html";
 };
 

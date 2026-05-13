@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.publications.title">Publications | Laboratory Homepage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="publications-page">
+    <header class="head-container publication-head">
+        <div class="gooey-nav-shell">
+            <a href="../index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
+                <img src="../logo.svg" alt="Company Logo">
+            </a>
+            <div class="gooey-nav-container">
+                <nav data-i18n-aria-label="common.navAria" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="../index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="../people.html" data-i18n="common.nav.people">People</a></li>
+                        <li><a href="../projects.html" data-i18n="common.nav.projects">Projects</a></li>
+                        <li><a href="../news.html" data-i18n="common.nav.news">News & Media</a></li>
+                        <li class="active"><a href="./publications.html" data-i18n="common.nav.publications">Publications</a></li>
+                        <li><a href="../activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="../opening.html" data-i18n="common.nav.opening">Opening</a></li>
+                        <li><a href="../contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <span class="effect filter" aria-hidden="true"></span>
+                <span class="effect text" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="grainient-container" aria-hidden="true"></div>
+        <section class="publication-hero">
+            <p data-i18n="page.publications.heroLead">Selected papers, benchmarks, and systems work</p>
+            <h1 data-i18n="page.publications.heroTitle">Publications</h1>
+        </section>
+    </header>
+
+    <main class="publication-shell">
+        <section class="publication-panel">
+            <div class="publication-searchbar">
+                <label class="publication-search-label" for="paper-search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input id="paper-search" type="search" data-i18n-placeholder="page.publications.searchPlaceholder" placeholder="e.g. Title, Author, Venue, Year" autocomplete="off">
+                </label>
+                <span class="publication-count" data-publication-count data-i18n="page.publications.initialCount">Showing 0 of 0 papers</span>
+            </div>
+
+            <p class="publication-note" data-i18n="page.publications.note">*Co-lead authors, ✉ Corresponding author(s);</p>
+
+            <div class="publication-list" data-publication-list></div>
+
+            <p class="publication-empty" data-publication-empty data-i18n="page.publications.empty">No papers found.</p>
+        </section>
+    </main>
+
+    <script src="../js/grainient.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/card-nav.js"></script>
+    <script src="../js/page-transition.js"></script>
+    <script src="../js/publications-data.js"></script>
+    <script src="../js/publication-search.js"></script>
+</body>
+</html>

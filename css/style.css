@@ -1335,6 +1335,24 @@ height: 40px;
 .activities-heading {
     margin-bottom: 30px;
 }
+.activity-section {
+    margin-bottom: 20px;
+}
+.activity-section-heading {
+    margin: 0 auto 28px;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+.activity-section-heading h2 {
+    border-bottom: 2px solid rgba(82, 39, 255, 0.18);
+    color: #1a1825;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: 14px;
+}
 .activity-gallery {
     margin: 0 auto 80px;
     max-width: 1400px;
@@ -1441,7 +1459,7 @@ height: 40px;
 .publication-hero p {
     color: #000000;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.02em;
     margin: 0 0 12px;
 }
@@ -1498,7 +1516,7 @@ height: 40px;
     flex: 1;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 200;
     background: transparent;
     min-width: 0;
     outline: 0;
@@ -1517,14 +1535,14 @@ height: 40px;
     color: #1b1b1b;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 200;
     white-space: nowrap;
 }
 .publication-note {
     color: #111111;
     font-family: 'Raleway', sans-serif;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 200;
     margin: 0 0 48px;
 }
 .publication-year-group {
@@ -1538,7 +1556,7 @@ height: 40px;
     color: #5227ff;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 600;
     margin: 0;
     padding: 8px 0 10px;
 }
@@ -1548,12 +1566,27 @@ height: 40px;
     border: 1px solid rgba(27, 23, 34, 0.08);
     border-radius: 12px;
     box-shadow: 0 18px 42px rgba(23, 20, 32, 0.10);
+    cursor: pointer;
     display: grid;
-    gap: 34px;
-    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
-    margin: 26px 0 0;
-    padding: 34px 38px;
+    gap: 30px;
+    grid-template-columns: minmax(0, 30%) minmax(0, 1fr);
+    margin: 30px 0 0;
+    /* i have changed the card padding, 
+    you should not change it automatically for me */
+    padding: 0px 30px 0px 0px;   
     text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.publication-item:hover {
+    box-shadow:
+        rgba(0, 0, 0, 0.06) 0px 2px 4px,
+        rgba(0, 0, 0, 0.1) 0px 8px 24px,
+        rgba(0, 0, 0, 0.08) 0px 20px 48px;
+    transform: translateY(-6px) translate3d(0, 0, 0.01px);
+}
+.publication-item:focus-visible {
+    box-shadow: 0 0 0 3px rgba(82, 39, 255, 0.22), 0 18px 42px rgba(23, 20, 32, 0.10);
+    outline: 0;
 }
 .publication-thumb {
     align-items: center;
@@ -1564,10 +1597,10 @@ height: 40px;
     color: #4a66a5;
     display: flex;
     font-family: 'Raleway', sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 800;
     justify-content: center;
-    min-height: 100px;
+    min-height: 220px;
     overflow: hidden;
     position: relative;
 }
@@ -1578,8 +1611,7 @@ height: 40px;
     display: block;
     height: 100%;
     inset: 0;
-    object-fit: contain;
-    padding: 10px;
+    object-fit: cover;
     position: absolute;
     width: 100%;
 }
@@ -1598,7 +1630,7 @@ height: 40px;
     color: #171420;
     font-family: 'Raleway', sans-serif;
     font-size: clamp(21px, 1.6vw, 20px);
-    font-weight: 700;
+    font-weight: 200;
     letter-spacing: -0.02em;
     line-height: 1.12;
     margin: 0 0 14px;
@@ -1609,47 +1641,246 @@ height: 40px;
     color: #34303f;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 1.55;
     margin: 0 0 12px;
     text-align: left;
 }
 .publication-authors {
-    color: #2d6fdb !important;
+    color: #5c7dc9 !important;
 }
 .publication-venue,
 .publication-venue a {
     /* Publication venue shares .publication-info p font-size above */
-    color: #38364a !important;
+    color: #a9a9ab !important;
     text-decoration: none;
 }
 .publication-award {
-    color: #b34a1f;
-    font-weight: 700;
+    color: #fea622;
+    font-weight: 200;
 }
 .publication-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
     margin-top: 12px;
 }
 .publication-action {
-    border: 1px solid rgba(45, 111, 219, 0.42);
-    border-radius: 12px;
-    color: #2d6fdb;
+    align-items: center;
+    background: #f8f8f8;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 6px;
+    color: #555555;
     display: inline-flex;
     font-family: 'Raleway', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
-    padding: 10px 14px;
-    text-align: left;
+    line-height: 1;
+    padding: 8px 12px;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease;
+}
+.publication-action.is-blue {
+    background: #eef7ff;
+    border-color: rgba(31, 117, 207, 0.22);
+    color: #1f75cf;
 }
 .publication-action:hover {
-    background: #2d6fdb;
-    border-color: #2d6fdb;
-    color: #ffffff;
+    transform: translateY(-1px);
+}
+.publication-detail-page {
+    background: #f5f5f6;
+}
+.publication-detail-head {
+    background: transparent;
+    isolation: isolate;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.publication-detail-head::after {
+    background: linear-gradient(to bottom, transparent 20%, #f5f5f6 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+}
+.publication-detail-head .gooey-nav-shell {
+    top: 2em;
+}
+.publication-detail-head .gooey-nav-container {
+    background: rgba(17, 14, 26, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.publication-detail-shell {
+    margin: 0 auto;
+    max-width: 1760px;
+    padding: 42px 5vw 86px;
+}
+.publication-detail-loading,
+.publication-detail-empty {
+    color: #666666;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+.publication-detail-card {
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-left: 8px solid #b45cff;
+    border-radius: 18px;
+    box-shadow: 0 16px 36px rgba(17, 24, 39, 0.10);
+    margin: 0 auto 28px;
+    padding: 36px 42px 38px;
+}
+.publication-detail-card h1 {
+    color: #242428;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.28;
+    margin: 16px 0 14px;
+}
+.publication-detail-back {
+    align-items: center;
+    color: #5e6470;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    gap: 8px;
+    margin-bottom: 18px;
+    text-decoration: none;
+}
+.publication-detail-back:hover {
+    color: #5227ff;
+}
+.publication-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.publication-detail-tags span {
+    align-items: center;
+    background: #f7f7f8;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 5px;
+    color: #5f636b;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    gap: 8px;
+    padding: 9px 13px;
+}
+.publication-detail-tags .is-award {
+    background: #fff7ed;
+    border-color: rgba(180, 74, 31, 0.22);
+    color: #b34a1f;
+}
+.publication-detail-authors {
+    color: #666666;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 18px;
+}
+.publication-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+.publication-detail-link {
+    align-items: center;
+    background: #f8f8f8;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 6px;
+    color: #555555;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+.publication-detail-link.is-blue {
+    background: #eef7ff;
+    border-color: rgba(31, 117, 207, 0.22);
+    color: #1f75cf;
+}
+.publication-detail-link.is-red {
+    background: #fff2f2;
+    border-color: rgba(202, 32, 38, 0.2);
+    color: #ca2026;
+}
+.publication-detail-link:hover {
+    transform: translateY(-1px);
+}
+.publication-detail-card hr {
+    border: 0;
+    border-top: 1px solid rgba(17, 24, 39, 0.10);
+    margin: 0 0 22px;
+}
+.publication-detail-section {
+    margin-top: 22px;
+}
+.publication-detail-section h2,
+.publication-detail-media-card h2 {
+    align-items: center;
+    color: #242428;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    gap: 8px;
+    letter-spacing: 0;
+    margin: 0 0 10px;
+}
+.publication-detail-section p {
+    color: #5b5b5f;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+.publication-detail-media-card {
+    border-left-color: transparent;
+}
+.publication-detail-preview {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    min-height: 420px;
+    overflow: hidden;
+}
+.publication-detail-preview img {
+    display: block;
+    max-height: 640px;
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.publication-detail-preview-fallback {
+    align-items: center;
+    background: linear-gradient(135deg, #f4f7fb, #eef2f9);
+    display: flex;
+    justify-content: center;
+    min-height: 420px;
+    width: 100%;
+}
+.publication-detail-preview-fallback span {
+    color: #1f2937;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
 }
 .publication-empty {
     color: #777777;
@@ -1825,6 +2056,27 @@ height: 40px;
     }
     .publication-thumb {
         min-height: 180px;
+    }
+    .publication-detail-shell {
+        padding: 24px 20px 54px;
+    }
+    .publication-detail-card {
+        border-left-width: 6px;
+        padding: 26px 22px 28px;
+    }
+    .publication-detail-card h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .publication-detail-authors {
+        font-size: 18px;
+    }
+    .publication-detail-section p {
+        font-size: 17px;
+    }
+    .publication-detail-preview,
+    .publication-detail-preview-fallback {
+        min-height: 260px;
     }
     .opening-panel {
         padding: 34px 22px;

@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!root || !container) return;
   const i18n = window.labI18n;
 
-  const coverDir = root.dataset.coverDir || "./images/cover/";
-  const fallbackImages = ["00002.jpg", "00013.jpg", "00014.JPEG"].map((name) => `${coverDir}${name}`);
+  const coverDir = root.dataset.coverDir || "./mainpage/cover/";
+  const fallbackImages = (window.__LAB_COVER__ && window.__LAB_COVER__.length)
+    ? window.__LAB_COVER__
+    : ["00002.jpg", "00006.jpg", "00013.jpg", "00014.jpg"].map((name) => `${coverDir}${name}`);
   const config = {
     cardDistance: 60,
     verticalDistance: 70,

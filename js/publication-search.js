@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       : `<span>${escapeHtml(initials(title) || "AI")}</span>`;
 
     const links = [
-      paper.paper_link ? `<a class="publication-action" href="${escapeHtml(paper.paper_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.paper"))}</a>` : "",
+      paper.paper_link ? `<a class="publication-action is-blue" href="${escapeHtml(paper.paper_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.paper"))}</a>` : "",
       paper.code_link ? `<a class="publication-action" href="${escapeHtml(paper.code_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.code"))}</a>` : "",
       paper.book_link ? `<a class="publication-action" href="${escapeHtml(paper.book_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.books"))}</a>` : "",
       paper.scholar_link ? `<a class="publication-action" href="${escapeHtml(paper.scholar_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.scholar"))}</a>` : ""
@@ -45,9 +45,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       .join(" ");
 
     const venueLine = `${escapeHtml(venue)}${award ? ` <span class="publication-award">(${escapeHtml(award)})</span>` : ""}`;
+    const detailHref = `./publication-detail.html?id=${encodeURIComponent(paper.id)}`;
 
     return `
-      <article class="publication-item" data-paper>
+      <article class="publication-item" data-paper data-paper-link="${escapeHtml(detailHref)}" role="link" tabindex="0" aria-label="Open ${escapeHtml(title)}">
         <div class="publication-thumb${paper.cover_image ? " has-image" : ""}">${thumbContent}</div>
         <div class="publication-info">
           <h3>${escapeHtml(title)}</h3>
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let papers = [];
 
   try {
-    const response = await fetch("./publications/data/papers.json");
+    const response = await fetch("./data/papers.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     papers = Array.isArray(data.papers) ? data.papers : [];
@@ -128,5 +129,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   input.addEventListener("input", update);
   document.addEventListener("languagechange", update);
+  list.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    const item = event.target.closest("[data-paper-link]");
+    if (item?.dataset.paperLink) window.location.href = item.dataset.paperLink;
+  });
+  list.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const item = event.target.closest("[data-paper-link]");
+    if (!item?.dataset.paperLink) return;
+    event.preventDefault();
+    window.location.href = item.dataset.paperLink;
+  });
   update();
 });
