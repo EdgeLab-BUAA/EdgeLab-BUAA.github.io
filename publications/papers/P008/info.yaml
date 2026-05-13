@@ -1,0 +1,9 @@
+id: P008
+title: "BiBench: Benchmarking and Analyzing Network Binarization"
+authors: "H Qin, M Zhang, Y Ding, A Li, Z Cai, Z Liu, F Yu, X Liu"
+venue: "ICML 2023"
+year: 2023
+citations: 68
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:ufrVoPGSRksC"
+cover_image: "bibench.png"
+featured: true

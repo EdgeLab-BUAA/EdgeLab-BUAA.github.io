@@ -1,0 +1,9 @@
+id: P007
+title: "QuantSR: Accurate Low-bit Quantization for Efficient Image Super-Resolution"
+authors: "H Qin, Y Zhang, Y Ding, X Liu, M Danelljan, F Yu"
+venue: "NeurIPS 2023"
+year: 2023
+citations: 78
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:hqOjcs7Dif8C"
+cover_image: "quantsr.png"
+featured: true

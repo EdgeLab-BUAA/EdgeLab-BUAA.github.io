@@ -1,0 +1,148 @@
+{
+  "generated_at": "2026-05-13T06:39:54.954Z",
+  "papers": [
+    {
+      "id": "P001",
+      "title": "Dynamic Parallel Tree Search for Efficient LLM Reasoning",
+      "authors": "Y Ding, W Jiang, S Liu, Y Jing, J Guo, Y Wang, J Zhang, Z Wang, Z Liu, et al.",
+      "venue": "arXiv preprint arXiv:2502.16235",
+      "year": 2025,
+      "citations": 20,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:YOwf2qJgpHMC",
+      "featured": true,
+      "cover_image": "publications/papers/P001/dynamic-parallel.png"
+    },
+    {
+      "id": "P002",
+      "title": "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms",
+      "authors": "R Gong, Y Ding, Z Wang, C Lv, X Zheng, J Du, Y Yong, S Gu, H Qin, et al.",
+      "venue": "Neural Networks, 107856",
+      "year": 2025,
+      "citations": 31,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:3fE2CSJIrl8C",
+      "featured": true,
+      "cover_image": "publications/papers/P002/llm-quant-survey.png"
+    },
+    {
+      "id": "P010",
+      "title": "QVGen: Pushing the Limit of Quantized Video Generative Models",
+      "authors": "Y Huang, R Gong, J Liu, Y Ding, C Lv, H Qin, J Zhang",
+      "venue": "arXiv preprint arXiv:2505.11497",
+      "year": 2025,
+      "citations": 6,
+      "scholar_link": "",
+      "featured": false,
+      "cover_image": "publications/papers/P010/qvgen.png"
+    },
+    {
+      "id": "P011",
+      "title": "VORTA: Efficient Video Diffusion via Routing Sparse Attention",
+      "authors": "W Sun, RC Tu, Y Ding, Z Jin, J Liao, S Liu, D Tao",
+      "venue": "arXiv preprint arXiv:2505.18809",
+      "year": 2025,
+      "citations": 4,
+      "scholar_link": "",
+      "featured": false,
+      "cover_image": "publications/papers/P011/vorta.png"
+    },
+    {
+      "id": "P003",
+      "title": "PTQ4SAM: Post-Training Quantization for Segment Anything",
+      "authors": "C Lv, H Chen, J Guo, Y Ding, X Liu",
+      "venue": "CVPR 2024",
+      "year": 2024,
+      "citations": 43,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:5nxA0vEk-isC",
+      "featured": true,
+      "cover_image": "publications/papers/P003/ptq4sam.png"
+    },
+    {
+      "id": "P004",
+      "title": "Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector",
+      "authors": "Y Ding, W Feng, C Chen, J Guo, X Liu",
+      "venue": "CVPR 2024",
+      "year": 2024,
+      "citations": 16,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:8k81kl-MbHgC",
+      "featured": true,
+      "cover_image": "publications/papers/P004/reg-ptq.png"
+    },
+    {
+      "id": "P005",
+      "title": "Compressing Large Language Models by Joint Sparsification and Quantization",
+      "authors": "J Guo, J Wu, Z Wang, J Liu, G Yang, Y Ding, R Gong, H Qin, X Liu",
+      "venue": "ICML 2024",
+      "year": 2024,
+      "citations": 40,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:0EnyYjriUFMC",
+      "featured": true,
+      "cover_image": "publications/papers/P005/compression-large-language-models.png"
+    },
+    {
+      "id": "P006",
+      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+      "authors": "H Chen, C Lv, L Ding, H Qin, X Zhou, Y Ding, X Liu, M Zhang, J Guo, X Liu, et al.",
+      "venue": "arXiv preprint arXiv:2402.11960",
+      "year": 2024,
+      "citations": 34,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:Se3iqnhoufwC",
+      "featured": true,
+      "cover_image": "publications/papers/P006/db-llm.png"
+    },
+    {
+      "id": "P012",
+      "title": "Llmcbench: Benchmarking Large Language Model Compression for Efficient Deployment",
+      "authors": "G Yang, C He, J Guo, J Wu, Y Ding, A Liu, H Qin, P Ji, X Liu",
+      "venue": "NeurIPS 2024",
+      "year": 2024,
+      "citations": 15,
+      "scholar_link": "",
+      "featured": false,
+      "cover_image": ""
+    },
+    {
+      "id": "P007",
+      "title": "QuantSR: Accurate Low-bit Quantization for Efficient Image Super-Resolution",
+      "authors": "H Qin, Y Zhang, Y Ding, X Liu, M Danelljan, F Yu",
+      "venue": "NeurIPS 2023",
+      "year": 2023,
+      "citations": 78,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:hqOjcs7Dif8C",
+      "featured": true,
+      "cover_image": "publications/papers/P007/quantsr.png"
+    },
+    {
+      "id": "P008",
+      "title": "BiBench: Benchmarking and Analyzing Network Binarization",
+      "authors": "H Qin, M Zhang, Y Ding, A Li, Z Cai, Z Liu, F Yu, X Liu",
+      "venue": "ICML 2023",
+      "year": 2023,
+      "citations": 68,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:ufrVoPGSRksC",
+      "featured": true,
+      "cover_image": "publications/papers/P008/bibench.png"
+    },
+    {
+      "id": "P009",
+      "title": "Diverse Sample Generation: Pushing the Limit of Generative Data-Free Quantization",
+      "authors": "H Qin, Y Ding, X Zhang, J Wang, X Liu, J Lu",
+      "venue": "IEEE TPAMI 2023",
+      "year": 2023,
+      "citations": 110,
+      "scholar_link": "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:roLk4NBRz8UC",
+      "featured": true,
+      "cover_image": "publications/papers/P009/diverse-sample-generation.png"
+    },
+    {
+      "id": "P013",
+      "title": "BifsmnV2: Pushing Binary Neural Networks for Keyword Spotting to Real-Network Performance",
+      "authors": "H Qin, X Ma, Y Ding, X Li, Y Zhang, Z Ma, J Wang, J Luo, X Liu",
+      "venue": "IEEE TNNLS 2023",
+      "year": 2023,
+      "citations": 43,
+      "scholar_link": "",
+      "featured": false,
+      "cover_image": "publications/papers/P013/qin2022bifsmnv2.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+id: P006
+title: "DB-LLM: Accurate Dual-Binarization for Efficient LLMs"
+authors: "H Chen, C Lv, L Ding, H Qin, X Zhou, Y Ding, X Liu, M Zhang, J Guo, X Liu, et al."
+venue: "arXiv preprint arXiv:2402.11960"
+year: 2024
+citations: 34
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:Se3iqnhoufwC"
+cover_image: "db-llm.png"
+featured: true

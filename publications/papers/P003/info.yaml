@@ -1,0 +1,9 @@
+id: P003
+title: "PTQ4SAM: Post-Training Quantization for Segment Anything"
+authors: "C Lv, H Chen, J Guo, Y Ding, X Liu"
+venue: "CVPR 2024"
+year: 2024
+citations: 43
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:5nxA0vEk-isC"
+cover_image: "ptq4sam.png"
+featured: true

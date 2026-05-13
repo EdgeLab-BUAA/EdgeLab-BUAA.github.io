@@ -1,0 +1,9 @@
+id: P002
+title: "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms"
+authors: "R Gong, Y Ding, Z Wang, C Lv, X Zheng, J Du, Y Yong, S Gu, H Qin, et al."
+venue: "Neural Networks, 107856"
+year: 2025
+citations: 31
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:3fE2CSJIrl8C"
+cover_image: "llm-quant-survey.png"
+featured: true

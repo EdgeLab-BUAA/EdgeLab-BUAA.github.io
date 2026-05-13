@@ -1,0 +1,9 @@
+id: P004
+title: "Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector"
+authors: "Y Ding, W Feng, C Chen, J Guo, X Liu"
+venue: "CVPR 2024"
+year: 2024
+citations: 16
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:8k81kl-MbHgC"
+cover_image: "reg-ptq.png"
+featured: true

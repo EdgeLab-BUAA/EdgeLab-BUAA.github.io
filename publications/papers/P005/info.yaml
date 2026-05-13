@@ -1,0 +1,9 @@
+id: P005
+title: "Compressing Large Language Models by Joint Sparsification and Quantization"
+authors: "J Guo, J Wu, Z Wang, J Liu, G Yang, Y Ding, R Gong, H Qin, X Liu"
+venue: "ICML 2024"
+year: 2024
+citations: 40
+scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:0EnyYjriUFMC"
+cover_image: "compression-large-language-models.png"
+featured: true
