@@ -1,9 +1,14 @@
 id: P008
-title: "BiBench: Benchmarking and Analyzing Network Binarization"
-authors: "H Qin, M Zhang, Y Ding, A Li, Z Cai, Z Liu, F Yu, X Liu"
-venue: "ICML 2023"
-year: 2023
-citations: 68
-scholar_link: "https://scholar.google.ca/citations?view_op=view_citation&user=RCEI1r0AAAAJ&citation_for_view=RCEI1r0AAAAJ:ufrVoPGSRksC"
-cover_image: "bibench.png"
+group: "2024"
+title: "LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment"
+authors: "Ge Yang, Changyi He, Jinyang Guo✉, Jianyu Wu, Yifu Ding, Aishan Liu, Haotong Qin, Pengliang Ji, Xianglong Liu"
+venue: "Annual Conference on Neural Information Processing Systems Datasets&Benchmarks Track (NeurIPS D&B Track, Spotlight), 2024."
+year: 2024
+citations: 0
+paper_link: ""
+code_link: ""
+book_link: ""
+scholar_link: ""
+award: "Spotlight"
+cover_image: ""
 featured: true

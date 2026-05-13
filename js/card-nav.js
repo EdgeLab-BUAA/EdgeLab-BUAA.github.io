@@ -109,6 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
   updateEffectPosition(items[activeIndex]);
   text.classList.add("active");
 
+  document.addEventListener("nav:refresh", () => {
+    updateEffectPosition(items[activeIndex]);
+    text.classList.add("active");
+  });
+
   const resizeObserver = new ResizeObserver(() => updateEffectPosition(items[activeIndex]));
   resizeObserver.observe(container);
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratory Homepage</title>
+    <title data-i18n="page.home.title">Laboratory Homepage</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -12,21 +12,22 @@
 <!-- Navigation Bar -->
 <div class="head-container">
     <div class="gooey-nav-shell">
-        <a href="#" class="gooey-logo" aria-label="Company home">
+        <a href="#" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
             <img src="./images/logo.svg" alt="Company Logo">
         </a>
         <div class="gooey-nav-container">
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="./publications.html">Publications</a></li>
-                    <li><a href="./news.html">News</a></li>
-                    <li><a href="./activities.html">Activities</a></li>
-                    <li><a href="./people.html">People</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <nav data-i18n-aria-label="common.navAria" aria-label="Main navigation">
+                    <ul>
+                        <li class="active"><a href="#" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="./people.html" data-i18n="common.nav.people">People</a></li>
+                        <li><a href="./projects.html" data-i18n="common.nav.projects">Projects</a></li>
+                        <li><a href="./news.html" data-i18n="common.nav.news">News & Media</a></li>
+                        <li><a href="./publications.html" data-i18n="common.nav.publications">Publications</a></li>
+                        <li><a href="./activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="./opening.html" data-i18n="common.nav.opening">Opening</a></li>
+                        <li><a href="./contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
             <span class="effect filter" aria-hidden="true"></span>
             <span class="effect text" aria-hidden="true"></span>
         </div>
@@ -38,66 +39,92 @@
         <div class="card-swap-container" aria-label="Lab cover photo carousel"></div>
     </div>
     <div class="hero-main-copy">
-        <h1 class="split-title" data-split-text>Efficient and scalable AI computing</h1>
-        <p>Our lab studies model efficiency, data efficiency, label efficiency, neuromorphic computing, and AI4Science, building practical learning systems that are smaller, faster, and easier to deploy.</p>
+        <h1 class="split-title" data-split-text data-i18n="page.home.heroMainTitle">Efficient and scalable<br>AI computing</h1>
+        <p style="font-weight: 800;" data-i18n="page.home.heroMainBody">Our lab studies model efficiency, data efficiency, label efficiency, neuromorphic computing, and AI4Science, building practical learning systems that are smaller, faster, and easier to deploy.</p>
     </div>
 </div>
 </div>
-<!-- Hero section-2 -->
-<div class="hero">
-    <h1>Research for efficient, deployable, and scientific AI</h1>
-    <div class="counter">
-        <div>
-            <h1>Models</h1>
-            <h3>Compression</h3>
-        </div>
-        <div>
-            <h1>Data</h1>
-            <h3>Efficiency</h3>
-        </div>
-        <div>
-            <h1>SNN</h1>
+<!-- Research directions -->
+<section class="research-directions-section">
+    <div class="research-directions-heading">
+        <p>ABOUT US</p>
+        <h2>Research Directions</h2>
+    </div>
+    <div class="research-directions-grid">
+        <article class="research-direction-card">
+            <h3>Efficient Computing</h3>
+            <p>Brief Introduction...</p>
+            <div class="research-direction-card__footer">
+                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+        <article class="research-direction-card">
             <h3>Neuromorphic AI</h3>
-        </div>
-        <div>
-            <h1>Science</h1>
+            <p>Brief Introduction...</p>
+            <div class="research-direction-card__footer">
+                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+        <article class="research-direction-card">
             <h3>AI4Science</h3>
-        </div>
+            <p>Brief Introduction...</p>
+            <div class="research-direction-card__footer">
+                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
     </div>
-</div>
+</section>
 <!-- Youtube video saction -->
 <div class="video">
     <img class="video-img" src="./images/img2.jpg" alt="">
 </div>
-<!-- Hero section-3 -->
+<section class="highlighted-projects-section">
+    <div class="highlighted-projects-heading">
+        <p data-i18n="page.home.highlighted.lead">Selected systems, benchmarks, and model-efficiency work</p>
+        <h2 data-i18n="page.home.highlighted.title">Highlighted Articles</h2>
+    </div>
+    <div class="card-grid bento-section" data-magic-bento></div>
+</section>
+<section class="latest-news-section">
+    <div class="latest-news-shell">
+        <div class="latest-news-heading">
+            <p data-i18n="page.home.newsLead">From the lab</p>
+            <h2 data-i18n="page.home.newsTitle">Latest News</h2>
+        </div>
+        <div class="latest-news-stream" data-news-cards data-news-limit="6"></div>
+    </div>
+</section>
+<!--
+Hero section-3
 <div class="hero">
-    <h1 style="order: -2;">Our Research</h1>
+    <h1 style="order: -2;" data-i18n="page.home.researchTitle">Our Research</h1>
     <div>
-        <h1 style="text-align: left;">Efficient foundation models and deployment</h1>
-        <p>We develop compression, quantization, sparsification, and knowledge distillation methods for large language models, diffusion models, segmentation models, and vision systems.</p>
-        <button>Learn More</button>
+        <h1 style="text-align: left;" data-i18n="page.home.researchBlock1Title">Efficient foundation models and deployment</h1>
+        <p data-i18n="page.home.researchBlock1Body">We develop compression, quantization, sparsification, and knowledge distillation methods for large language models, diffusion models, segmentation models, and vision systems.</p>
+        <button data-i18n="page.home.researchBlock1Button">Learn More</button>
     </div>
     <img src="./images/img3.jpg" alt="">
 </div>
-<!-- Hero section-4 -->
+Hero section-4
 <div class="hero">
     <div><img src="./images/img4.jpg" alt=""></div>
     <div>
-        <h1 style="text-align: left;">Representative publications and benchmarks</h1>
-        <p>Recent work includes LLM compression benchmarks, small language model quantization, medical LLM compression evaluation, post-training quantization, sparsity benchmarks, and efficient model deployment papers.</p>
-        <button>View Papers</button>
+        <h1 style="text-align: left;" data-i18n="page.home.researchBlock2Title">Representative publications and benchmarks</h1>
+        <p data-i18n="page.home.researchBlock2Body">Recent work includes LLM compression benchmarks, small language model quantization, medical LLM compression evaluation, post-training quantization, sparsity benchmarks, and efficient model deployment papers.</p>
+        <button data-i18n="page.home.researchBlock2Button">View Papers</button>
     </div>
 </div>
-<!-- Hero section-5 -->
+Hero section-5
 <div class="hero">
     <div>
-        <h1 style="text-align: left;">Join the Lab</h1>
-        <p>We welcome students interested in efficient AI computing, model compression, PyTorch systems, open-source research, and AI4Science. Strong candidates are self-motivated and comfortable with Python, PyTorch, and Linux.</p>
-        <button>Openings</button>
+        <h1 style="text-align: left;" data-i18n="page.home.researchBlock3Title">Join the Lab</h1>
+        <p data-i18n="page.home.researchBlock3Body">We welcome students interested in efficient AI computing, model compression, PyTorch systems, open-source research, and AI4Science. Strong candidates are self-motivated and comfortable with Python, PyTorch, and Linux.</p>
+        <button data-i18n="page.home.researchBlock3Button">Openings</button>
     </div>
     <div><img src="./images/img5.jpg" alt=""></div>
 </div>
-<!-- bottom section -->
+-->
+bottom section
 <div class="bottom-social">
     <div>
         <img src="./images/logo.svg" alt="">
@@ -114,45 +141,51 @@
     <hr class="bar">
 </div>
 <div class="bottom-section">
-    <div>
-        <h3>About</h3>
-        <a href="#">Home</a>
-        <a href="#">People</a>
-        <a href="#">Mission</a>
-        <a href="#">Contact</a>
+    <!-- <div>
+        <h3 data-i18n="common.footer.about">About</h3>
+        <a href="#" data-i18n="common.footer.home">Home</a>
+        <a href="#" data-i18n="common.footer.people">People</a>
+        <a href="#" data-i18n="common.footer.mission">Mission</a>
+        <a href="#" data-i18n="common.footer.contact">Contact</a>
     </div>
     <div>
-        <h3>Publications</h3>
-        <a href="./publications.html">Papers</a>
-        <a href="#">Projects</a>
-        <a href="#">Datasets</a>
-        <a href="#">Code</a>
+        <h3 data-i18n="common.footer.publications">Publications</h3>
+        <a href="./publications.html" data-i18n="common.footer.papers">Papers</a>
+        <a href="#" data-i18n="common.footer.projects">Projects</a>
+        <a href="#" data-i18n="common.footer.datasets">Datasets</a>
+        <a href="#" data-i18n="common.footer.code">Code</a>
     </div>
     <div>
-        <h3>Awards</h3>
-        <a href="#">Competitions</a>
-        <a href="#">Honors</a>
-        <a href="#">Grants</a>
-        <a href="#">Media</a>
+        <h3 data-i18n="common.footer.awards">Awards</h3>
+        <a href="#" data-i18n="common.footer.competitions">Competitions</a>
+        <a href="#" data-i18n="common.footer.honors">Honors</a>
+        <a href="#" data-i18n="common.footer.grants">Grants</a>
+        <a href="#" data-i18n="common.footer.media">Media</a>
     </div>
     <div>
-        <h3>Activities</h3>
-        <a href="#">Workshops</a>
-        <a href="#">Team-building</a>
-        <a href="#">Openings</a>
+        <h3 data-i18n="common.footer.activities">Activities</h3>
+        <a href="#" data-i18n="common.footer.workshops">Workshops</a>
+        <a href="#" data-i18n="common.footer.teamBuilding">Team-building</a>
+        <a href="#" data-i18n="common.footer.openings">Openings</a>
     </div>
     <div>
-        <h3>Research</h3>
-        <a href="#">Model Efficiency</a>
-        <a href="#">Data Efficiency</a>
-        <a href="#">Neuromorphic AI</a>
-        <a href="#">AI4Science</a>
-    </div>
+        <h3 data-i18n="common.footer.research">Research</h3>
+        <a href="#" data-i18n="common.footer.modelEfficiency">Model Efficiency</a>
+        <a href="#" data-i18n="common.footer.dataEfficiency">Data Efficiency</a>
+        <a href="#" data-i18n="common.footer.neuromorphic">Neuromorphic AI</a>
+        <a href="#" data-i18n="common.footer.ai4science">AI4Science</a>
+    </div> -->
 
 </div>
 <script src="./js/grainient.js"></script>
+<script src="./js/i18n.js"></script>
 <script src="./js/card-nav.js"></script>
+    <script src="./js/page-transition.js"></script>
 <script src="./js/card-swap.js"></script>
+<script src="./js/highlighted-projects-data.js"></script>
+<script src="./js/magic-bento.js"></script>
 <script src="./js/split-text.js"></script>
+<script src="./js/news-data.js"></script>
+<script src="./js/news-cards.js"></script>
 </body>
 </html>

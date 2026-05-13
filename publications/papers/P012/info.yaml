@@ -1,9 +1,14 @@
 id: P012
-title: "Llmcbench: Benchmarking Large Language Model Compression for Efficient Deployment"
-authors: "G Yang, C He, J Guo, J Wu, Y Ding, A Liu, H Qin, P Ji, X Liu"
-venue: "NeurIPS 2024"
+group: "2024"
+title: "VRDistill: Vote Refinement Distillation for Efficient Indoor 3D Object Detection"
+authors: "Ze Yuan*, Jinyang Guo*, Dakai An, Junran Wu, He Zhu, Jianhao Li, Xueyuan Chen, Ke Xu, Jiaheng Liu"
+venue: "ACM MULTIMEDIA (ACM MM), 2024."
 year: 2024
-citations: 15
+citations: 0
+paper_link: ""
+code_link: ""
+book_link: ""
 scholar_link: ""
+award: ""
 cover_image: ""
-featured: false
+featured: true

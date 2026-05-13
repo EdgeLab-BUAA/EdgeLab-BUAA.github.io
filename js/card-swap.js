@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.querySelector("[data-card-swap]");
   const container = root?.querySelector(".card-swap-container");
   if (!root || !container) return;
+  const i18n = window.labI18n;
 
   const coverDir = root.dataset.coverDir || "./images/cover/";
   const fallbackImages = ["00002.jpg", "00013.jpg", "00014.JPEG"].map((name) => `${coverDir}${name}`);
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("article");
       card.className = "card";
       card.style.backgroundImage = `url("${src}")`;
-      card.setAttribute("aria-label", `Lab cover photo ${index + 1}`);
+      card.setAttribute("aria-label", i18n?.t?.("dynamic.cards.coverPhoto", { index: index + 1 }) || `Lab cover photo ${index + 1}`);
       container.appendChild(card);
     });
     return Array.from(container.querySelectorAll(".card"));

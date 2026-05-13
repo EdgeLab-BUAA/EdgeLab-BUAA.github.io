@@ -3,8 +3,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const count = document.querySelector("[data-publication-count]");
   const empty = document.querySelector("[data-publication-empty]");
   const list = document.querySelector("[data-publication-list]");
+  const i18n = window.labI18n;
 
   if (!input || !count || !empty || !list) return;
+
+  const getLang = () => i18n?.getLanguage?.() || "en";
+  const t = (key, vars) => i18n?.t?.(key, vars) || key;
 
   const initials = (title) =>
     title
@@ -22,33 +26,54 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replaceAll('"', "&quot;");
 
   const renderPaper = (paper) => {
+    const lang = getLang();
+    const title = lang === "zh" ? paper.title_zh || paper.title : paper.title;
+    const authors = lang === "zh" ? paper.authors_zh || paper.authors : paper.authors;
+    const venue = lang === "zh" ? paper.venue_zh || paper.venue : paper.venue;
+    const award = lang === "zh" ? paper.award_zh || paper.award : paper.award;
     const thumbContent = paper.cover_image
-      ? `<img src="./${escapeHtml(paper.cover_image)}" alt="${escapeHtml(paper.title)} cover">`
-      : `<span>${escapeHtml(initials(paper.title) || "AI")}</span>`;
+      ? `<img src="./${escapeHtml(paper.cover_image)}" alt="${escapeHtml(title)} cover">`
+      : `<span>${escapeHtml(initials(title) || "AI")}</span>`;
 
-    const venueLine = paper.scholar_link
-      ? `${escapeHtml(paper.venue)}. <a href="${escapeHtml(paper.scholar_link)}" target="_blank" rel="noreferrer">[Scholar]</a>`
-      : escapeHtml(paper.venue);
+    const links = [
+      paper.paper_link ? `<a class="publication-action" href="${escapeHtml(paper.paper_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.paper"))}</a>` : "",
+      paper.code_link ? `<a class="publication-action" href="${escapeHtml(paper.code_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.code"))}</a>` : "",
+      paper.book_link ? `<a class="publication-action" href="${escapeHtml(paper.book_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.books"))}</a>` : "",
+      paper.scholar_link ? `<a class="publication-action" href="${escapeHtml(paper.scholar_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.scholar"))}</a>` : ""
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    const venueLine = `${escapeHtml(venue)}${award ? ` <span class="publication-award">(${escapeHtml(award)})</span>` : ""}`;
 
     return `
       <article class="publication-item" data-paper>
         <div class="publication-thumb${paper.cover_image ? " has-image" : ""}">${thumbContent}</div>
         <div class="publication-info">
-          <h3>${escapeHtml(paper.title)}</h3>
-          <p>${escapeHtml(paper.authors)}</p>
+          <h3>${escapeHtml(title)}</h3>
+          <p class="publication-authors">${escapeHtml(authors)}</p>
           <p class="publication-venue">${venueLine}</p>
+          ${links ? `<div class="publication-actions">${links}</div>` : ""}
         </div>
       </article>
     `;
   };
 
+  const groupOrder = (group) => {
+    if (group === "Books") return 100000;
+    if (/^\d{4}$/.test(group)) return Number(group);
+    if (/^\d{4}-\d{4}$/.test(group)) return Number(group.slice(0, 4)) - 0.5;
+    return -1;
+  };
+
   const groupByYear = (papers) => {
     const map = new Map();
     papers.forEach((paper) => {
-      if (!map.has(paper.year)) map.set(paper.year, []);
-      map.get(paper.year).push(paper);
+      const key = paper.group || String(paper.year || "");
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push(paper);
     });
-    return Array.from(map.entries()).sort((a, b) => b[0] - a[0]);
+    return Array.from(map.entries()).sort((a, b) => groupOrder(b[0]) - groupOrder(a[0]));
   };
 
   let papers = [];
@@ -59,18 +84,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     papers = Array.isArray(data.papers) ? data.papers : [];
   } catch (error) {
-    count.textContent = "Unable to load papers";
-    empty.hidden = false;
-    empty.textContent = "Publication data is missing. Run the generator first.";
-    return;
+    const fallback = window.__LAB_PAPERS__;
+    papers = Array.isArray(fallback?.papers) ? fallback.papers : [];
+    if (!papers.length) {
+      count.textContent = t("dynamic.publications.errorTitle");
+      empty.hidden = false;
+      empty.textContent = t("dynamic.publications.errorBody");
+      return;
+    }
   }
 
   const render = (filteredPapers, query) => {
     const sections = groupByYear(filteredPapers)
       .map(
         ([year, items]) => `
-          <section class="publication-year-group" data-year-group="${year}">
-            <h2>${year}</h2>
+          <section class="publication-year-group" data-year-group="${escapeHtml(year)}">
+            <h2>${escapeHtml(year)}</h2>
             ${items.map(renderPaper).join("")}
           </section>
         `
@@ -79,16 +108,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     list.innerHTML = sections;
     count.textContent = query
-      ? `Showing ${filteredPapers.length} matching papers`
-      : `Showing all ${papers.length} papers`;
+      ? t("dynamic.publications.countMatching", { count: filteredPapers.length })
+      : t("dynamic.publications.countAll", { count: papers.length });
     empty.hidden = filteredPapers.length !== 0;
+    empty.textContent = t("dynamic.publications.empty");
   };
 
   const update = () => {
     const query = input.value.trim().toLowerCase();
     const filtered = papers.filter((paper) => {
       if (!query) return true;
-      return [paper.title, paper.authors]
+      return [paper.title, paper.title_zh, paper.authors, paper.authors_zh, paper.venue, paper.venue_zh, paper.group, paper.year]
         .join(" ")
         .toLowerCase()
         .includes(query);
@@ -97,5 +127,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   input.addEventListener("input", update);
+  document.addEventListener("languagechange", update);
   update();
 });

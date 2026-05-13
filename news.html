@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | Laboratory Homepage</title>
+    <title data-i18n="page.news.title">News &amp; Media | Laboratory Homepage</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="publications-page">
     <header class="head-container publication-head">
         <div class="gooey-nav-shell">
-            <a href="./index.html" class="gooey-logo" aria-label="Company home">
+            <a href="./index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
                 <img src="./images/logo.svg" alt="Company Logo">
             </a>
             <div class="gooey-nav-container">
-                <nav aria-label="Main navigation">
+                <nav data-i18n-aria-label="common.navAria" aria-label="Main navigation">
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./index.html#about">About</a></li>
-                        <li><a href="./publications.html">Publications</a></li>
-                        <li class="active"><a href="./news.html">News</a></li>
-                        <li><a href="./activities.html">Activities</a></li>
-                        <li><a href="./people.html">People</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="./people.html" data-i18n="common.nav.people">People</a></li>
+                        <li><a href="./projects.html" data-i18n="common.nav.projects">Projects</a></li>
+                        <li class="active"><a href="./news.html" data-i18n="common.nav.news">News & Media</a></li>
+                        <li><a href="./publications.html" data-i18n="common.nav.publications">Publications</a></li>
+                        <li><a href="./activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="./opening.html" data-i18n="common.nav.opening">Opening</a></li>
+                        <li><a href="./contact.html" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </nav>
                 <span class="effect filter" aria-hidden="true"></span>
@@ -32,13 +33,21 @@
         </div>
         <div class="grainient-container" aria-hidden="true"></div>
         <section class="publication-hero">
-            <p>Updates, announcements, and highlights from the lab</p>
-            <h1>News</h1>
+            <p data-i18n="page.news.heroLead">Updates, announcements, and highlights from the lab</p>
+            <h1 data-i18n="page.news.heroTitle">News &amp; Media</h1>
         </section>
     </header>
 
-    <main style="padding: 80px 40px; max-width: 900px; margin: 0 auto;">
-        <p style="color: #9a9a9a; font-size: 16px; text-align: center;">News coming soon.</p>
+    <main class="news-page-main">
+        <section class="latest-news-section latest-news-section--page">
+            <div class="latest-news-shell">
+                <div class="latest-news-heading">
+                    <p>Updates and highlights</p>
+                    <h2>Latest News</h2>
+                </div>
+                <div class="latest-news-stream" data-news-cards></div>
+            </div>
+        </section>
     </main>
 
     <div class="bottom-social">
@@ -58,41 +67,44 @@
     </div>
     <div class="bottom-section">
         <div>
-            <h3>About</h3>
-            <a href="./index.html">Home</a>
-            <a href="./people.html">People</a>
-            <a href="#">Mission</a>
-            <a href="./contact.html">Contact</a>
+            <h3 data-i18n="common.footer.about">About</h3>
+            <a href="./index.html" data-i18n="common.footer.home">Home</a>
+            <a href="./people.html" data-i18n="common.footer.people">People</a>
+            <a href="#" data-i18n="common.footer.mission">Mission</a>
+            <a href="./contact.html" data-i18n="common.footer.contact">Contact</a>
         </div>
         <div>
-            <h3>Publications</h3>
-            <a href="./publications.html">Papers</a>
-            <a href="#">Projects</a>
-            <a href="#">Datasets</a>
-            <a href="#">Code</a>
+            <h3 data-i18n="common.footer.publications">Publications</h3>
+            <a href="./publications.html" data-i18n="common.footer.papers">Papers</a>
+            <a href="#" data-i18n="common.footer.projects">Projects</a>
+            <a href="#" data-i18n="common.footer.datasets">Datasets</a>
+            <a href="#" data-i18n="common.footer.code">Code</a>
         </div>
         <div>
-            <h3>Awards</h3>
-            <a href="#">Competitions</a>
-            <a href="#">Honors</a>
-            <a href="#">Grants</a>
-            <a href="#">Media</a>
+            <h3 data-i18n="common.footer.awards">Awards</h3>
+            <a href="#" data-i18n="common.footer.competitions">Competitions</a>
+            <a href="#" data-i18n="common.footer.honors">Honors</a>
+            <a href="#" data-i18n="common.footer.grants">Grants</a>
+            <a href="#" data-i18n="common.footer.media">Media</a>
         </div>
         <div>
-            <h3>Activities</h3>
-            <a href="./activities.html">Workshops</a>
-            <a href="./activities.html">Team-building</a>
-            <a href="#">Openings</a>
+            <h3 data-i18n="common.footer.activities">Activities</h3>
+            <a href="./activities.html" data-i18n="common.footer.workshops">Workshops</a>
+            <a href="./activities.html" data-i18n="common.footer.teamBuilding">Team-building</a>
+            <a href="#" data-i18n="common.footer.openings">Openings</a>
         </div>
         <div>
-            <h3>Research</h3>
-            <a href="#">Model Efficiency</a>
-            <a href="#">Data Efficiency</a>
-            <a href="#">Neuromorphic AI</a>
-            <a href="#">AI4Science</a>
+            <h3 data-i18n="common.footer.research">Research</h3>
+            <a href="#" data-i18n="common.footer.modelEfficiency">Model Efficiency</a>
+            <a href="#" data-i18n="common.footer.dataEfficiency">Data Efficiency</a>
+            <a href="#" data-i18n="common.footer.neuromorphic">Neuromorphic AI</a>
+            <a href="#" data-i18n="common.footer.ai4science">AI4Science</a>
         </div>
     </div>
     <script src="./js/grainient.js"></script>
+    <script src="./js/i18n.js"></script>
     <script src="./js/card-nav.js"></script>
+    <script src="./js/page-transition.js"></script>
+    <script src="./js/news-cards.js"></script>
 </body>
 </html>

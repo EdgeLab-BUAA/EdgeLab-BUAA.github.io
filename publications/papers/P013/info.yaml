@@ -1,9 +1,14 @@
 id: P013
-title: "BifsmnV2: Pushing Binary Neural Networks for Keyword Spotting to Real-Network Performance"
-authors: "H Qin, X Ma, Y Ding, X Li, Y Zhang, Z Ma, J Wang, J Luo, X Liu"
-venue: "IEEE TNNLS 2023"
-year: 2023
-citations: 43
+group: "2024"
+title: "PTSBench: A Comprehensive Post-Training Sparsity Benchmark Towards Algorithms and Models"
+authors: "Zining Wang, Jinyang Guo✉, Ruihao Gong, Yang Yong, Aishan Liu, Yushi Huang, Jiaheng Liu, Xianglong Liu"
+venue: "ACM MULTIMEDIA 2024 (ACM MM), 2024."
+year: 2024
+citations: 0
+paper_link: ""
+code_link: ""
+book_link: ""
 scholar_link: ""
-cover_image: "qin2022bifsmnv2.jpeg"
-featured: false
+award: ""
+cover_image: ""
+featured: true

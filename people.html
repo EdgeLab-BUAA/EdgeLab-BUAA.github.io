@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People | Laboratory Homepage</title>
+    <title data-i18n="page.people.title">People | Laboratory Homepage</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="publications-page">
     <header class="head-container publication-head">
         <div class="gooey-nav-shell">
-            <a href="./index.html" class="gooey-logo" aria-label="Company home">
+            <a href="./index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
                 <img src="./images/logo.svg" alt="Company Logo">
             </a>
             <div class="gooey-nav-container">
-                <nav aria-label="Main navigation">
+                <nav data-i18n-aria-label="common.navAria" aria-label="Main navigation">
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./index.html#about">About</a></li>
-                        <li><a href="./publications.html">Publications</a></li>
-                        <li><a href="./news.html">News</a></li>
-                        <li><a href="./activities.html">Activities</a></li>
-                        <li class="active"><a href="./people.html">People</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li class="active"><a href="./people.html" data-i18n="common.nav.people">People</a></li>
+                        <li><a href="./projects.html" data-i18n="common.nav.projects">Projects</a></li>
+                        <li><a href="./news.html" data-i18n="common.nav.news">News & Media</a></li>
+                        <li><a href="./publications.html" data-i18n="common.nav.publications">Publications</a></li>
+                        <li><a href="./activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="./opening.html" data-i18n="common.nav.opening">Opening</a></li>
+                        <li><a href="./contact.html" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </nav>
                 <span class="effect filter" aria-hidden="true"></span>
@@ -32,311 +33,13 @@
         </div>
         <div class="grainient-container" aria-hidden="true"></div>
         <section class="publication-hero">
-            <p>Faculty, students, and collaborators</p>
-            <h1>People</h1>
+            <p data-i18n="page.people.heroLead">Faculty, students, and collaborators</p>
+            <h1 data-i18n="page.people.heroTitle">People</h1>
         </section>
     </header>
 
-    <main style="padding: 60px 0 40px;">
-
-        <!-- Faculty -->
-        <div class="people-section">
-            <h2 class="people-section-title">Faculty</h2>
-            <div class="team">
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Guo Jinyang.jpg" alt="Guo Jinyang">
-                        <div class="person-info">
-                            <h3>Guo Jinyang</h3>
-                            <p>Faculty</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="guojinyang@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Team 1 -->
-        <div class="people-section">
-            <h2 class="people-section-title">Team 1</h2>
-            <div class="team">
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Zheng Xingyu</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="zhengxingyu@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Wang Zining.jpg" alt="Wang Zining">
-                        <div class="person-info">
-                            <h3>Wang Zining</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="wangzining@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Ding Yifu.jpg" alt="Ding Yifu">
-                        <div class="person-info">
-                            <h3>Ding Yifu</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="dingyifu@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Yang Ge.jpg" alt="Yang Ge">
-                        <div class="person-info">
-                            <h3>Yang Ge</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="yangge@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Jin Shenghao</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="jinshenghao@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Chen Yuanming</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="chenyuanming@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Team 2 -->
-        <div class="people-section">
-            <h2 class="people-section-title">Team 2</h2>
-            <div class="team">
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Zeng Yejun</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="zengyejun@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Wang Jiacheng</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="wangjiacheng@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Liu Xiaoning</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="liuxiaoning@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Ge Xiaoze.jpg" alt="Ge Xiaoze">
-                        <div class="person-info">
-                            <h3>Ge Xiaoze</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="gexiaoze@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Weng Chenhao</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="wengchenhao@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Team 3 -->
-        <div class="people-section">
-            <h2 class="people-section-title">Team 3</h2>
-            <div class="team">
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <img class="person-avatar" src="./images/people/Xie Hui.jpg" alt="Xie Hui">
-                        <div class="person-info">
-                            <h3>Xie Hui</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="xiehui@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Shi Tong</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="shitong@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Ye Jingtao</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="yejingtao@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Zhu Yanan</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="zhuyanan@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Cui Yifan</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="cuiyifan@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="border-glow-card person-card">
-                    <span class="edge-light"></span>
-                    <div class="border-glow-inner">
-                        <div class="person-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
-                        <div class="person-info">
-                            <h3>Xiao Peng</h3>
-                            <p>Graduate Student</p>
-                            <div class="person-links">
-                                <a href="#" target="_blank" class="person-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                                <a href="#" target="_blank" class="person-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <button class="person-link email-btn" data-email="xiaopeng@example.com" title="Copy email"><i class="fa-solid fa-envelope"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-
+    <main data-people-main style="padding: 60px 0 40px;">
+        <p style="text-align:center;color:#9a9a9a;padding:80px 0" data-i18n="page.people.loading">Loading...</p>
     </main>
 
     <div class="bottom-social">
@@ -356,43 +59,46 @@
     </div>
     <div class="bottom-section">
         <div>
-            <h3>About</h3>
-            <a href="./index.html">Home</a>
-            <a href="./people.html">People</a>
-            <a href="#">Mission</a>
-            <a href="./contact.html">Contact</a>
+            <h3 data-i18n="common.footer.about">About</h3>
+            <a href="./index.html" data-i18n="common.footer.home">Home</a>
+            <a href="./people.html" data-i18n="common.footer.people">People</a>
+            <a href="#" data-i18n="common.footer.mission">Mission</a>
+            <a href="./contact.html" data-i18n="common.footer.contact">Contact</a>
         </div>
         <div>
-            <h3>Publications</h3>
-            <a href="./publications.html">Papers</a>
-            <a href="#">Projects</a>
-            <a href="#">Datasets</a>
-            <a href="#">Code</a>
+            <h3 data-i18n="common.footer.publications">Publications</h3>
+            <a href="./publications.html" data-i18n="common.footer.papers">Papers</a>
+            <a href="#" data-i18n="common.footer.projects">Projects</a>
+            <a href="#" data-i18n="common.footer.datasets">Datasets</a>
+            <a href="#" data-i18n="common.footer.code">Code</a>
         </div>
         <div>
-            <h3>Awards</h3>
-            <a href="#">Competitions</a>
-            <a href="#">Honors</a>
-            <a href="#">Grants</a>
-            <a href="#">Media</a>
+            <h3 data-i18n="common.footer.awards">Awards</h3>
+            <a href="#" data-i18n="common.footer.competitions">Competitions</a>
+            <a href="#" data-i18n="common.footer.honors">Honors</a>
+            <a href="#" data-i18n="common.footer.grants">Grants</a>
+            <a href="#" data-i18n="common.footer.media">Media</a>
         </div>
         <div>
-            <h3>Activities</h3>
-            <a href="./activities.html">Workshops</a>
-            <a href="./activities.html">Team-building</a>
-            <a href="#">Openings</a>
+            <h3 data-i18n="common.footer.activities">Activities</h3>
+            <a href="./activities.html" data-i18n="common.footer.workshops">Workshops</a>
+            <a href="./activities.html" data-i18n="common.footer.teamBuilding">Team-building</a>
+            <a href="#" data-i18n="common.footer.openings">Openings</a>
         </div>
         <div>
-            <h3>Research</h3>
-            <a href="#">Model Efficiency</a>
-            <a href="#">Data Efficiency</a>
-            <a href="#">Neuromorphic AI</a>
-            <a href="#">AI4Science</a>
+            <h3 data-i18n="common.footer.research">Research</h3>
+            <a href="#" data-i18n="common.footer.modelEfficiency">Model Efficiency</a>
+            <a href="#" data-i18n="common.footer.dataEfficiency">Data Efficiency</a>
+            <a href="#" data-i18n="common.footer.neuromorphic">Neuromorphic AI</a>
+            <a href="#" data-i18n="common.footer.ai4science">AI4Science</a>
         </div>
     </div>
     <script src="./js/grainient.js"></script>
+    <script src="./js/i18n.js"></script>
     <script src="./js/card-nav.js"></script>
+    <script src="./js/page-transition.js"></script>
     <script src="./js/border-glow-cards.js"></script>
-    <script src="./js/people.js"></script>
+    <script src="./js/people-data.js"></script>
+    <script src="./js/people-loader.js"></script>
 </body>
 </html>

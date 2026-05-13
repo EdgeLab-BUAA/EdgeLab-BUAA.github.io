@@ -1,0 +1,14 @@
+id: P017
+group: "2024"
+title: "Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector"
+authors: "Yifu Ding, Weilun Feng, Chuyan Chen, Jinyang Guo, Xianglong Liu"
+venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2024."
+year: 2024
+citations: 0
+paper_link: ""
+code_link: ""
+book_link: ""
+scholar_link: ""
+award: ""
+cover_image: "reg-ptq.png"
+featured: true

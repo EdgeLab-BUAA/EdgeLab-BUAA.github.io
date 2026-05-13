@@ -1,9 +1,14 @@
 id: P011
-title: "VORTA: Efficient Video Diffusion via Routing Sparse Attention"
-authors: "W Sun, RC Tu, Y Ding, Z Jin, J Liao, S Liu, D Tao"
-venue: "arXiv preprint arXiv:2505.18809"
-year: 2025
-citations: 4
+group: "2024"
+title: "QVD: Post-training Quantization for Video Diffusion Models"
+authors: "Shilong Tian, Hong Chen, Chengtao Lv, Yu Liu, Jinyang Guo✉, Xianglong Liu, Shengxi Li, Hao Yang, Tao Xie"
+venue: "ACM MULTIMEDIA (ACM MM), 2024."
+year: 2024
+citations: 0
+paper_link: ""
+code_link: ""
+book_link: ""
 scholar_link: ""
-cover_image: "vorta.png"
-featured: false
+award: ""
+cover_image: ""
+featured: true
