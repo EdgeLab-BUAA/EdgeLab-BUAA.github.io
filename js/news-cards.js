@@ -20,9 +20,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       .map((part) => part[0].toUpperCase())
       .join("") || "NW";
 
+  // Detect page depth so root-relative paths resolve correctly from any subfolder
+  const scriptEl = document.querySelector('script[src*="news-cards.js"]');
+  const scriptSrc = scriptEl ? scriptEl.getAttribute('src') : './js/news-cards.js';
+  const depth = (scriptSrc.match(/\.\.\//g) || []).length;
+  const rootPrefix = depth > 0 ? '../'.repeat(depth) : './';
+
   let items = [];
   try {
-    const response = await fetch("./news/data/news.json");
+    const response = await fetch("./news.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     items = Array.isArray(data.items) ? data.items : [];
@@ -50,10 +56,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       : item.type_en || item.type || "";
     const meta = [type, item.date].filter(Boolean).join(" · ");
     const media = item.image
-      ? `<div class="news-card__media"><img src="./${esc(item.image)}" alt="${esc(title)}"></div>`
+      ? `<div class="news-card__media"><img src="${rootPrefix}${esc(item.image)}" alt="${esc(title)}"></div>`
       : `<div class="news-card__media news-card__media--fallback" aria-hidden="true"><span>${esc(initials(title))}</span></div>`;
-    const href = item.link || "./news.html";
-    const external = /^https?:\/\//i.test(href);
+    const rawHref = item.link || "./news/news.html";
+    const external = /^https?:\/\//i.test(rawHref);
+    const href = external ? rawHref : rawHref.replace(/^\.\//, rootPrefix);
 
     return `
       <article class="news-card">

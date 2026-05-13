@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let data;
   try {
-    const res = await fetch("./activities/team-building.json");
+    const res = await fetch("./team-building.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
   } catch {

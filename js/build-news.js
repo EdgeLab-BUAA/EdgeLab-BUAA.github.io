@@ -76,9 +76,9 @@ const guessLink = (id, info, image) => {
     info.scholar_link ||
     "";
   if (directLink) return String(directLink);
-  if (/^A\d+/i.test(id)) return `./activities.html#${id}`;
+  if (/^A\d+/i.test(id)) return `./activities/activities.html#${id}`;
   if (/^P\d+/i.test(id)) return `./publication./publications/publications.html#${id}`;
-  return image ? `./${image}` : "./news.html";
+  return image ? `./${image}` : "./news/news.html";
 };
 
 const buildExcerpt = (info) => {

@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let data;
   try {
-    const res = await fetch("./people/data/members.json");
+    const res = await fetch("./data/members.json");
     data = await res.json();
   } catch {
     data = window.__LAB_PEOPLE__;

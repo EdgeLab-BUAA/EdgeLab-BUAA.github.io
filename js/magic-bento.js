@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let projects = [];
   try {
-    const response = await fetch("./highlighted-research/data/projects.json");
+    const response = await fetch("./mainpage/highlighted-research/data/projects.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     projects = Array.isArray(data.projects) ? data.projects.slice(0, 6) : [];

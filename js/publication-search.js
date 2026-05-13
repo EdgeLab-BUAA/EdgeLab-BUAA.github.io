@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const links = [
       paper.paper_link ? `<a class="publication-action is-blue" href="${escapeHtml(paper.paper_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.paper"))}</a>` : "",
       paper.code_link ? `<a class="publication-action" href="${escapeHtml(paper.code_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.code"))}</a>` : "",
-      paper.book_link ? `<a class="publication-action" href="${escapeHtml(paper.book_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.books"))}</a>` : "",
-      paper.scholar_link ? `<a class="publication-action" href="${escapeHtml(paper.scholar_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.scholar"))}</a>` : ""
+      paper.book_link ? `<a class="publication-action is-blue" href="${escapeHtml(paper.book_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.books"))}</a>` : "",
+      paper.scholar_link ? `<a class="publication-action is-yellow" href="${escapeHtml(paper.scholar_link)}" target="_blank" rel="noreferrer">${escapeHtml(t("dynamic.publications.link.scholar"))}</a>` : ""
     ]
       .filter(Boolean)
       .join(" ");

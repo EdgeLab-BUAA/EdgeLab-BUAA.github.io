@@ -63,7 +63,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P004/llm-quant-survey.png"
+      "cover_image": "papers/P004/llm-quant-survey.png"
     },
     {
       "id": "P005",
@@ -95,7 +95,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P006/da-kd.png"
+      "cover_image": "papers/P006/da-kd.png"
     },
     {
       "id": "P007",
@@ -223,7 +223,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P014/compression-large-language-models.png"
+      "cover_image": "papers/P014/compression-large-language-models.png"
     },
     {
       "id": "P015",
@@ -255,7 +255,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P016/ptq4sam.png"
+      "cover_image": "papers/P016/ptq4sam.png"
     },
     {
       "id": "P017",
@@ -271,7 +271,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P017/reg-ptq.png"
+      "cover_image": "papers/P017/reg-ptq.png"
     },
     {
       "id": "P018",
@@ -303,7 +303,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "publications/papers/P019/db-llm.png"
+      "cover_image": "papers/P019/db-llm.png"
     },
     {
       "id": "P020",

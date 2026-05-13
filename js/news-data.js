@@ -10,7 +10,7 @@ window.__LAB_NEWS__ = {
       "excerpt": "Beijing Olympic Forest Park",
       "date": "2025-04",
       "image": "activities/team-building/00013.jpg",
-      "link": "./activities.html#A013"
+      "link": "./activities/activities.html#A013"
     },
     {
       "id": "P010",
