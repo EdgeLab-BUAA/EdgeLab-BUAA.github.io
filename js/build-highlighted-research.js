@@ -1,85 +1,42 @@
 #!/usr/bin/env node
+// Run from repo root: node js/build-highlighted-research.js
 
 const fs = require("node:fs");
 const path = require("node:path");
 
 const ROOT = process.cwd();
-const SOURCE_DIR = path.join(ROOT, "highlighted-research");
-const OUTPUT_DIR = path.join(SOURCE_DIR, "data");
-const OUTPUT_FILE = path.join(OUTPUT_DIR, "projects.json");
+const BASE_DIR  = path.join(ROOT, "mainpage", "highlighted-research");
+const IMGS_DIR  = path.join(BASE_DIR, "imgs");
+const DATA_FILE = path.join(BASE_DIR, "data", "projects.json");
+const JS_FALLBACK = path.join(ROOT, "js", "highlighted-projects-data.js");
 
-const parseValue = (raw) => {
-  const value = raw.trim();
-  if (value === "") return "";
-  if (value === "true") return true;
-  if (value === "false") return false;
-  if (/^-?\d+$/.test(value)) return Number(value);
-  if (
-    (value.startsWith('"') && value.endsWith('"')) ||
-    (value.startsWith("'") && value.endsWith("'"))
-  ) {
-    return value.slice(1, -1);
+const resolveCoverImage = (raw) => {
+  if (!raw) return "";
+  // Already a full path that exists — keep as-is
+  if (fs.existsSync(path.join(ROOT, raw))) return raw;
+  // Bare filename → look in imgs/
+  const candidate = path.join(IMGS_DIR, path.basename(raw));
+  if (fs.existsSync(candidate)) {
+    return path.relative(ROOT, candidate).replace(/\\/g, "/");
   }
-  return value;
+  return raw;
 };
 
-const parseSimpleYaml = (source) => {
-  const data = {};
-  source.split(/\r?\n/).forEach((line) => {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith("#")) return;
-    const idx = line.indexOf(":");
-    if (idx === -1) return;
-    const key = line.slice(0, idx).trim();
-    const rawValue = line.slice(idx + 1);
-    data[key] = parseValue(rawValue);
-  });
-  return data;
-};
+const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
 
-const resolveCover = (dir, info) => {
-  if (info.cover_image) {
-    const explicit = path.join(dir, info.cover_image);
-    if (fs.existsSync(explicit)) {
-      return path.relative(ROOT, explicit).replace(/\\/g, "/");
-    }
-  }
+data.projects = data.projects.map((p) => ({
+  ...p,
+  cover_image: resolveCoverImage(p.cover_image),
+}));
 
-  const image = fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && /\.(png|jpe?g|webp|gif)$/i.test(entry.name))
-    .map((entry) => entry.name)
-    .sort()[0];
+data.generated_at = new Date().toISOString();
 
-  if (!image) return "";
-  return path.relative(ROOT, path.join(dir, image)).replace(/\\/g, "/");
-};
-
-const dirs = fs
-  .readdirSync(SOURCE_DIR, { withFileTypes: true })
-  .filter((entry) => entry.isDirectory() && /^P\d+$/i.test(entry.name))
-  .map((entry) => entry.name)
-  .sort();
-
-const projects = dirs.map((dirName) => {
-  const dir = path.join(SOURCE_DIR, dirName);
-  const info = parseSimpleYaml(fs.readFileSync(path.join(dir, "info.yaml"), "utf8"));
-  return {
-    id: info.id || dirName,
-    title: info.title || "",
-    authors: info.authors || "",
-    venue: info.venue || "",
-    year: Number(info.year || 0),
-    award: info.award || "",
-    cover_image: resolveCover(dir, info)
-  };
-});
-
-fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2) + "\n", "utf8");
 fs.writeFileSync(
-  OUTPUT_FILE,
-  `${JSON.stringify({ generated_at: new Date().toISOString(), projects }, null, 2)}\n`,
+  JS_FALLBACK,
+  `window.__LAB_HIGHLIGHTED_PROJECTS__ = ${JSON.stringify(data, null, 2)};\n`,
   "utf8"
 );
 
-console.log(`Wrote ${projects.length} projects to ${path.relative(ROOT, OUTPUT_FILE)}`);
+console.log(`Updated ${data.projects.length} projects → ${path.relative(ROOT, DATA_FILE)}`);
+console.log(`Regenerated ${path.relative(ROOT, JS_FALLBACK)}`);

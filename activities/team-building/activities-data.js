@@ -10,19 +10,19 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京郊区",
       "date": "2024-06",
       "photographer": "",
-      "image": "activities/team-building/00001.jpg",
+      "image": "team-building/imgs/00001.jpg",
       "height": 420
     },
     {
       "id": "A002",
-      "category": "meal",
-      "title_en": "Lab Annual Meeting",
-      "title_zh": "实验室年会",
-      "location_en": "Beihang University",
-      "location_zh": "北京航空航天大学",
+      "category": "outdoor",
+      "title_en": "Climbing Xiangshan Group Photo",
+      "title_zh": "香山爬山小组合照",
+      "location_en": "Xiangshan, Beijing",
+      "location_zh": "北京香山",
       "date": "2024-01",
       "photographer": "",
-      "image": "activities/team-building/00002.jpg",
+      "image": "team-building/imgs/00002.jpg",
       "height": 300
     },
     {
@@ -34,7 +34,7 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京香山",
       "date": "2024-04",
       "photographer": "",
-      "image": "activities/team-building/00003.jpg",
+      "image": "team-building/imgs/00003.jpg",
       "height": 360
     },
     {
@@ -46,19 +46,19 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京",
       "date": "2024-09",
       "photographer": "",
-      "image": "activities/team-building/00004.jpg",
+      "image": "team-building/imgs/00004.jpg",
       "height": 500
     },
     {
       "id": "A005",
-      "category": "meal",
-      "title_en": "New Year Gathering",
-      "title_zh": "新年聚会",
-      "location_en": "Beihang University",
-      "location_zh": "北京航空航天大学",
+      "category": "outdoor",
+      "title_en": "Yang Ge Solo Photo at Xiangshan",
+      "title_zh": "香山团建 杨戈单人照",
+      "location_en": "Xiangshan, Beijing",
+      "location_zh": "北京香山",
       "date": "2024-12",
       "photographer": "",
-      "image": "activities/team-building/00005.jpg",
+      "image": "team-building/imgs/00005.jpg",
       "height": 280
     },
     {
@@ -70,7 +70,7 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京",
       "date": "2024-07",
       "photographer": "",
-      "image": "activities/team-building/00006.jpg",
+      "image": "team-building/imgs/00006.jpg",
       "height": 430
     },
     {
@@ -82,7 +82,7 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京航空航天大学",
       "date": "2024-05",
       "photographer": "",
-      "image": "activities/team-building/00007.jpg",
+      "image": "team-building/imgs/00007.jpg",
       "height": 340
     },
     {
@@ -94,31 +94,31 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京航空航天大学",
       "date": "2024-10",
       "photographer": "",
-      "image": "activities/team-building/00008.jpg",
+      "image": "team-building/imgs/00008.jpg",
       "height": 520
     },
     {
       "id": "A009",
-      "category": "meal",
-      "title_en": "Paper Celebration",
-      "title_zh": "论文录用庆祝",
-      "location_en": "Beijing",
-      "location_zh": "北京",
-      "date": "2025-01",
+      "category": "outdoor",
+      "title_en": "Listen to Offline Stand-up Comedy",
+      "title_zh": "听线下脱口秀",
+      "location_en": "Beijing, China",
+      "location_zh": "北京, 中国",
+      "date": "2024-02",
       "photographer": "",
-      "image": "activities/team-building/00009.jpg",
-      "height": 320
+      "image": "team-building/imgs/00009.jpg",
+      "height": 400
     },
     {
       "id": "A010",
-      "category": "outdoor",
-      "title_en": "Autumn Outing",
-      "title_zh": "秋季团建",
-      "location_en": "Beijing Botanical Garden",
-      "location_zh": "北京植物园",
+      "category": "meal",
+      "title_en": "Hotpot Gathering",
+      "title_zh": "火锅聚餐",
+      "location_en": "Beijing Happy Hotpot",
+      "location_zh": "北京高兴火锅",
       "date": "2024-11",
       "photographer": "",
-      "image": "activities/team-building/00010.jpg",
+      "image": "team-building/imgs/00010.jpg",
       "height": 450
     },
     {
@@ -130,7 +130,7 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京航空航天大学",
       "date": "2024-09",
       "photographer": "",
-      "image": "activities/team-building/00011.jpg",
+      "image": "team-building/imgs/00011.jpg",
       "height": 300
     },
     {
@@ -142,19 +142,19 @@ window.__LAB_ACTIVITIES__ = {
       "location_zh": "北京",
       "date": "2024-12",
       "photographer": "",
-      "image": "activities/team-building/00012.jpg",
+      "image": "team-building/imgs/00012.jpg",
       "height": 390
     },
     {
       "id": "A013",
-      "category": "outdoor",
-      "title_en": "Spring Outing",
-      "title_zh": "春游团建",
-      "location_en": "Beijing Olympic Forest Park",
-      "location_zh": "北京奥森公园",
-      "date": "2025-04",
+      "category": "meal",
+      "title_en": "Dinner Gathering",
+      "title_zh": "年终聚餐",
+      "location_en": "Beijing",
+      "location_zh": "北京",
+      "date": "2024-12",
       "photographer": "",
-      "image": "activities/team-building/00013.jpg",
+      "image": "team-building/imgs/00013.jpg",
       "height": 520
     }
   ]

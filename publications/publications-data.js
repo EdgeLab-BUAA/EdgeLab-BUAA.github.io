@@ -1,4 +1,4 @@
-{
+window.__LAB_PAPERS__ = {
   "generated_at": "2026-05-13T11:24:36.950Z",
   "papers": [
     {
@@ -154,7 +154,7 @@
       "year": 2024,
       "citations": 0,
       "scholar_link": "",
-      "paper_link": "https://openreview.net/pdf?id=xgiurUq0ss",
+      "paper_link": "https://arxiv.org/abs/2407.16154",
       "code_link": "",
       "book_link": "",
       "award": "",
@@ -578,4 +578,4 @@
       "cover_image": ""
     }
   ]
-}
+};

@@ -1,4 +1,4 @@
-{
+window.__LAB_WORKSHOPS__ = {
   "generated_at": "2026-05-13T11:41:36.585Z",
   "photos": [
     {
@@ -10,7 +10,7 @@
       "location_zh": "",
       "date": "2025",
       "photographer": "",
-      "image": "activities/workshop/iccv-2025-eclr/00026.jpg",
+      "image": "workshop/iccv-2025-eclr/00026.jpg",
       "height": 360
     },
     {
@@ -22,7 +22,7 @@
       "location_zh": "",
       "date": "2025",
       "photographer": "",
-      "image": "activities/workshop/iccv-2025-eclr/00027.jpg",
+      "image": "workshop/iccv-2025-eclr/00027.jpg",
       "height": 360
     },
     {
@@ -34,7 +34,7 @@
       "location_zh": "",
       "date": "2025",
       "photographer": "",
-      "image": "activities/workshop/iccv-2025-eclr/00028.jpg",
+      "image": "workshop/iccv-2025-eclr/00028.jpg",
       "height": 360
     },
     {
@@ -46,7 +46,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00015.JPEG",
+      "image": "workshop/ijcai-2024/00015.JPEG",
       "height": 360
     },
     {
@@ -58,7 +58,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00016.JPEG",
+      "image": "workshop/ijcai-2024/00016.JPEG",
       "height": 360
     },
     {
@@ -70,7 +70,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00017.JPEG",
+      "image": "workshop/ijcai-2024/00017.JPEG",
       "height": 360
     },
     {
@@ -82,7 +82,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00018.JPEG",
+      "image": "workshop/ijcai-2024/00018.JPEG",
       "height": 360
     },
     {
@@ -94,7 +94,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00019.HEIC",
+      "image": "workshop/ijcai-2024/00019.jpg",
       "height": 360
     },
     {
@@ -106,7 +106,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00020.JPEG",
+      "image": "workshop/ijcai-2024/00020.JPEG",
       "height": 360
     },
     {
@@ -118,7 +118,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00021.JPEG",
+      "image": "workshop/ijcai-2024/00021.JPEG",
       "height": 360
     },
     {
@@ -130,7 +130,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00022.JPEG",
+      "image": "workshop/ijcai-2024/00022.JPEG",
       "height": 360
     },
     {
@@ -142,7 +142,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00023.JPEG",
+      "image": "workshop/ijcai-2024/00023.JPEG",
       "height": 360
     },
     {
@@ -154,7 +154,7 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00024.JPEG",
+      "image": "workshop/ijcai-2024/00024.JPEG",
       "height": 360
     },
     {
@@ -166,8 +166,8 @@
       "location_zh": "",
       "date": "2024",
       "photographer": "",
-      "image": "activities/workshop/ijcai-2024/00025.JPEG",
+      "image": "workshop/ijcai-2024/00025.JPEG",
       "height": 360
     }
   ]
-}
+};

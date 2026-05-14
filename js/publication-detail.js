@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const links = [
     linkButton(paper.paper_link, "PDF", "is-blue"),
     linkButton(paper.code_link, "Code"),
-    linkButton(paper.book_link, "Blog", "is-blue"),
+    linkButton(paper.book_link, "Book", "is-blue"),
     linkButton(paper.scholar_link, "Bibtex", "is-red")
   ].join("");
 

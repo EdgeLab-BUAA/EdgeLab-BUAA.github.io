@@ -1,5 +1,5 @@
 window.__LAB_HIGHLIGHTED_PROJECTS__ = {
-  "generated_at": "2026-05-13T07:14:38.494Z",
+  "generated_at": "2026-05-14T04:57:54.076Z",
   "projects": [
     {
       "id": "P001",
@@ -12,7 +12,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2026,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/P001/dynamic-parallel.png"
+      "cover_image": "mainpage/highlighted-research/imgs/dynamic-parallel.png"
     },
     {
       "id": "P002",
@@ -25,7 +25,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2026,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/P002/llm-quant-survey.png"
+      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png"
     },
     {
       "id": "P003",
@@ -38,7 +38,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "Best Paper Award",
       "award_zh": "最佳论文奖",
-      "cover_image": "mainpage/highlighted-research/P003/ptq4sam.png"
+      "cover_image": "mainpage/highlighted-research/imgs/ptq4sam.png"
     },
     {
       "id": "P004",
@@ -51,7 +51,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/P004/llm-quant-survey.png"
+      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png"
     },
     {
       "id": "P005",
@@ -64,7 +64,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "Outstanding Paper Award",
       "award_zh": "杰出论文奖",
-      "cover_image": "mainpage/highlighted-research/P005/compression-large-language-models.png"
+      "cover_image": "mainpage/highlighted-research/imgs/compression-large-language-models.png"
     },
     {
       "id": "P006",
@@ -77,7 +77,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/P006/da-kd.png"
+      "cover_image": "mainpage/highlighted-research/imgs/da-kd.png"
     }
   ]
 };

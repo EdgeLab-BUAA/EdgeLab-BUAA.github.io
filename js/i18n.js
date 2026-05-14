@@ -207,7 +207,7 @@
     "dynamic.publications.errorBody": { en: "Publication data is missing. Run the generator first.", zh: "论文数据缺失，请先生成数据文件。" },
     "dynamic.publications.link.paper": { en: "PDF", zh: "PDF" },
     "dynamic.publications.link.code": { en: "Code", zh: "代码" },
-    "dynamic.publications.link.books": { en: "Blog", zh: "博客" },
+    "dynamic.publications.link.books": { en: "Book", zh: "书籍" },
     "dynamic.publications.link.scholar": { en: "Bibtex", zh: "Bibtex" },
     "dynamic.publications.countAll": { en: "Showing all {count} papers", zh: "显示全部 {count} 篇论文" },
     "dynamic.publications.countMatching": { en: "Showing {count} matching papers", zh: "显示 {count} 篇匹配论文" },
