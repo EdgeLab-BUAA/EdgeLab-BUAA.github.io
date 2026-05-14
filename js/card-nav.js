@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateEffectPosition = (element) => {
     const containerRect = container.getBoundingClientRect();
     const rect = element.getBoundingClientRect();
+    const topLevelLink = element.querySelector(":scope > a, :scope > .nav-trigger");
+    const isDropdown = element.classList.contains("has-dropdown");
     const styles = {
       left: `${rect.x - containerRect.x}px`,
       top: `${rect.y - containerRect.y}px`,
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     Object.assign(filter.style, styles);
     Object.assign(text.style, styles);
-    text.textContent = element.textContent.trim();
+    text.textContent = isDropdown ? "" : (topLevelLink?.textContent.trim() || element.textContent.trim());
   };
 
   const makeParticles = () => {
@@ -97,11 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   items.forEach((item, index) => {
-    item.addEventListener("click", () => activate(item, index));
+    item.addEventListener("click", (event) => {
+      if (item.classList.contains("has-dropdown")) {
+        event.preventDefault();
+        return;
+      }
+      activate(item, index);
+    });
     item.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        item.querySelector("a")?.click();
+        if (item.classList.contains("has-dropdown")) return;
+        item.querySelector(":scope > a")?.click();
       }
     });
   });

@@ -9,6 +9,7 @@
     "common.nav.home": { en: "Home", zh: "首页" },
     "common.nav.people": { en: "People", zh: "团队成员" },
     "common.nav.projects": { en: "Projects", zh: "项目" },
+    "common.nav.directions": { en: "Directions", zh: "研究方向" },
     "common.nav.news": { en: "News & Media", zh: "新闻与动态" },
     "common.nav.publications": { en: "Publications", zh: "论文发表" },
     "common.nav.activities": { en: "Activities", zh: "活动" },
@@ -216,7 +217,45 @@
     "dynamic.cards.coverPhoto": { en: "Lab cover photo {index}", zh: "课题组封面照片 {index}" },
     "dynamic.news.error": { en: "Unable to load news right now.", zh: "暂时无法加载新闻内容。" },
     "dynamic.news.empty": { en: "News coming soon.", zh: "新闻内容即将上线。" },
-    "dynamic.news.readMore": { en: "Read More", zh: "查看更多" }
+    "dynamic.news.readMore": { en: "Read More", zh: "查看更多" },
+    "dynamic.directions.error": {
+      en: "Unable to load research directions.",
+      zh: "无法加载研究方向内容。"
+    },
+
+    "page.direction.label": { en: "Research Direction", zh: "研究方向" },
+    "page.direction.overview": { en: "Overview", zh: "概述" },
+    "page.direction.publications": { en: "Related Publications", zh: "相关论文" },
+    "page.direction.publicationsPlaceholder": {
+      en: "Coming soon — see <a href=\"../../publications/publications.html\" style=\"color:#5227ff;\">full publication list</a>.",
+      zh: "即将上线 — 查看<a href=\"../../publications/publications.html\" style=\"color:#5227ff;\">全部论文列表</a>。"
+    },
+    "page.direction.people": { en: "People", zh: "相关人员" },
+    "page.direction.peoplePlaceholder": {
+      en: "Coming soon — see <a href=\"../../people/people.html\" style=\"color:#5227ff;\">full members list</a>.",
+      zh: "即将上线 — 查看<a href=\"../../people/people.html\" style=\"color:#5227ff;\">全部成员列表</a>。"
+    },
+
+    "page.direction.efficient-computing.pageTitle": { en: "Efficient Computing | Laboratory Homepage", zh: "高效计算 | 实验室主页" },
+    "page.direction.efficient-computing.heroTitle": { en: "Efficient Computing", zh: "高效计算" },
+    "page.direction.efficient-computing.intro": {
+      en: "Compression, quantization, distillation, and systems that make models smaller, faster, and cheaper to run—from LLMs to vision and segmentation. Our work spans post-training quantization, structured/unstructured sparsity, knowledge distillation, and efficient deployment pipelines.",
+      zh: "压缩、量化、蒸馏与系统优化，让模型更小、更快、更省算力，覆盖大语言模型、视觉与分割等方向。我们的工作涵盖后训练量化、结构化/非结构化稀疏、知识蒸馏与高效部署流水线。"
+    },
+
+    "page.direction.neuromorphic-ai.pageTitle": { en: "Neuromorphic AI | Laboratory Homepage", zh: "神经形态 AI | 实验室主页" },
+    "page.direction.neuromorphic-ai.heroTitle": { en: "Neuromorphic AI", zh: "神经形态 AI" },
+    "page.direction.neuromorphic-ai.intro": {
+      en: "Spiking and event-driven paradigms that target low latency and energy-aware inference at the edge and in neuromorphic hardware. We explore spike-based neural architectures, on-chip learning, and bio-inspired computing for next-generation AI systems.",
+      zh: "脉冲与事件驱动范式，面向低延迟、低功耗推理，服务边缘端与神经形态硬件上的智能应用。我们探索基于脉冲的神经网络架构、片上学习与仿生计算，推动下一代 AI 系统。"
+    },
+
+    "page.direction.ai4science.pageTitle": { en: "AI4Science | Laboratory Homepage", zh: "AI4Science | 实验室主页" },
+    "page.direction.ai4science.heroTitle": { en: "AI4Science", zh: "AI4Science" },
+    "page.direction.ai4science.intro": {
+      en: "Learning methods for scientific discovery and domain benchmarks—turning large models and efficient training into practical scientific tools. We develop AI-driven approaches for accelerating research across biology, materials science, and beyond.",
+      zh: "面向科学发现的学习方法与领域基准，把大模型与高效训练转化为可落地的科研工具。我们开发 AI 驱动的方法，加速生物、材料科学等领域的科研进程。"
+    }
   };
 
   const interpolate = (template, vars = {}) =>

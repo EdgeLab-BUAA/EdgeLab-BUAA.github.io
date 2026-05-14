@@ -89,9 +89,10 @@ body {
     background: rgba(23, 20, 32, 0.85);
     border-radius: 100vw;
     flex: 1;
-    overflow: hidden;
+    overflow: visible;
     padding: 0.25em 0.5em;
     position: relative;
+    z-index: 5;
 }
 .gooey-nav-container,
 .gooey-nav-container a,
@@ -135,6 +136,15 @@ body {
     text-decoration: none;
     white-space: nowrap;
 }
+.gooey-nav-container nav ul li .nav-trigger {
+    color: inherit;
+    cursor: default;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    white-space: nowrap;
+}
 .gooey-nav-container nav ul li:focus-within {
     box-shadow: 0 0 0.5px 1.5px #ffffff;
 }
@@ -157,6 +167,88 @@ body {
     opacity: 1;
     transform: scale(1);
 }
+/* Dropdown nav */
+.gooey-nav-container nav ul li.has-dropdown {
+    cursor: default;
+    position: relative;
+}
+.gooey-nav-container nav ul li.has-dropdown > a,
+.gooey-nav-container nav ul li.has-dropdown > .nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.gooey-nav-container nav ul li.has-dropdown > a::after,
+.gooey-nav-container nav ul li.has-dropdown > .nav-trigger::after {
+    content: "▾";
+    font-size: 10px;
+    opacity: 0.7;
+    background: none;
+    border-radius: 0;
+    inset: auto;
+    opacity: 0.7;
+    position: static;
+    transform: none;
+    transition: transform 0.2s ease;
+}
+.gooey-nav-container nav ul li.has-dropdown:hover > a::after,
+.gooey-nav-container nav ul li.has-dropdown:focus-within > a::after,
+.gooey-nav-container nav ul li.has-dropdown:hover > .nav-trigger::after,
+.gooey-nav-container nav ul li.has-dropdown:focus-within > .nav-trigger::after {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+.nav-dropdown {
+    background: rgba(23, 20, 32, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    min-width: 200px;
+    opacity: 0;
+    padding: 6px;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 200;
+}
+.nav-dropdown::before {
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    height: 12px;
+}
+.gooey-nav-container nav ul li.has-dropdown:hover .nav-dropdown,
+.gooey-nav-container nav ul li.has-dropdown:focus-within .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown a {
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    display: block;
+    font-family: 'ArialRoundedBoldLocal', 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 9px 14px !important;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+}
+.nav-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+}
 .gooey-nav-container .effect {
     display: grid;
     height: 0;
@@ -171,6 +263,7 @@ body {
 }
 .gooey-nav-container .effect.text {
     color: #ffffff;
+    display: none;
     font-size: 15px;
     transition: color 0.3s ease;
 }
@@ -184,7 +277,8 @@ body {
 .gooey-nav-container .effect.filter::before {
     background: #000000;
     content: "";
-    inset: -75px;
+    inset: 0;
+    border-radius: inherit;
     position: absolute;
     z-index: -2;
 }
@@ -332,8 +426,10 @@ body {
 .video-img {
     width: 100%;
 }
-.research-directions-section {
+.homepage-section-spacing {
     margin: 0 auto 80px;
+}
+.research-directions-section {
     max-width: 1520px;
     padding: 76px 7vw 20px;
     position: relative;
@@ -374,12 +470,14 @@ body {
     border: 1px solid rgba(17, 24, 39, 0.08);
     border-radius: 20px;
     box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     min-height: 210px;
     overflow: hidden;
     padding: 32px;
     position: relative;
+    text-decoration: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .research-direction-card::after {
@@ -437,18 +535,17 @@ body {
     position: relative;
     z-index: 1;
 }
-.research-direction-card__footer a {
+.research-direction-card__link {
     color: #1f75cf;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
     text-decoration: none;
 }
-.research-direction-card__footer a:hover {
+.research-direction-card:hover .research-direction-card__link {
     color: #0f5fb3;
 }
 .highlighted-projects-section {
-    margin: 0 auto 80px;
     max-width: 1520px;
     padding: 0 7vw;
     position: relative;
@@ -491,6 +588,7 @@ body {
     --glow-intensity: 0;
     --glow-radius: 200px;
     --glow-color-rgb: 132, 0, 255;
+    cursor: pointer;
     background: rgba(255, 255, 255, 0.72);
     border: 1px solid rgba(17, 24, 39, 0.08);
     border-radius: 20px;
@@ -1363,6 +1461,87 @@ height: 40px;
     position: relative;
     width: 100%;
 }
+/* ── Lightbox ──────────────────────────────────────────────── */
+.lightbox-overlay {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.25s ease;
+    z-index: 2000;
+}
+.lightbox-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 92vh;
+    max-width: 92vw;
+    padding: 52px 16px 24px;
+}
+.lightbox-img {
+    border-radius: 8px;
+    display: block;
+    max-height: 76vh;
+    max-width: 88vw;
+    object-fit: contain;
+    width: auto;
+}
+.lightbox-caption {
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-align: center;
+}
+.lightbox-close {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 22px;
+    height: 40px;
+    line-height: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: background 0.15s ease;
+    width: 40px;
+}
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.25); }
+.lightbox-prev,
+.lightbox-next {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    height: 44px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.15s ease;
+    width: 44px;
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-prev:hover,
+.lightbox-next:hover { background: rgba(255, 255, 255, 0.25); }
+/* ── end Lightbox ───────────────────────────────────────────── */
+
 .item-wrapper {
     cursor: pointer;
     display: flex;
@@ -2115,12 +2294,12 @@ height: 40px;
 }
 .latest-news-section {
     overflow: hidden;
-    padding: 72px 0 36px;
+    padding: 0;
     position: relative;
 }
 .latest-news-section::before,
 .latest-news-section::after {
-    content: "";
+    content: none;
     pointer-events: none;
     position: absolute;
 }
@@ -2416,7 +2595,7 @@ height: 40px;
     width: 100%;
 }
 .latest-news-section {
-    padding: 56px 0 24px;
+    padding: 0;
 }
 .latest-news-shell {
     padding: 0 20px;

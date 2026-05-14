@@ -21,6 +21,14 @@
                         <li class="active"><a href="#" data-i18n="common.nav.home">Home</a></li>
                         <li><a href="./people/people.html" data-i18n="common.nav.people">People</a></li>
                         <li><a href="./projects.html" data-i18n="common.nav.projects">Projects</a></li>
+                        <li class="has-dropdown">
+                            <span class="nav-trigger" data-i18n="common.nav.directions">Directions</span>
+                            <div class="nav-dropdown">
+                                <a href="./mainpage/directions/efficient-computing.html" data-i18n="page.direction.efficient-computing.heroTitle">Efficient Computing</a>
+                                <a href="./mainpage/directions/neuromorphic-ai.html" data-i18n="page.direction.neuromorphic-ai.heroTitle">Neuromorphic AI</a>
+                                <a href="./mainpage/directions/ai4science.html" data-i18n="page.direction.ai4science.heroTitle">AI4Science</a>
+                            </div>
+                        </li>
                         <li><a href="./news/news.html" data-i18n="common.nav.news">News & Media</a></li>
                         <li><a href="./publications/publications.html" data-i18n="common.nav.publications">Publications</a></li>
                         <li><a href="./activities/activities.html" data-i18n="common.nav.activities">Activities</a></li>
@@ -44,48 +52,19 @@
     </div>
 </div>
 </div>
+
 <!-- Research directions -->
-<section class="research-directions-section">
+<section class="research-directions-section homepage-section-spacing">
     <div class="research-directions-heading">
         <p>ABOUT US</p>
         <h2>Research Directions</h2>
     </div>
-    <div class="research-directions-grid">
-        <article class="research-direction-card">
-            <h3>Efficient Computing</h3>
-            <p>Brief Introduction...</p>
-            <div class="research-direction-card__footer">
-                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
-            </div>
-        </article>
-        <article class="research-direction-card">
-            <h3>Neuromorphic AI</h3>
-            <p>Brief Introduction...</p>
-            <div class="research-direction-card__footer">
-                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
-            </div>
-        </article>
-        <article class="research-direction-card">
-            <h3>AI4Science</h3>
-            <p>Brief Introduction...</p>
-            <div class="research-direction-card__footer">
-                <a href="./projects.html">Read More <span aria-hidden="true">→</span></a>
-            </div>
-        </article>
-    </div>
+    <div class="research-directions-grid" data-research-directions-grid></div>
 </section>
-<!-- Youtube video saction -->
-<div class="video">
-    <img class="video-img" src="./images/img2.jpg" alt="">
-</div>
-<section class="highlighted-projects-section">
-    <div class="highlighted-projects-heading">
-        <p data-i18n="page.home.highlighted.lead">Selected systems, benchmarks, and model-efficiency work</p>
-        <h2 data-i18n="page.home.highlighted.title">Highlighted Articles</h2>
-    </div>
-    <div class="card-grid bento-section" data-magic-bento></div>
-</section>
-<section class="latest-news-section">
+
+
+ <!-- Latest news -->
+ <section class="latest-news-section homepage-section-spacing">
     <div class="latest-news-shell">
         <div class="latest-news-heading">
             <p data-i18n="page.home.newsLead">From the lab</p>
@@ -94,7 +73,18 @@
         <div class="latest-news-stream" data-news-cards data-news-limit="6"></div>
     </div>
 </section>
+
+ <!-- Highlighted projects -->
+<section class="highlighted-projects-section homepage-section-spacing">
+    <div class="highlighted-projects-heading">
+        <p data-i18n="page.home.highlighted.lead">Selected systems, benchmarks, and model-efficiency work</p>
+        <h2 data-i18n="page.home.highlighted.title">Highlighted Articles</h2>
+    </div>
+    <div class="card-grid bento-section" data-magic-bento></div>
+</section>
+
 <!--
+Research directions -
 Hero section-3
 <div class="hero">
     <h1 style="order: -2;" data-i18n="page.home.researchTitle">Our Research</h1>
@@ -140,7 +130,7 @@ Hero section-5
 <div style="background-color: #000000;">
     <hr class="bar">
 </div>
-<div class="bottom-section">
+<!-- <div class="bottom-section"> -->
     <!-- <div>
         <h3 data-i18n="common.footer.about">About</h3>
         <a href="#" data-i18n="common.footer.home">Home</a>
@@ -175,10 +165,11 @@ Hero section-5
         <a href="#" data-i18n="common.footer.neuromorphic">Neuromorphic AI</a>
         <a href="#" data-i18n="common.footer.ai4science">AI4Science</a>
     </div> -->
-
-</div>
+<!-- </div> -->
 <script src="./js/grainient.js"></script>
 <script src="./js/i18n.js"></script>
+<script src="./js/directions-data.js"></script>
+<script src="./js/research-directions.js"></script>
 <script src="./js/card-nav.js"></script>
 <script src="./js/page-transition.js"></script>
 <script src="./js/cover-data.js"></script>
@@ -186,7 +177,7 @@ Hero section-5
 <script src="./js/highlighted-projects-data.js"></script>
 <script src="./js/magic-bento.js"></script>
 <script src="./js/split-text.js"></script>
-<script src="./js/news-data.js"></script>
+<script src="./news/news-data.js"></script>
 <script src="./js/news-cards.js"></script>
 </body>
 </html>
