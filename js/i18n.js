@@ -218,6 +218,7 @@
     "dynamic.news.error": { en: "Unable to load news right now.", zh: "暂时无法加载新闻内容。" },
     "dynamic.news.empty": { en: "News coming soon.", zh: "新闻内容即将上线。" },
     "dynamic.news.readMore": { en: "Read More", zh: "查看更多" },
+    "dynamic.news.loadMore": { en: "Load More", zh: "加载更多" },
     "dynamic.directions.error": {
       en: "Unable to load research directions.",
       zh: "无法加载研究方向内容。"

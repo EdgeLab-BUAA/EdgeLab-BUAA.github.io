@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <a class="publication-detail-back" href="./publications.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Back to publications</a>
       <div class="publication-detail-tags">
         <span>${esc(paper.group || paper.year || "Publication")}</span>
-        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>${esc(paper.year || "")}</span>
+        ${String(paper.group) !== String(paper.year) ? `<span><i class="fa-regular fa-calendar" aria-hidden="true"></i>${esc(paper.year || "")}</span>` : ""}
         ${paper.award ? `<span class="is-award">${esc(paper.award)}</span>` : ""}
       </div>
       <h1>${esc(title)}</h1>
@@ -93,11 +93,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         <p>${esc(venue)}</p>
       </section>
     </section>
+    ${paper.cover_image ? `
     <section class="publication-detail-card publication-detail-media-card">
       <h2><i class="fa-solid fa-image" aria-hidden="true"></i>Preview</h2>
       <div class="publication-detail-preview">
         ${renderPreview(paper, title)}
       </div>
-    </section>
+    </section>` : ""}
   `;
 });

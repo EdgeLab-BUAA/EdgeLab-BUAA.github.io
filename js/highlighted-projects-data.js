@@ -12,7 +12,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2026,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/imgs/dynamic-parallel.png"
+      "cover_image": "mainpage/highlighted-research/imgs/dynamic-parallel.png",
+      "link": "./publications/publication-detail.html?id=P001"
     },
     {
       "id": "P002",
@@ -25,7 +26,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2026,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png"
+      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png",
+      "link": "./publications/publication-detail.html?id=P002"
     },
     {
       "id": "P003",
@@ -38,7 +40,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "Best Paper Award",
       "award_zh": "最佳论文奖",
-      "cover_image": "mainpage/highlighted-research/imgs/ptq4sam.png"
+      "cover_image": "mainpage/highlighted-research/imgs/ptq4sam.png",
+      "link": "./publications/publication-detail.html?id=P003"
     },
     {
       "id": "P004",
@@ -51,7 +54,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png"
+      "cover_image": "mainpage/highlighted-research/imgs/llm-quant-survey.png",
+      "link": "./publications/publication-detail.html?id=P004"
     },
     {
       "id": "P005",
@@ -64,7 +68,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "Outstanding Paper Award",
       "award_zh": "杰出论文奖",
-      "cover_image": "mainpage/highlighted-research/imgs/compression-large-language-models.png"
+      "cover_image": "mainpage/highlighted-research/imgs/compression-large-language-models.png",
+      "link": "./publications/publication-detail.html?id=P005"
     },
     {
       "id": "P006",
@@ -77,7 +82,8 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
       "year": 2025,
       "award": "",
       "award_zh": "",
-      "cover_image": "mainpage/highlighted-research/imgs/da-kd.png"
+      "cover_image": "mainpage/highlighted-research/imgs/da-kd.png",
+      "link": "./publications/publication-detail.html?id=P006"
     }
   ]
 };

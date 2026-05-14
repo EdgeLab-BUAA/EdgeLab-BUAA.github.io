@@ -26,21 +26,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const depth = (scriptSrc.match(/\.\.\//g) || []).length;
   const rootPrefix = depth > 0 ? '../'.repeat(depth) : './';
 
-  let items = [];
-  try {
-    const response = await fetch("./news.json");
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    items = Array.isArray(data.items) ? data.items : [];
-  } catch {
-    const fallback = window.__LAB_NEWS__;
-    items = Array.isArray(fallback?.items) ? fallback.items : [];
-    if (!items.length) {
-      sections.forEach((section) => {
-        section.innerHTML = `<p class="news-cards-empty">${esc(t("dynamic.news.error"))}</p>`;
-      });
-      return;
-    }
+  const items = Array.isArray(window.__LAB_NEWS__?.items) ? window.__LAB_NEWS__.items : [];
+  if (!items.length) {
+    sections.forEach((section) => {
+      section.innerHTML = `<p class="news-cards-empty">${esc(t("dynamic.news.error"))}</p>`;
+    });
+    return;
   }
 
   const renderCard = (item) => {
@@ -110,14 +101,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
+  const bindLoadMore = (section, limit, step) => {
+    const button = section.querySelector("[data-news-load-more]");
+    if (!button) return;
+    button.addEventListener("click", () => {
+      const current = Number(section.dataset.newsVisibleCount || limit || items.length);
+      section.dataset.newsVisibleCount = String(Math.min(items.length, current + step));
+      render();
+    });
+  };
+
   const render = () => {
     sections.forEach((section) => {
       const limit = Number(section.dataset.newsLimit || 0);
-      const subset = limit > 0 ? items.slice(0, limit) : items;
+      const step = Number(section.dataset.newsStep || 3) || 3;
+      const visibleCount = limit > 0
+        ? Math.min(
+            items.length,
+            Number(section.dataset.newsVisibleCount || limit)
+          )
+        : items.length;
+      const subset = limit > 0 ? items.slice(0, visibleCount) : items;
+      const showLoadMore = limit > 0 && items.length > limit && visibleCount < items.length;
+
       section.innerHTML = subset.length
-        ? subset.map(renderCard).join("\n")
+        ? `
+          ${subset.map(renderCard).join("\n")}
+          ${showLoadMore ? `
+            <div class="news-load-more-shell">
+              <button class="news-load-more" type="button" data-news-load-more>${esc(t("dynamic.news.loadMore"))}</button>
+            </div>
+          ` : ""}
+        `
         : `<p class="news-cards-empty">${esc(t("dynamic.news.empty"))}</p>`;
       bindHoverEffects(section);
+      bindLoadMore(section, limit, step);
     });
   };
 

@@ -9,7 +9,7 @@ window.__LAB_NEWS__ = {
       "title_zh": "春游团建",
       "excerpt": "Beijing Olympic Forest Park",
       "date": "2025-04",
-      "image": "activities/team-building/00013.jpg",
+      "image": "activities/team-building/imgs/00013.jpg",
       "link": "./activities/activities.html#A013"
     },
     {
@@ -20,8 +20,8 @@ window.__LAB_NEWS__ = {
       "title_zh": "",
       "excerpt": "Annual Conference on Neural Information Processing Systems (NeurIPS), 2024.",
       "date": "2024",
-      "image": "news/P010/qvgen.png",
-      "link": "./publications.html#P010"
+      "image": "publications/imgs/qvgen.png",
+      "link": "./publications/publication-detail.html?id=P010"
     }
   ]
 };

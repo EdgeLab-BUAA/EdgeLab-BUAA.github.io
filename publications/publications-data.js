@@ -26,12 +26,12 @@ window.__LAB_PAPERS__ = {
       "year": 2026,
       "citations": 0,
       "scholar_link": "",
-      "paper_link": "",
+      "paper_link": "https://ojs.aaai.org/index.php/AAAI/article/view/39264",
       "code_link": "",
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cmedbench.jpg"
     },
     {
       "id": "P003",
@@ -63,7 +63,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P004/llm-quant-survey.png"
+      "cover_image": "imgs/llm-quant-survey.png"
     },
     {
       "id": "P005",
@@ -95,7 +95,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P006/da-kd.png"
+      "cover_image": "imgs/da-kd.png"
     },
     {
       "id": "P007",
@@ -223,7 +223,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P014/compression-large-language-models.png"
+      "cover_image": "imgs/compression-large-language-models.png"
     },
     {
       "id": "P015",
@@ -255,7 +255,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P016/ptq4sam.png"
+      "cover_image": "imgs/ptq4sam.png"
     },
     {
       "id": "P017",
@@ -271,7 +271,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P017/reg-ptq.png"
+      "cover_image": "imgs/reg-ptq.png"
     },
     {
       "id": "P018",
@@ -303,7 +303,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": "papers/P019/db-llm.png"
+      "cover_image": "imgs/db-llm.png"
     },
     {
       "id": "P020",

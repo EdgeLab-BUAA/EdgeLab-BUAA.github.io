@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           ? `<div class="magic-bento-card__image"><img src="./${escapeHtml(project.cover_image)}" alt="${escapeHtml(title)} cover"></div>`
           : "";
         return `
-          <article class="magic-bento-card magic-bento-card--border-glow" style="--glow-color-rgb: ${glowColor}">
+          <article class="magic-bento-card magic-bento-card--border-glow" style="--glow-color-rgb: ${glowColor}" data-link="${escapeHtml(project.link || '')}">
             ${image}
             <div class="magic-bento-card__header">
               <div class="magic-bento-card__label">${escapeHtml(project.group || t("common.project"))}</div>
@@ -76,6 +76,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   renderCards();
   document.addEventListener("languagechange", renderCards);
+
+  grid.addEventListener("click", (e) => {
+    const card = e.target.closest("[data-link]");
+    if (card?.dataset.link) window.location.href = card.dataset.link;
+  });
 
   let cards = Array.from(grid.querySelectorAll(".magic-bento-card"));
   if (!cards.length || isMobile) return;

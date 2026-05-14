@@ -27,13 +27,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const scholarLink = m.scholar
       ? `<a href="${esc(m.scholar)}" target="_blank" class="person-link" title="${esc(t("dynamic.people.title.scholar"))}"><i class="fa-solid fa-graduation-cap"></i></a>`
-      : `<a href="#" class="person-link person-link-empty" title="${esc(t("dynamic.people.title.scholar"))}"><i class="fa-solid fa-graduation-cap"></i></a>`;
+      : "";
 
     const githubLink = m.github
       ? `<a href="${esc(m.github)}" target="_blank" class="person-link" title="${esc(t("dynamic.people.title.github"))}"><i class="fa-brands fa-github"></i></a>`
-      : `<a href="#" class="person-link person-link-empty" title="${esc(t("dynamic.people.title.github"))}"><i class="fa-brands fa-github"></i></a>`;
+      : "";
 
-    const emailBtn = `<button class="person-link email-btn" data-email="${esc(m.email)}" title="${esc(t("dynamic.people.title.copyEmail"))}"${!m.email ? " disabled" : ""}><i class="fa-solid fa-envelope"></i></button>`;
+    const emailBtn = m.email
+      ? `<button class="person-link email-btn" data-email="${esc(m.email)}" title="${esc(t("dynamic.people.title.copyEmail"))}"><i class="fa-solid fa-envelope"></i></button>`
+      : "";
 
     const homepageLink = m.homepage
       ? `<a href="${esc(m.homepage)}" target="_blank" class="person-link" title="${esc(t("dynamic.people.title.homepage"))}"><i class="fa-solid fa-house"></i></a>`
