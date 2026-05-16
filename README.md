@@ -20,3 +20,11 @@ https://user-images.githubusercontent.com/44089465/194747811-3a91a3c4-a433-4337-
 ## Snapshot
 
 ![Desktop](thumbnail.png)
+
+## Markdown Manifest
+
+After adding or updating files in `publications/md`, regenerate the local markdown manifest so publication detail pages can render introductions correctly under `file://`:
+
+```bash
+node scripts/generate-markdown-manifest.mjs
+```

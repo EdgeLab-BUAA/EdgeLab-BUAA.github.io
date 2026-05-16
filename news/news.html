@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="publications-page">
+<body class="publications-page news-timeline-page">
     <header class="head-container publication-head">
         <div class="gooey-nav-shell">
             <a href="../index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
@@ -40,13 +40,9 @@
     </header>
 
     <main class="news-page-main">
-        <section class="latest-news-section latest-news-section--page">
-            <div class="latest-news-shell">
-                <div class="latest-news-heading">
-                    <p>Updates and highlights</p>
-                    <h2>Latest News</h2>
-                </div>
-                <div class="latest-news-stream" data-news-cards></div>
+        <section class="latest-news-section latest-news-section--page news-timeline-section">
+            <div class="latest-news-shell news-timeline-shell">
+                <div class="latest-news-stream news-timeline-stream" data-news-cards data-news-variant="timeline"></div>
             </div>
         </section>
     </main>
@@ -66,42 +62,7 @@
     <div style="background-color: #000000;">
         <hr class="bar">
     </div>
-    <!-- <div class="bottom-section">
-        <div>
-            <h3 data-i18n="common.footer.about">About</h3>
-            <a href="../index.html" data-i18n="common.footer.home">Home</a>
-            <a href="../people/people.html" data-i18n="common.footer.people">People</a>
-            <a href="#" data-i18n="common.footer.mission">Mission</a>
-            <a href="../contact.html" data-i18n="common.footer.contact">Contact</a>
-        </div>
-        <div>
-            <h3 data-i18n="common.footer.publications">Publications</h3>
-            <a href="../publications/publications.html" data-i18n="common.footer.papers">Papers</a>
-            <a href="#" data-i18n="common.footer.projects">Projects</a>
-            <a href="#" data-i18n="common.footer.datasets">Datasets</a>
-            <a href="#" data-i18n="common.footer.code">Code</a>
-        </div>
-        <div>
-            <h3 data-i18n="common.footer.awards">Awards</h3>
-            <a href="#" data-i18n="common.footer.competitions">Competitions</a>
-            <a href="#" data-i18n="common.footer.honors">Honors</a>
-            <a href="#" data-i18n="common.footer.grants">Grants</a>
-            <a href="#" data-i18n="common.footer.media">Media</a>
-        </div>
-        <div>
-            <h3 data-i18n="common.footer.activities">Activities</h3>
-            <a href="../activities/activities.html" data-i18n="common.footer.workshops">Workshops</a>
-            <a href="../activities/activities.html" data-i18n="common.footer.teamBuilding">Team-building</a>
-            <a href="#" data-i18n="common.footer.openings">Openings</a>
-        </div>
-        <div>
-            <h3 data-i18n="common.footer.research">Research</h3>
-            <a href="#" data-i18n="common.footer.modelEfficiency">Model Efficiency</a>
-            <a href="#" data-i18n="common.footer.dataEfficiency">Data Efficiency</a>
-            <a href="#" data-i18n="common.footer.neuromorphic">Neuromorphic AI</a>
-            <a href="#" data-i18n="common.footer.ai4science">AI4Science</a>
-        </div>
-    </div> -->
+  
     <script src="../js/grainient.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/card-nav.js"></script>

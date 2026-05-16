@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       .map((project) => {
         const title = lang === "zh" ? project.title_zh || project.title : project.title;
         const authors = lang === "zh" ? project.authors_zh || project.authors : project.authors;
+        const summary = lang === "zh" ? project.summary_zh || project.summary || "" : project.summary || project.summary_zh || "";
         const venue = lang === "zh" ? project.venue_zh || project.venue : project.venue;
         const award = lang === "zh" ? project.award_zh || project.award : project.award;
         const image = project.cover_image
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
             <div class="magic-bento-card__content">
               <h3 class="magic-bento-card__title">${escapeHtml(title || initials(project.id || "AI"))}</h3>
-              <p class="magic-bento-card__description">${escapeHtml(summarizeAuthors(authors || ""))}</p>
+              <p class="magic-bento-card__description">${escapeHtml(summary || summarizeAuthors(authors || ""))}</p>
               <div class="magic-bento-card__meta">
                 <p class="magic-bento-card__venue">${escapeHtml(venue || "")}${award ? ` (${escapeHtml(award)})` : ""}</p>
                 <span class="magic-bento-card__year">${escapeHtml(project.year || "")}</span>

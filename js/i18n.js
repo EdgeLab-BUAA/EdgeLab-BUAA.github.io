@@ -108,7 +108,7 @@
     "page.publications.title": { en: "Publications | Laboratory Homepage", zh: "论文发表 | 实验室主页" },
     "page.publications.heroLead": { en: "Selected papers, benchmarks, and systems work", zh: "精选论文、基准与系统研究" },
     "page.publications.heroTitle": { en: "Publications", zh: "论文发表" },
-    "page.publications.searchPlaceholder": { en: "e.g. Title, Author, Venue, Year", zh: "例如：标题、作者、会议、年份" },
+    "page.publications.searchPlaceholder": { en: "e.g. Title, Author, Venue, Year, Tags", zh: "例如：标题、作者、会议、年份、标签" },
     "page.publications.initialCount": { en: "Showing 0 of 0 papers", zh: "显示 0 / 0 篇论文" },
     "page.publications.note": { en: "*Co-lead authors, ✉ Corresponding author(s);", zh: "*共同一作，✉ 通讯作者；" },
     "page.publications.empty": { en: "No papers found.", zh: "未找到论文。" },
