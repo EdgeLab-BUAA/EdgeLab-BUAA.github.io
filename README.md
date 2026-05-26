@@ -28,3 +28,4 @@ After adding or updating files in `publications/md`, regenerate the local markdo
 ```bash
 node scripts/generate-markdown-manifest.mjs
 ```
+
