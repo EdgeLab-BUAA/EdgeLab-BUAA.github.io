@@ -5,9 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const i18n = window.labI18n;
 
   const coverDir = root.dataset.coverDir || "./mainpage/cover/";
-  const fallbackImages = (window.__LAB_COVER__ && window.__LAB_COVER__.length)
-    ? window.__LAB_COVER__
-    : ["00002.jpg", "00006.jpg", "00013.jpg", "00014.jpg"].map((name) => `${coverDir}${name}`);
+  const coverImages = Array.isArray(window.__LAB_COVER__)
+    ? window.__LAB_COVER__.filter(Boolean)
+    : [];
+  const fallbackImages = coverImages.length
+    ? coverImages
+    : ["00002.jpg", "00006.jpg", "00012.jpg", "00013.jpg", "00014.jpg"].map((name) => `${coverDir}${name}`);
   const config = {
     cardDistance: 60,
     verticalDistance: 70,
@@ -52,24 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.transform = `translate(-50%, -50%) translate3d(${slot.x}px, ${slot.y}px, ${slot.z}px) skewY(${config.skewAmount}deg)`;
   };
 
-  const imagesReady = (images) =>
-    Promise.all(
-      images.map(
-        (src) =>
-          new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(src);
-            img.onerror = () => resolve(null);
-            img.src = src;
-          })
-      )
-    ).then((items) => items.filter(Boolean));
-
   const setup = async () => {
-    const directoryImages = await readDirectoryImages();
+    const directoryImages = coverImages.length ? [] : await readDirectoryImages();
     const imageSources = directoryImages.length ? directoryImages : fallbackImages;
-    const validImages = await imagesReady(imageSources);
-    const cards = createCards(validImages.length ? validImages : fallbackImages);
+    const cards = createCards(imageSources);
     const order = cards.map((_, index) => index);
 
     cards.forEach((card, index) => {
