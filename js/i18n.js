@@ -190,9 +190,8 @@
     },
 
     "dynamic.people.faculty": { en: "Faculty", zh: "教师" },
-    "dynamic.people.team1": { en: "Team 1", zh: "第一组" },
-    "dynamic.people.team2": { en: "Team 2", zh: "第二组" },
-    "dynamic.people.team3": { en: "Team 3", zh: "第三组" },
+    "dynamic.people.phd": { en: "Ph.D. Students", zh: "博士研究生" },
+    "dynamic.people.master": { en: "Master's Students", zh: "硕士研究生" },
     "dynamic.people.alumni": { en: "Alumni", zh: "校友" },
     "dynamic.people.error": { en: "Unable to load people data.", zh: "无法加载成员数据。" },
     "dynamic.people.emailCopied": { en: "Email copied!", zh: "邮箱已复制！" },

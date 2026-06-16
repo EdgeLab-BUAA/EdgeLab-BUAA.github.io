@@ -72,10 +72,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const SECTION_LABELS = {
     faculty: "dynamic.people.faculty",
-    team1: "dynamic.people.team1",
-    team2: "dynamic.people.team2",
-    team3: "dynamic.people.team3",
+    phd: "dynamic.people.phd",
+    master: "dynamic.people.master",
     alumni: "dynamic.people.alumni",
+  };
+
+  const getSectionKey = (m) => {
+    if (m.team === "faculty" || m.team === "alumni") return m.team;
+
+    const role = `${m.role_en || ""} ${m.role_zh || ""}`.toLowerCase();
+    if (/ph\.?\s*d/.test(role) || role.includes("博士")) return "phd";
+    if (role.includes("master") || role.includes("硕士")) return "master";
+
+    return "master";
   };
 
   const renderSection = (team, members) => {
@@ -102,11 +111,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const grouped = new Map();
   for (const m of data.members) {
-    if (!grouped.has(m.team)) grouped.set(m.team, []);
-    grouped.get(m.team).push(m);
+    const sectionKey = getSectionKey(m);
+    if (!grouped.has(sectionKey)) grouped.set(sectionKey, []);
+    grouped.get(sectionKey).push(m);
   }
 
-  const order = ["faculty", "team1", "team2", "team3", "alumni"];
+  const order = ["faculty", "phd", "master", "alumni"];
   const renderAll = () => {
     main.innerHTML = order
       .filter((team) => grouped.has(team))
