@@ -79,7 +79,10 @@ body {
 }
 .gooey-logo img {
     display: block;
-    height: 38px;
+    height: 52px;
+    max-width: min(300px, 28vw);
+    object-fit: contain;
+    width: auto;
 }
 .gooey-nav-container {
     --color-1: #ffffff;
@@ -2917,7 +2920,8 @@ height: 40px;
     top: 1.2em;
 }
 .gooey-logo img {
-    height: 32px;
+    height: 42px;
+    max-width: min(260px, 72vw);
 }
 .gooey-nav-container {
     max-width: 100%;

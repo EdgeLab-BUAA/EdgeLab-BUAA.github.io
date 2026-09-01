@@ -35,10 +35,10 @@
     "common.footer.teamBuilding": { en: "Team-building", zh: "团建" },
     "common.footer.openings": { en: "Openings", zh: "招生招聘" },
     "common.footer.research": { en: "Research", zh: "研究方向" },
-    "common.footer.modelEfficiency": { en: "Model Efficiency", zh: "模型高效化" },
-    "common.footer.dataEfficiency": { en: "Data Efficiency", zh: "数据高效化" },
-    "common.footer.neuromorphic": { en: "Neuromorphic AI", zh: "神经形态 AI" },
-    "common.footer.ai4science": { en: "AI4Science", zh: "AI4Science" },
+    "common.footer.modelEfficiency": { en: "Efficient foundation model", zh: "高效基础模型" },
+    "common.footer.dataEfficiency": { en: "Efficient embodied AI", zh: "高效具身智能" },
+    "common.footer.neuromorphic": { en: "Efficient embodied AI", zh: "高效具身智能" },
+    "common.footer.ai4science": { en: "Efficient AI memory", zh: "高效 AI 记忆" },
     "common.langToggle": { en: "中文", zh: "EN" },
     "common.langToggleAria": { en: "Switch to Chinese", zh: "切换到英文" },
     "common.project": { en: "Project", zh: "项目" },
@@ -46,8 +46,8 @@
     "page.home.title": { en: "Laboratory Homepage", zh: "实验室主页" },
     "page.home.heroMainTitle": { en: "Efficient and scalable AI computing", zh: "高效可扩展的 AI 计算" },
     "page.home.heroMainBody": {
-      en: "Our lab studies model efficiency, data efficiency, label efficiency, neuromorphic computing, and AI4Science, building practical learning systems that are smaller, faster, and easier to deploy.",
-      zh: "我们聚焦模型效率、数据效率、标签效率、神经形态计算与 AI4Science，致力于构建更小、更快、更易部署的实用智能学习系统。"
+      en: "Our lab studies efficient AI computing, building practical learning systems that are smaller, faster, and easier to deploy.",
+      zh: "我们聚焦高效 AI 计算，致力于构建更小、更快、更易部署的实用智能学习系统。"
     },
     "page.home.hero2Title": {
       en: "Research for efficient, deployable, and scientific AI",
@@ -58,9 +58,9 @@
     "page.home.counter.data": { en: "Data", zh: "数据" },
     "page.home.counter.efficiency": { en: "Efficiency", zh: "效率" },
     "page.home.counter.snn": { en: "SNN", zh: "SNN" },
-    "page.home.counter.neuromorphic": { en: "Neuromorphic AI", zh: "神经形态 AI" },
+    "page.home.counter.neuromorphic": { en: "Efficient embodied AI", zh: "高效具身智能" },
     "page.home.counter.science": { en: "Science", zh: "科学" },
-    "page.home.counter.ai4science": { en: "AI4Science", zh: "AI4Science" },
+    "page.home.counter.ai4science": { en: "Efficient AI memory", zh: "高效 AI 记忆" },
     "page.home.highlighted.lead": {
       en: "Selected systems, benchmarks, and model-efficiency work",
       zh: "精选系统、基准与模型高效化研究"
@@ -236,25 +236,25 @@
       zh: "即将上线 — 查看<a href=\"../../people/people.html\" style=\"color:#5227ff;\">全部成员列表</a>。"
     },
 
-    "page.direction.efficient-computing.pageTitle": { en: "Efficient Computing | Laboratory Homepage", zh: "高效计算 | 实验室主页" },
-    "page.direction.efficient-computing.heroTitle": { en: "Efficient Computing", zh: "高效计算" },
+    "page.direction.efficient-computing.pageTitle": { en: "Efficient foundation model | Laboratory Homepage", zh: "高效基础模型 | 实验室主页" },
+    "page.direction.efficient-computing.heroTitle": { en: "Efficient foundation model", zh: "高效基础模型" },
     "page.direction.efficient-computing.intro": {
-      en: "Compression, quantization, distillation, and systems that make models smaller, faster, and cheaper to run—from LLMs to vision and segmentation. Our work spans post-training quantization, structured/unstructured sparsity, knowledge distillation, and efficient deployment pipelines.",
-      zh: "压缩、量化、蒸馏与系统优化，让模型更小、更快、更省算力，覆盖大语言模型、视觉与分割等方向。我们的工作涵盖后训练量化、结构化/非结构化稀疏、知识蒸馏与高效部署流水线。"
+      en: "We study compression, quantization, distillation, and deployment methods for foundation models that reduce computation and memory cost while preserving capability.",
+      zh: "我们研究基础模型的压缩、量化、蒸馏与部署方法，在保持模型能力的同时降低计算和存储成本。"
     },
 
-    "page.direction.neuromorphic-ai.pageTitle": { en: "Neuromorphic AI | Laboratory Homepage", zh: "神经形态 AI | 实验室主页" },
-    "page.direction.neuromorphic-ai.heroTitle": { en: "Neuromorphic AI", zh: "神经形态 AI" },
+    "page.direction.neuromorphic-ai.pageTitle": { en: "Efficient embodied AI | Laboratory Homepage", zh: "高效具身智能 | 实验室主页" },
+    "page.direction.neuromorphic-ai.heroTitle": { en: "Efficient embodied AI", zh: "高效具身智能" },
     "page.direction.neuromorphic-ai.intro": {
-      en: "Spiking and event-driven paradigms that target low latency and energy-aware inference at the edge and in neuromorphic hardware. We explore spike-based neural architectures, on-chip learning, and bio-inspired computing for next-generation AI systems.",
-      zh: "脉冲与事件驱动范式，面向低延迟、低功耗推理，服务边缘端与神经形态硬件上的智能应用。我们探索基于脉冲的神经网络架构、片上学习与仿生计算，推动下一代 AI 系统。"
+      en: "We develop efficient perception, reasoning, and action learning for embodied AI systems under real-world compute, memory, and latency constraints.",
+      zh: "我们面向真实场景中的计算、存储与时延约束，研究高效具身智能系统的感知、推理与行动学习方法。"
     },
 
-    "page.direction.ai4science.pageTitle": { en: "AI4Science | Laboratory Homepage", zh: "AI4Science | 实验室主页" },
-    "page.direction.ai4science.heroTitle": { en: "AI4Science", zh: "AI4Science" },
+    "page.direction.ai4science.pageTitle": { en: "Efficient AI memory | Laboratory Homepage", zh: "高效 AI 记忆 | 实验室主页" },
+    "page.direction.ai4science.heroTitle": { en: "Efficient AI memory", zh: "高效 AI 记忆" },
     "page.direction.ai4science.intro": {
-      en: "Learning methods for scientific discovery and domain benchmarks—turning large models and efficient training into practical scientific tools. We develop AI-driven approaches for accelerating research across biology, materials science, and beyond.",
-      zh: "面向科学发现的学习方法与领域基准，把大模型与高效训练转化为可落地的科研工具。我们开发 AI 驱动的方法，加速生物、材料科学等领域的科研进程。"
+      en: "We explore efficient memory, retrieval, and long-context mechanisms that help AI systems store, access, and reuse knowledge more effectively.",
+      zh: "我们探索高效记忆、检索与长上下文机制，帮助 AI 系统更有效地存储、访问和复用知识。"
     }
   };
 
