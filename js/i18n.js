@@ -44,10 +44,10 @@
     "common.project": { en: "Project", zh: "项目" },
 
     "page.home.title": { en: "Laboratory Homepage", zh: "实验室主页" },
-    "page.home.heroMainTitle": { en: "Efficient and scalable computing", zh: "高效可扩展计算" },
+    "page.home.heroMainTitle": { en: "Efficient AI Computing", zh: "高效 AI 计算" },
     "page.home.heroMainBody": {
-      en: "Our lab studies efficient AI computing across three directions: efficient LLM/VLM, efficient embodied AI, and efficient AI systems. We make large models smaller, faster, and easier to deploy on real-world hardware.",
-      zh: "课题组聚焦高效 AI 计算，研究方向包括高效大语言/视觉语言模型、高效具身智能与高效 AI 系统，致力于让大模型更小、更快、更易于在真实硬件上部署。"
+      en: "Our lab studies efficient AI computing, which aims to make large models smaller, faster, and easier to deploy on real-world hardware.",
+      zh: "课题组聚焦高效 AI 计算，致力于让大模型更小、更快、更易于在真实硬件上部署。"
     },
     "page.home.hero2Title": {
       en: "Research for efficient, deployable, and scientific AI",

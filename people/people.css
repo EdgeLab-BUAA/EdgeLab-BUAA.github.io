@@ -555,7 +555,7 @@
        push the hero text below that stack so they don't overlap. */
     .people-page .publication-head {
         min-height: 0;
-        padding-top: 206px;
+        padding-top: 232px;
         padding-bottom: 72px;
     }
 }

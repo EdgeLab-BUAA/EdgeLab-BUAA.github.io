@@ -79,8 +79,8 @@ body {
 }
 .gooey-logo img {
     display: block;
-    height: 52px;
-    max-width: min(300px, 28vw);
+    height: 72px;
+    max-width: min(320px, 30vw);
     object-fit: contain;
     width: auto;
 }
@@ -592,7 +592,7 @@ body {
     --glow-radius: 200px;
     --glow-color-rgb: 132, 0, 255;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.72);
+    background: #ffffff;
     border: 1px solid rgba(17, 24, 39, 0.08);
     border-radius: 20px;
     display: flex;
@@ -676,6 +676,7 @@ body {
 }
 .magic-bento-card__image {
     border-radius: 14px;
+    display: none;
     inset: 0;
     opacity: 0.1;
     overflow: hidden;
@@ -2920,7 +2921,7 @@ height: 40px;
     top: 1.2em;
 }
 .gooey-logo img {
-    height: 42px;
+    height: 56px;
     max-width: min(260px, 72vw);
 }
 .gooey-nav-container {
