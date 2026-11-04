@@ -17,7 +17,7 @@ window.__LAB_HIGHLIGHTED_PROJECTS__ = {
     },
     {
       "id": "P002",
-      "title": "CMedBench: Comprehensive Evaluation of the LLM Compression Impact on Medical Applications",
+      "title": "CMedBench: A Comprehensive Benchmark for Efficient Medical Large Language Models",
       "title_zh": "CMedBench：面向医疗应用的大语言模型压缩影响综合评测",
       "authors": "Shengbo Gao, Jinyang Guo✉, Lixian Su, Yifu Ding, Shiqiao Gu, Aishan Liu, Yuqing Ma, Zhiwang Zhang, Xianglong Liu",
       "authors_zh": "Shengbo Gao, Jinyang Guo✉, Lixian Su, Yifu Ding, Shiqiao Gu, Aishan Liu, Yuqing Ma, Zhiwang Zhang, Xianglong Liu",

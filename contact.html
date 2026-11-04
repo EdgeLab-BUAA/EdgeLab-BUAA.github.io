@@ -151,6 +151,76 @@
         .form-field textarea {
             min-height: 130px;
         }
+        .contact-note {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: -8px 0 14px;
+        }
+        .contact-email-address {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0 0 22px;
+            overflow-wrap: anywhere;
+            user-select: all;
+        }
+        .contact-actions {
+            display: grid;
+            gap: 10px;
+        }
+        .contact-actions .contact-submit i,
+        .contact-actions .contact-submit span,
+        .contact-secondary i,
+        .contact-secondary span {
+            color: inherit;
+        }
+        .contact-secondary {
+            align-items: center;
+            border: 1.5px solid #d1d5db;
+            border-radius: 100vw;
+            color: #171420;
+            display: inline-flex;
+            font-family: 'ArialRoundedBoldLocal', 'Arial Rounded MT Bold', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            gap: 8px;
+            justify-content: center;
+            letter-spacing: 0.04em;
+            padding: 12px 28px;
+            text-decoration: none;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .contact-secondary:hover {
+            border-color: #5227ff;
+            color: #5227ff;
+        }
+        .contact-copied {
+            color: #047857;
+            font-size: 13px;
+            font-weight: 700;
+            margin: 12px 0 0;
+        }
+        .contact-copied i,
+        .contact-copied span {
+            color: inherit;
+        }
+        .contact-card-info {
+            border-top: 1px solid #e5e7eb;
+            margin-top: 22px !important;
+            padding-top: 18px !important;
+        }
+        .contact-card-info li,
+        .contact-card-info li span,
+        .contact-card-info a {
+            color: #4b5563 !important;
+        }
+        .contact-card-info li i {
+            color: #5227ff;
+        }
+        .contact-card-info a:hover {
+            color: #5227ff !important;
+        }
         .contact-submit {
             background: #171420;
             border: none;
@@ -237,7 +307,7 @@
     <!-- Contact Hero -->
     <section class="contact-hero">
         <div class="contact-hero-bg">
-            <img src="./mainpage/cover/00002.jpg" alt="Contact background">
+            <img src="./activities/team-building/imgs/00014.jpg" alt="EDGE Lab dinner, October 2026">
         </div>
         <div class="contact-hero-overlay"></div>
         <div class="contact-hero-content">
@@ -251,26 +321,18 @@
             <!-- Right: form -->
             <div class="contact-right">
                 <div class="contact-dialog">
-                    <h2 data-i18n="page.contact.formTitle">Leave a message</h2>
-                    <form id="contact-form">
-                        <div class="form-field">
-                            <label for="contact-name" data-i18n="page.contact.nameLabel">Your name</label>
-                            <input type="text" id="contact-name" name="name" data-i18n-placeholder="page.contact.namePlaceholder" placeholder="Name" />
-                        </div>
-                        <div class="form-field">
-                            <label for="contact-email" data-i18n="page.contact.emailLabel">Your email</label>
-                            <input type="email" id="contact-email" name="email" data-i18n-placeholder="page.contact.emailPlaceholder" placeholder="you@example.com" />
-                        </div>
-                        <div class="form-field">
-                            <label for="contact-message" data-i18n="page.contact.messageLabel">Message</label>
-                            <textarea id="contact-message" name="message" data-i18n-placeholder="page.contact.messagePlaceholder" placeholder="Write your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="contact-submit" data-i18n="page.contact.submit">Send Message</button>
-                    </form>
-                    <div id="form-success" class="form-success">
-                        <i class="fa-solid fa-circle-check success-icon"></i>
-                        <span data-i18n="page.contact.success">Thank you for reaching out. We will get back to you within a few days.</span>
+                    <h2 data-i18n="page.contact.emailTitle">Email us</h2>
+                    <p class="contact-note" data-i18n="page.contact.emailNote">For research collaborations, student recruitment, or anything else, write to:</p>
+                    <p class="contact-email-address" id="contact-email-address">jinyangguo@buaa.edu.cn</p>
+                    <div class="contact-actions">
+                        <button type="button" class="contact-submit" id="contact-copy"><i class="fa-solid fa-copy"></i> <span data-i18n="page.contact.copy">Copy email</span></button>
+                        <a class="contact-secondary" href="mailto:jinyangguo@buaa.edu.cn"><i class="fa-solid fa-envelope"></i> <span data-i18n="page.contact.write">Write an email</span></a>
                     </div>
+                    <p class="contact-copied" id="contact-copied" role="status" hidden><i class="fa-solid fa-circle-check"></i> <span data-i18n="page.contact.copied">Email copied</span></p>
+                    <ul class="contact-info-list contact-card-info">
+                        <li><i class="fa-solid fa-location-dot"></i><span data-i18n="page.contact.address">Beihang University, No. 37 Xueyuan Road, Haidian District, Beijing, China</span></li>
+                        <li><i class="fa-solid fa-user-plus"></i><a href="./opening.html" data-i18n="page.contact.joinLink">Interested in joining the lab? See Openings</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -296,13 +358,29 @@
     <script src="./js/page-transition.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("contact-form");
-            const success = document.getElementById("form-success");
-            if (!form) return;
-            form.addEventListener("submit", (e) => {
-                e.preventDefault();
-                form.style.display = "none";
-                success.classList.add("visible");
+            const btn = document.getElementById("contact-copy");
+            const done = document.getElementById("contact-copied");
+            const address = document.getElementById("contact-email-address");
+            if (!btn || !address) return;
+            const showDone = () => {
+                done.hidden = false;
+                clearTimeout(done._t);
+                done._t = setTimeout(() => { done.hidden = true; }, 2500);
+            };
+            const selectAddress = () => {
+                const range = document.createRange();
+                range.selectNodeContents(address);
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+            };
+            btn.addEventListener("click", () => {
+                const email = address.textContent.trim();
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(email).then(showDone).catch(selectAddress);
+                } else {
+                    selectAddress();
+                }
             });
         });
     </script>

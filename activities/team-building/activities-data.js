@@ -1,53 +1,53 @@
 window.__LAB_ACTIVITIES__ = {
-  "generated_at": "2026-05-13T11:46:49.513Z",
+  "generated_at": "2026-11-04T14:30:00.000Z",
   "photos": [
     {
-      "id": "A001",
-      "category": "outdoor",
-      "title_en": "Team Building Outing",
-      "title_zh": "团建户外活动",
-      "location_en": "Beijing Suburb",
-      "location_zh": "北京郊区",
-      "date": "2024-06",
-      "photographer": "",
-      "image": "team-building/imgs/00001.jpg",
-      "height": 420
-    },
-    {
-      "id": "A002",
-      "category": "outdoor",
-      "title_en": "Climbing Xiangshan Group Photo",
-      "title_zh": "香山爬山小组合照",
-      "location_en": "Xiangshan, Beijing",
-      "location_zh": "北京香山",
-      "date": "2024-01",
-      "photographer": "",
-      "image": "team-building/imgs/00002.jpg",
-      "height": 300
-    },
-    {
-      "id": "A003",
-      "category": "outdoor",
-      "title_en": "Hiking Trip",
-      "title_zh": "爬山团建",
-      "location_en": "Fragrant Hills, Beijing",
-      "location_zh": "北京香山",
-      "date": "2024-04",
-      "photographer": "",
-      "image": "team-building/imgs/00003.jpg",
-      "height": 360
-    },
-    {
-      "id": "A004",
-      "category": "outdoor",
-      "title_en": "Research Retreat",
-      "title_zh": "学术研讨营",
+      "id": "A014",
+      "category": "meal",
+      "title_en": "Lab Dinner",
+      "title_zh": "课题组聚餐",
       "location_en": "Beijing",
       "location_zh": "北京",
-      "date": "2024-09",
+      "date": "2026-10",
       "photographer": "",
-      "image": "team-building/imgs/00004.jpg",
-      "height": 500
+      "image": "team-building/imgs/00014.jpg",
+      "height": 390
+    },
+    {
+      "id": "A013",
+      "category": "meal",
+      "title_en": "Dinner Gathering",
+      "title_zh": "年终聚餐",
+      "location_en": "Beijing",
+      "location_zh": "北京",
+      "date": "2025-12",
+      "photographer": "",
+      "image": "team-building/imgs/00013.jpg",
+      "height": 520
+    },
+    {
+      "id": "A012",
+      "category": "meal",
+      "title_en": "Dinner Gathering",
+      "title_zh": "年终聚餐",
+      "location_en": "Beijing",
+      "location_zh": "北京",
+      "date": "2025-02",
+      "photographer": "",
+      "image": "team-building/imgs/00012.jpg",
+      "height": 390
+    },
+    {
+      "id": "A011",
+      "category": "meal",
+      "title_en": "Welcome Party",
+      "title_zh": "新生欢迎晚会",
+      "location_en": "Beihang University",
+      "location_zh": "北京航空航天大学",
+      "date": "2025-01",
+      "photographer": "",
+      "image": "team-building/imgs/00011.jpg",
+      "height": 300
     },
     {
       "id": "A005",
@@ -62,6 +62,42 @@ window.__LAB_ACTIVITIES__ = {
       "height": 280
     },
     {
+      "id": "A008",
+      "category": "outdoor",
+      "title_en": "Sports Day",
+      "title_zh": "运动会",
+      "location_en": "Beihang University",
+      "location_zh": "北京航空航天大学",
+      "date": "2024-10",
+      "photographer": "",
+      "image": "team-building/imgs/00008.jpg",
+      "height": 520
+    },
+    {
+      "id": "A004",
+      "category": "outdoor",
+      "title_en": "Research Retreat",
+      "title_zh": "学术研讨营",
+      "location_en": "Beijing",
+      "location_zh": "北京",
+      "date": "2024-09",
+      "photographer": "",
+      "image": "team-building/imgs/00004.jpg",
+      "height": 500
+    },
+    {
+      "id": "A010",
+      "category": "meal",
+      "title_en": "Hotpot Gathering",
+      "title_zh": "火锅聚餐",
+      "location_en": "Beijing Happy Hotpot",
+      "location_zh": "北京高兴火锅",
+      "date": "2024-08",
+      "photographer": "",
+      "image": "team-building/imgs/00010.jpg",
+      "height": 450
+    },
+    {
       "id": "A006",
       "category": "outdoor",
       "title_en": "Summer Barbecue",
@@ -72,6 +108,18 @@ window.__LAB_ACTIVITIES__ = {
       "photographer": "",
       "image": "team-building/imgs/00006.jpg",
       "height": 430
+    },
+    {
+      "id": "A001",
+      "category": "outdoor",
+      "title_en": "Team Building Outing",
+      "title_zh": "团建户外活动",
+      "location_en": "Beijing Suburb",
+      "location_zh": "北京郊区",
+      "date": "2024-06",
+      "photographer": "",
+      "image": "team-building/imgs/00001.jpg",
+      "height": 420
     },
     {
       "id": "A007",
@@ -86,16 +134,16 @@ window.__LAB_ACTIVITIES__ = {
       "height": 340
     },
     {
-      "id": "A008",
+      "id": "A003",
       "category": "outdoor",
-      "title_en": "Sports Day",
-      "title_zh": "运动会",
-      "location_en": "Beihang University",
-      "location_zh": "北京航空航天大学",
-      "date": "2024-10",
+      "title_en": "Hiking Trip",
+      "title_zh": "爬山团建",
+      "location_en": "Fragrant Hills, Beijing",
+      "location_zh": "北京香山",
+      "date": "2024-04",
       "photographer": "",
-      "image": "team-building/imgs/00008.jpg",
-      "height": 520
+      "image": "team-building/imgs/00003.jpg",
+      "height": 360
     },
     {
       "id": "A009",
@@ -110,52 +158,16 @@ window.__LAB_ACTIVITIES__ = {
       "height": 400
     },
     {
-      "id": "A010",
-      "category": "meal",
-      "title_en": "Hotpot Gathering",
-      "title_zh": "火锅聚餐",
-      "location_en": "Beijing Happy Hotpot",
-      "location_zh": "北京高兴火锅",
-      "date": "2024-11",
+      "id": "A002",
+      "category": "outdoor",
+      "title_en": "Climbing Xiangshan Group Photo",
+      "title_zh": "香山爬山小组合照",
+      "location_en": "Xiangshan, Beijing",
+      "location_zh": "北京香山",
+      "date": "2023-10",
       "photographer": "",
-      "image": "team-building/imgs/00010.jpg",
-      "height": 450
-    },
-    {
-      "id": "A011",
-      "category": "meal",
-      "title_en": "Welcome Party",
-      "title_zh": "新生欢迎晚会",
-      "location_en": "Beihang University",
-      "location_zh": "北京航空航天大学",
-      "date": "2024-09",
-      "photographer": "",
-      "image": "team-building/imgs/00011.jpg",
+      "image": "team-building/imgs/00002.jpg",
       "height": 300
-    },
-    {
-      "id": "A012",
-      "category": "meal",
-      "title_en": "Dinner Gathering",
-      "title_zh": "年终聚餐",
-      "location_en": "Beijing",
-      "location_zh": "北京",
-      "date": "2024-12",
-      "photographer": "",
-      "image": "team-building/imgs/00012.jpg",
-      "height": 390
-    },
-    {
-      "id": "A013",
-      "category": "meal",
-      "title_en": "Dinner Gathering",
-      "title_zh": "年终聚餐",
-      "location_en": "Beijing",
-      "location_zh": "北京",
-      "date": "2024-12",
-      "photographer": "",
-      "image": "team-building/imgs/00013.jpg",
-      "height": 520
     }
   ]
 };

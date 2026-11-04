@@ -79,8 +79,8 @@ body {
 }
 .gooey-logo img {
     display: block;
-    height: 72px;
-    max-width: min(320px, 30vw);
+    height: clamp(56px, 6vw, 88px);
+    max-width: min(360px, 32vw);
     object-fit: contain;
     width: auto;
 }
@@ -147,6 +147,24 @@ body {
     padding: 0.6em 1em;
     text-decoration: none;
     white-space: nowrap;
+}
+/* Compact nav on narrower desktops so the larger logo and language toggle still fit */
+@media (min-width: 768px) and (max-width: 1400px) {
+    .gooey-nav-shell {
+        gap: 20px;
+    }
+    .gooey-nav-container nav ul li a,
+    .gooey-nav-container nav ul li .nav-trigger {
+        font-size: 14px;
+        padding: 0.6em 0.7em;
+    }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+    .gooey-nav-container nav ul li a,
+    .gooey-nav-container nav ul li .nav-trigger {
+        font-size: 13px;
+        padding: 0.6em 0.6em;
+    }
 }
 .gooey-nav-container nav ul li:focus-within {
     box-shadow: 0 0 0.5px 1.5px #ffffff;
@@ -810,10 +828,18 @@ body {
 .hero-main-copy h1 {
     color: #ffffff !important;
     font-family: 'Raleway', sans-serif;
-    font-size: clamp(36px, 8vw, 76px) !important;
+    font-size: clamp(36px, 4.2vw, 76px) !important;
     font-weight: 800;
     line-height: 1.05;
     text-align: left;
+}
+@media (min-width: 1024px) {
+    /* Keep the hero title on one line on desktop */
+    .hero-main .hero-main-copy h1,
+    .hero-main .hero-main-copy h1.split-parent {
+        text-align: left;
+        white-space: nowrap;
+    }
 }
 .hero-main-copy .split-word,
 .hero-main-copy .split-char {
@@ -875,6 +901,22 @@ body {
     transform: translate(-10%, -15%);
     transform-origin: bottom right;
     width: 600px;
+}
+/* Shrink the photo stack on narrower desktops so it clears the hero title */
+@media (min-width: 768px) and (max-width: 1420px) {
+    .card-swap-container {
+        transform: translate(-10%, -15%) scale(0.85);
+    }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+    .card-swap-container {
+        transform: translate(-10%, -15%) scale(0.76);
+    }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+    .card-swap-container {
+        transform: translate(-10%, -15%) scale(0.66);
+    }
 }
 .card-swap-container .card {
     background-color: #000000;
@@ -2921,7 +2963,7 @@ height: 40px;
     top: 1.2em;
 }
 .gooey-logo img {
-    height: 56px;
+    height: 64px;
     max-width: min(260px, 72vw);
 }
 .gooey-nav-container {

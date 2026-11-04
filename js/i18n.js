@@ -46,8 +46,8 @@
     "page.home.title": { en: "Laboratory Homepage", zh: "实验室主页" },
     "page.home.heroMainTitle": { en: "Efficient AI Computing", zh: "高效 AI 计算" },
     "page.home.heroMainBody": {
-      en: "Our lab studies efficient AI computing, which aims to make large models smaller, faster, and easier to deploy on real-world hardware.",
-      zh: "课题组聚焦高效 AI 计算，致力于让大模型更小、更快、更易于在真实硬件上部署。"
+      en: "Our lab works on efficient AI computing, making large models smaller, faster, and easier to deploy on real-world hardware.",
+      zh: "课题组专注于高效 AI 计算，让大模型更小、更快，也更易于部署到真实硬件上。"
     },
     "page.home.hero2Title": {
       en: "Research for efficient, deployable, and scientific AI",
@@ -123,49 +123,87 @@
     "page.opening.eyebrow": { en: "Recruitment", zh: "招生信息" },
     "page.opening.introTitle": { en: "Research openings for highly motivated students", zh: "面向高自驱学生的科研招生机会" },
     "page.opening.introBody": {
-      en: "Our group currently has positions for master-to-Ph.D. (2026), bachelor-to-Ph.D. (2027), and master's candidates (2027). We also welcome students interested in research internships.",
-      zh: "课题组目前有 2026 年硕转博/申请考核博士名额，以及 2027 年直博/硕士名额，同时也欢迎对科研实习感兴趣的同学加入。"
+      en: "Our group is currently recruiting students for 2027 admission, including master-to-Ph.D. students, regular Ph.D. students (application-assessment track), and master's students. Research internships are also welcome.",
+      zh: "组里现有 2027 年入学的硕转博、普博（申请考核制）及硕士名额，也欢迎同学来组里科研实习。"
     },
     "page.opening.advantagesTitle": { en: "Advantages of Our Research Group", zh: "课题组优势" },
-    "page.opening.adv1Title": { en: "Sufficient Computing Resources and Guidance", zh: "充足的算力资源与细致指导" },
+    "page.opening.adv1Title": {
+      en: "Abundant Resources and Comprehensive Guidance",
+      zh: "充足的科研资源和全面的指导"
+    },
     "page.opening.adv1Body1": {
-      en: "Our research group is newly established, with sufficient computing resources and startup funding to support your research. With a smaller team at this stage, each member can receive comprehensive guidance and direct support from the supervisor.",
-      zh: "课题组成立未久，拥有充足的计算资源和启动经费支撑科研工作。当前团队规模较小，每位成员都能获得导师较为全面、直接的指导与支持。"
+      en: "Our research group is growing rapidly and has abundant computing resources and research funding to support your work. We place great emphasis on the development of every student.",
+      zh: "课题组正处于快速发展阶段，拥有充足的计算资源和科研经费，能够有力支持同学们开展科学研究。课题组重视每一位同学的培养。"
     },
     "page.opening.adv1Body2": {
-      en: "We provide hands-on mentorship for every new group member, including paper reading, debugging, and research writing. We are committed to thoroughly revising each student's first research paper from start to finish.",
-      zh: "我们会手把手带领新成员阅读论文、调试代码并撰写论文，尤其会帮助每位同学对第一篇论文进行从头到尾的系统修改和打磨。"
+      en: "The supervisor provides hands-on mentorship for every new group member, helping them read papers, debug code, and write research articles. We are committed to thoroughly revising each student's first research paper from beginning to end.",
+      zh: "导师会手把手地带每一位新入组的同学读论文、改 Bug、写论文。我们承诺会帮助每位同学对第一篇论文从头到尾进行优化改写。"
     },
-    "page.opening.adv2Title": { en: "Industry-Relevant Research Topics", zh: "与产业界紧密相关的研究内容" },
+    "page.opening.adv2Title": {
+      en: "Industry-Relevant Research Topics",
+      zh: "与产业界密切联系的研究内容"
+    },
     "page.opening.adv2Body1": {
-      en: "Our research topics are closely aligned with problems that matter to industry. For students planning to pursue industrial careers, this research experience can provide a significant advantage.",
-      zh: "课题组研究内容与产业界关注的问题高度相关。对于计划毕业后进入企业发展的同学，这类研究经历会带来明显优势。"
+      en: "The research topics in our group are closely aligned with problems of interest to the industry. For students aiming to pursue careers in the industry, such research experience will provide a significant advantage.",
+      zh: "课题组的研究内容与产业界关心的问题密切相关，如果同学们毕业后准备到企业发展，这样的研究经历会为你在企业求职带来巨大优势。"
     },
     "page.opening.adv2Body2": {
-      en: "The group encourages students who meet graduation requirements to take research-oriented internships in companies. We have collaborations with ByteDance, Huawei, Baidu, and SenseTime, and outstanding graduates may receive recommendations to these companies or for doctoral or postdoctoral opportunities at the University of Hong Kong, CUHK, the University of Sydney, and Shanghai AI Lab.",
-      zh: "课题组鼓励满足毕业要求的同学到企业开展以科研为主的实习，并已与字节、华为、百度、商汤等公司建立合作。优秀毕业生也有机会获得前往相关公司，或赴港大、港中文、悉尼大学、上海 AI Lab 等机构继续攻读博士/博士后的推荐。"
+      en: "Our group encourages students who meet the graduation requirements to undertake research-based internships in companies. We have established in-depth collaborations with leading companies such as ByteDance, Huawei, Baidu, and SenseTime. Outstanding graduates may also receive recommendations to these companies or for doctoral/postdoctoral opportunities at institutions such as the University of Hong Kong, CUHK, the University of Sydney, and Shanghai AI Lab.",
+      zh: "课题组鼓励满足学校毕业要求的同学到企业开展以科研为主要内容的实习。同时，课题组与字节、华为、百度、商汤等多家公司有深入合作。优秀者毕业后可推荐至相关公司，或推荐至港大、港中文、悉尼大学、上海 AI Lab 等攻读博士/博士后。"
     },
     "page.opening.expectationsTitle": { en: "Expectations for Prospective Students", zh: "对申请同学的期望" },
-    "page.opening.exp1Title": { en: "Strong Self-Motivation", zh: "强烈的自驱力" },
+    "page.opening.exp1Title": {
+      en: "Strong Self-Motivation",
+      zh: "有强烈的自驱力（Self-Motivation）"
+    },
     "page.opening.exp1Body": {
-      en: "We provide abundant guidance and research resources to all members, and we expect each student to make full use of these resources with strong self-motivation and a commitment to producing meaningful scientific contributions.",
-      zh: "课题组会为成员提供充分的指导和科研资源，也希望每位同学能以强烈的自驱力主动利用这些资源，做出真正有价值的科研成果。"
+      en: "We provide abundant guidance and research resources to all members, and we hope each student can fully leverage these resources with strong self-motivation to deliver truly valuable scientific contributions.",
+      zh: "课题组会为同学们提供充足的指导和科研资源，希望每位同学可以充分利用这些资源，以强烈的自驱力做出真正有价值的科学工作。"
     },
-    "page.opening.exp2Title": { en: "Early Engagement in Research", zh: "尽早进入科研状态" },
+    "page.opening.exp2Title": {
+      en: "Early Engagement in Research",
+      zh: "尽早投入科研"
+    },
     "page.opening.exp2Body": {
-      en: "Students planning to join the group are welcome to begin their undergraduate thesis and other research projects in the fourth year after securing postgraduate recommendation or admission. Starting early will substantially benefit future development, and papers published during this period can count toward graduate output requirements.",
-      zh: "对于有意加入课题组的同学，在确定保研或录取后，欢迎在大四提前进入组里开展毕业设计和其他科研项目。提前一年熟悉科研工作会显著有利于后续发展，该阶段产出的论文也可计入研究生阶段的成果要求。"
+      en: "After securing postgraduate recommendation or admission, students intending to join the group are welcome to work on their undergraduate thesis and other research projects with us during their fourth year. Starting research a year early will greatly benefit your future development. Papers published during this period can count toward the output requirements for graduate school.",
+      zh: "有意向加入课题组的同学，在完成保研/推免后，大四即可来到组里完成毕业设计以及其他科研项目。提前一年熟悉科研工作，多一年的积累会为你后续的发展提供巨大帮助。大四期间发表的论文可计入研究生阶段的工作产出，用于满足学校的毕业要求。"
     },
-    "page.opening.exp3Title": { en: "Robust Self-Learning and Programming Skills", zh: "扎实的自学与编程能力" },
+    "page.opening.exp3Title": {
+      en: "Strong Self-Learning and Programming Skills",
+      zh: "较强的自学能力和编程能力"
+    },
     "page.opening.exp3Body": {
-      en: "Students joining the group are expected to be proficient in Python, PyTorch, and basic Linux operations, with solid programming experience. Valuable advantages include ACM competition participation and awards, deep involvement in website development, program design, or open-source projects, and sustained, high-quality professional knowledge sharing.",
-      zh: "希望加入课题组的同学熟练掌握 Python、PyTorch 与 Linux 基础操作，并具备扎实的编程经验。ACM 竞赛经历与奖项、深度参与网站开发/程序设计/开源项目，以及长期持续的专业知识分享，都会成为重要加分项。"
+      en: "Students joining the group are expected to be proficient in Python, PyTorch, and basic Linux operations, with considerable programming experience. The following experiences are highly valued: participation and awards in ACM competitions; in-depth involvement in website development, software development, or open-source projects; and long-term, valuable knowledge sharing in professional fields.",
+      zh: "希望加入课题组的同学熟练掌握 Python、PyTorch 及 Linux 基础操作，有较为丰富的编程经验。以下经历会是重要的加分项：ACM 竞赛参赛和获奖经历；深度参与的网站搭建、程序开发或开源项目；长期、有价值的专业知识分享。"
+    },
+    "page.opening.stepsTitle": {
+      en: "Before You Apply",
+      zh: "申请前的准备"
+    },
+    "page.opening.step1Title": {
+      en: "1. Present one of our papers",
+      zh: "1. 讲解一篇课题组论文"
+    },
+    "page.opening.step1Body": {
+      en: "Select one paper published by our group (see Publications) and prepare a presentation (PPT) that explains its motivation, core method, and main experimental results.",
+      zh: "从课题组已发表的论文中任选一篇（见论文发表页面），制作一份 PPT，讲解论文的研究动机、核心方法和主要实验结果。"
+    },
+    "page.opening.step2Title": {
+      en: "2. Propose your own improvements",
+      zh: "2. 提出你的改进思路"
+    },
+    "page.opening.step2Body": {
+      en: "In the same PPT, analyze the paper's limitations and propose your own ideas for improvement or future extension.",
+      zh: "在同一份 PPT 中，分析该论文的不足之处，并提出你自己的改进思路或后续拓展方向。"
     },
     "page.opening.applicationEyebrow": { en: "Application Information", zh: "申请方式" },
-    "page.opening.applicationTitle": { en: "Contact us directly with your materials", zh: "请直接通过邮件发送申请材料" },
+    "page.opening.applicationTitle": {
+      en: "Send your application",
+      zh: "提交申请"
+    },
     "page.opening.applicationBody": {
-      en: "If you are interested in applying for a doctoral or master's position, or in joining the group as an intern, please send your resume and academic transcript by email.",
-      zh: "如果你希望申请博士、硕士或科研实习岗位，请直接通过邮件发送简历与成绩单。"
+      en: "Please send your PPT, resume, and academic transcript to jinyangguo@buaa.edu.cn. Applications without the PPT may not be considered. If you are passionate about research, we look forward to having you join us!",
+      zh: "请将 PPT、简历和成绩单一并发送至 jinyangguo@buaa.edu.cn。未附 PPT 的申请可能不予考虑。如果你有科研的热情和梦想，期待你的加入！"
     },
 
     "page.contact.title": { en: "Contact | Laboratory Homepage", zh: "联系我们 | 实验室主页" },
@@ -184,6 +222,13 @@
     "page.contact.messageLabel": { en: "Message", zh: "留言内容" },
     "page.contact.messagePlaceholder": { en: "Write your message here...", zh: "请在这里输入你的留言..." },
     "page.contact.submit": { en: "Send Message", zh: "发送留言" },
+    "page.contact.emailTitle": { en: "Email us", zh: "邮件联系" },
+    "page.contact.emailNote": { en: "For research collaborations, student recruitment, or anything else, write to:", zh: "科研合作、学生招生或其他事宜，欢迎发送邮件至：" },
+    "page.contact.copy": { en: "Copy email", zh: "复制邮箱" },
+    "page.contact.write": { en: "Write an email", zh: "发送邮件" },
+    "page.contact.copied": { en: "Email copied", zh: "邮箱已复制" },
+    "page.contact.address": { en: "Beihang University, No. 37 Xueyuan Road, Haidian District, Beijing, China", zh: "北京市海淀区学院路 37 号 北京航空航天大学" },
+    "page.contact.joinLink": { en: "Interested in joining the lab? See Openings", zh: "有意加入课题组？查看招生信息" },
     "page.contact.success": {
       en: "Thank you for reaching out. We will get back to you within a few days.",
       zh: "感谢你的留言。我们会在几天内与你联系。"
