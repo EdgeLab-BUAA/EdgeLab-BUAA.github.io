@@ -199,6 +199,22 @@
     "dynamic.people.title.github": { en: "GitHub", zh: "GitHub" },
     "dynamic.people.title.homepage": { en: "Homepage", zh: "主页" },
     "dynamic.people.title.copyEmail": { en: "Copy email", zh: "复制邮箱" },
+    "dynamic.people.label.email": { en: "Email", zh: "邮箱" },
+    "dynamic.people.next": { en: "Next:", zh: "下一站：" },
+    "dynamic.people.jumpAria": { en: "Jump to group", zh: "跳转到分组" },
+    "dynamic.people.title.dblp": { en: "dblp", zh: "dblp" },
+    "dynamic.people.cohort": { en: "Since {year}", zh: "{year}级" },
+    "dynamic.people.facts.papers": { en: "Selected papers", zh: "代表论文" },
+    "dynamic.people.facts.honors": { en: "Honors", zh: "荣誉" },
+    "dynamic.people.facts.service": { en: "Service", zh: "学术服务" },
+    "dynamic.people.facts.experience": { en: "Experience", zh: "经历" },
+    "dynamic.people.facts.cosup": { en: "Co-supervision", zh: "联合指导" },
+    "dynamic.people.join.title": { en: "Join us", zh: "加入我们" },
+    "dynamic.people.join.body": {
+      en: "We are recruiting postdocs, Ph.D. students, master's students, and visiting students in efficient AI computing. Email your CV and publications (if any) to {email}.",
+      zh: "课题组招收博士后、博士生、硕士生和访问学生，研究方向为高效 AI 计算。欢迎将简历及已发表论文（如有）发送至 {email}。"
+    },
+    "dynamic.people.join.cta": { en: "View openings", zh: "查看招生信息" },
 
     "dynamic.activities.error": { en: "Unable to load activities data.", zh: "无法加载活动数据。" },
     "dynamic.activities.photoAria": { en: "Activity photo", zh: "活动照片" },

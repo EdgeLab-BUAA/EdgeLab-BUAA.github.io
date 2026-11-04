@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page.people.title">People | Laboratory Homepage</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./people.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="publications-page">
+<body class="publications-page people-page">
     <header class="head-container publication-head">
         <div class="gooey-nav-shell">
             <a href="../index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
@@ -36,11 +37,12 @@
         <section class="publication-hero">
             <p data-i18n="page.people.heroLead">Faculty, students, and collaborators</p>
             <h1 data-i18n="page.people.heroTitle">People</h1>
+            <div class="people-hero-stats" data-people-stats></div>
         </section>
     </header>
 
-    <main data-people-main style="padding: 60px 0 40px;">
-        <p style="text-align:center;color:#9a9a9a;padding:80px 0" data-i18n="page.people.loading">Loading...</p>
+    <main class="people-main" data-people-main>
+        <p class="people-status" data-i18n="page.people.loading">Loading...</p>
     </main>
 
     <div class="bottom-social">

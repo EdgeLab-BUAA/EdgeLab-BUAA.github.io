@@ -1,0 +1,761 @@
+/* People page — layered on top of css/style.css. Scoped to this page only. */
+.people-page {
+    --pp-ink: #15121f;
+    --pp-text: #4a4658;
+    --pp-muted: #8a8599;
+    --pp-line: #e9e4f3;
+    --pp-surface: #ffffff;
+    --pp-accent: #5227ff;
+    --pp-accent-soft: #f1edff;
+    --pp-accent-ink: #4a2fd0;
+    --pp-radius: 22px;
+    --pp-shadow: 0 1px 2px rgba(21, 18, 31, 0.04), 0 6px 18px rgba(21, 18, 31, 0.06);
+    --pp-shadow-hover: 0 2px 6px rgba(21, 18, 31, 0.05), 0 22px 48px rgba(82, 39, 255, 0.16);
+    background: #f7f4fb;
+}
+
+/* ---------- Hero stats ---------- */
+.people-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+.people-hero-stat {
+    align-items: baseline;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 999px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+    padding: 7px 16px 7px 14px;
+}
+.people-hero-stat strong {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* ---------- Main shell ---------- */
+.people-main {
+    margin: 0 auto;
+    max-width: 1240px;
+    /* Card hover glows reach 44px past each card; keep them from widening the page on phones. */
+    overflow-x: clip;
+    padding: 0 40px 72px;
+}
+.people-main .people-status {
+    color: var(--pp-muted);
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* ---------- Section jump nav ---------- */
+.people-jump {
+    display: flex;
+    justify-content: center;
+    margin: -26px 0 44px;
+    position: sticky;
+    top: 14px;
+    z-index: 30;
+}
+.people-jump-inner {
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(82, 39, 255, 0.12);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(21, 18, 31, 0.1);
+    display: flex;
+    gap: 4px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 6px;
+    scrollbar-width: none;
+}
+.people-jump-inner::-webkit-scrollbar {
+    display: none;
+}
+.people-jump a {
+    align-items: center;
+    border-radius: 999px;
+    color: var(--pp-text);
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 8px;
+    padding: 9px 16px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+.people-jump a span {
+    background: var(--pp-accent-soft);
+    border-radius: 999px;
+    color: var(--pp-accent-ink);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    padding: 4px 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.people-jump a:hover {
+    background: rgba(82, 39, 255, 0.07);
+    color: var(--pp-ink);
+}
+.people-jump a.is-active {
+    background: var(--pp-ink);
+    color: #ffffff;
+}
+.people-jump a.is-active span {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+/* ---------- Section heading ---------- */
+.people-group {
+    margin-bottom: 64px;
+    scroll-margin-top: 96px;
+}
+.people-group-head {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+.people-group-index {
+    color: var(--pp-accent);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+.people-group-title {
+    color: var(--pp-ink);
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0;
+}
+.people-group-count {
+    background: var(--pp-surface);
+    border: 1px solid var(--pp-line);
+    border-radius: 999px;
+    color: var(--pp-muted);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 11px;
+}
+.people-group-head::after {
+    background: linear-gradient(90deg, var(--pp-line), rgba(233, 228, 243, 0));
+    content: "";
+    flex: 1;
+    height: 1px;
+}
+
+/* ---------- Shared card bits ---------- */
+.people-page .member-card {
+    --card-bg: var(--pp-surface);
+    --border-radius: var(--pp-radius);
+    border: 1px solid var(--pp-line);
+    box-shadow: var(--pp-shadow);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+}
+.people-page .member-card:hover {
+    box-shadow: var(--pp-shadow-hover);
+    transform: translateY(-6px) translate3d(0, 0, 0.01px);
+}
+.member-card .border-glow-inner {
+    height: 100%;
+}
+.member-photo {
+    background: #efeaf7;
+    overflow: hidden;
+    position: relative;
+}
+.member-photo img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    width: 100%;
+}
+.member-card:hover .member-photo img {
+    transform: scale(1.045);
+}
+.member-initials {
+    align-items: center;
+    background: var(--avatar-bg, linear-gradient(135deg, #5227ff, #c084fc));
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.member-initials::before,
+.member-initials::after {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+}
+.member-initials::before {
+    height: 120%;
+    right: -55%;
+    top: -35%;
+    width: 120%;
+}
+.member-initials::after {
+    bottom: -40%;
+    height: 90%;
+    left: -40%;
+    width: 90%;
+}
+.member-initials span {
+    color: rgba(255, 255, 255, 0.95);
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(34px, 4.4vw, 56px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    position: relative;
+    text-shadow: 0 6px 24px rgba(21, 18, 31, 0.18);
+    z-index: 1;
+}
+.member-name {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    margin: 0;
+}
+.member-name strong {
+    color: var(--pp-ink);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.member-name small {
+    color: var(--pp-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+.member-role {
+    color: var(--pp-accent-ink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 6px 0 0;
+    text-transform: uppercase;
+}
+.member-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+.member-tags li {
+    background: #f5f3fa;
+    border-radius: 999px;
+    color: var(--pp-text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 5px 10px;
+}
+.member-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+}
+.member-link {
+    align-items: center;
+    background: #f5f3fa;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--pp-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: 14px;
+    height: 34px;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    width: 34px;
+}
+.member-link i {
+    color: inherit;
+}
+.member-link:hover {
+    background: var(--pp-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.member-link:focus-visible,
+.people-jump a:focus-visible {
+    outline: 2px solid var(--pp-accent);
+    outline-offset: 2px;
+}
+
+/* ---------- Faculty ---------- */
+.faculty-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+}
+.faculty-card .border-glow-inner {
+    flex-direction: row;
+}
+.faculty-card .member-photo {
+    aspect-ratio: 4 / 5;
+    flex: 0 0 280px;
+}
+.faculty-card .member-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    padding: 32px 36px 30px;
+}
+.member-bio {
+    color: var(--pp-text);
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 14px 0 0;
+    max-width: 68ch;
+}
+.faculty-card .member-name strong {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+}
+.faculty-card .member-name small {
+    font-size: 16px;
+}
+.faculty-card .member-role {
+    font-size: 13px;
+    margin-top: 10px;
+}
+.faculty-card .member-tags li {
+    font-size: 13px;
+}
+.faculty-card .member-link {
+    gap: 8px;
+    height: 38px;
+    padding: 0 16px;
+    width: auto;
+}
+.faculty-card .member-link b {
+    color: inherit;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ---------- Students ---------- */
+.student-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.student-card .member-photo {
+    aspect-ratio: 4 / 4.4;
+}
+.student-card .member-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 18px 18px 18px;
+}
+
+/* ---------- Alumni ---------- */
+.alumni-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+.alumni-card .border-glow-inner {
+    flex-direction: row;
+    gap: 18px;
+    padding: 22px;
+}
+.alumni-card .member-photo {
+    aspect-ratio: 1;
+    border-radius: 18px;
+    flex: 0 0 72px;
+    height: 72px;
+}
+.alumni-card .member-initials span {
+    font-size: 24px;
+}
+.alumni-card .member-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+.alumni-card .member-name strong {
+    font-size: 17px;
+}
+.alumni-card .member-role {
+    font-size: 11.5px;
+    margin-top: 4px;
+}
+.alumni-research {
+    color: var(--pp-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 8px 0 0;
+}
+.alumni-card .member-tags {
+    margin-top: 10px;
+}
+.alumni-card .member-tags li {
+    font-size: 11.5px;
+    padding: 4px 9px;
+}
+.alumni-next {
+    align-items: flex-start;
+    background: linear-gradient(135deg, rgba(82, 39, 255, 0.08), rgba(244, 114, 182, 0.08));
+    border-radius: 12px;
+    color: var(--pp-ink);
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    gap: 8px;
+    line-height: 1.4;
+    margin-top: 12px;
+    padding: 9px 12px;
+}
+.alumni-next i {
+    color: var(--pp-accent);
+    margin-top: 3px;
+}
+.alumni-next em {
+    color: var(--pp-muted);
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 2px;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.people-reveal .member-card {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+.people-reveal .member-card.is-visible {
+    opacity: 1;
+    transform: none;
+}
+.people-reveal .member-card.is-visible:hover {
+    transform: translateY(-6px) translate3d(0, 0, 0.01px);
+    transition-delay: 0ms;
+}
+@media (prefers-reduced-motion: reduce) {
+    .people-reveal .member-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .member-card:hover .member-photo img {
+        transform: none;
+    }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+    .student-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .faculty-card .member-body {
+        padding: 24px;
+    }
+    .faculty-card .member-name strong {
+        font-size: 24px;
+    }
+}
+@media (max-width: 900px) {
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+    .faculty-card .member-photo {
+        flex-basis: 36%;
+    }
+    .faculty-card .member-body {
+        padding: 24px;
+    }
+}
+@media (max-width: 760px) {
+    .people-main {
+        padding: 0 16px 56px;
+    }
+    .people-jump {
+        justify-content: flex-start;
+        margin-top: -22px;
+    }
+    .people-jump a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    .people-group-title {
+        font-size: 24px;
+    }
+    .student-grid {
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .student-card .member-body {
+        padding: 14px;
+    }
+    .student-card .member-name strong {
+        font-size: 16px;
+    }
+    .student-card .member-cohort {
+        display: block;
+        margin-top: 2px;
+    }
+    .student-card .member-cohort::before {
+        content: none;
+    }
+    .student-card .member-tags li {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+    .people-hero-stat {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    .people-hero-stat strong {
+        font-size: 17px;
+    }
+}
+@media (max-width: 900px) {
+    /* The shared header stacks logo, nav and language toggle on small screens;
+       push the hero text below that stack so they don't overlap. */
+    .people-page .publication-head {
+        min-height: 0;
+        padding-top: 206px;
+        padding-bottom: 72px;
+    }
+}
+@media (max-width: 560px) {
+    .faculty-grid {
+        gap: 16px;
+    }
+    .faculty-card .border-glow-inner {
+        flex-direction: column;
+    }
+    .faculty-card .member-photo {
+        aspect-ratio: 5 / 4;
+        flex-basis: auto;
+    }
+    .faculty-card .member-photo img {
+        object-position: center 28%;
+    }
+    .faculty-card .member-body {
+        padding: 16px;
+    }
+
+    .faculty-card .member-name strong {
+        font-size: 21px;
+    }
+    .faculty-card .member-name small {
+        font-size: 13px;
+    }
+    .faculty-card .member-role {
+        font-size: 11.5px;
+        margin-top: 6px;
+    }
+    .faculty-card .member-tags li {
+        font-size: 11.5px;
+        padding: 4px 9px;
+    }
+    .faculty-card .member-link {
+        height: 34px;
+        padding: 0;
+        width: 34px;
+    }
+    .faculty-card .member-link b {
+        display: none;
+    }
+    .alumni-card .border-glow-inner {
+        padding: 18px;
+    }
+    .faculty-card .member-facts li {
+        font-size: 13px;
+    }
+}
+
+/* ---------- Fact rows (papers, honors, experience, co-supervision) ---------- */
+.member-cohort {
+    color: var(--pp-muted);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+.member-cohort::before {
+    content: "·";
+    margin: 0 6px 0 2px;
+}
+.member-facts {
+    display: grid;
+    gap: 7px;
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 12px 0 0;
+    border-top: 1px dashed var(--pp-line);
+}
+.member-facts li {
+    align-items: flex-start;
+    color: var(--pp-ink);
+    display: flex;
+    font-size: 12.5px;
+    font-weight: 600;
+    gap: 9px;
+    line-height: 1.45;
+}
+.member-facts li > i,
+.member-facts li > svg {
+    color: var(--pp-accent);
+    flex: 0 0 14px;
+    font-size: 12px;
+    margin-top: 2px;
+    width: 14px;
+}
+.member-facts li > span {
+    min-width: 0;
+}
+.member-facts li.is-muted {
+    color: var(--pp-muted);
+    font-weight: 600;
+}
+.member-facts li.is-muted > i,
+.member-facts li.is-muted > svg {
+    color: var(--pp-muted);
+}
+.faculty-card .member-facts {
+    gap: 9px;
+    margin-top: 18px;
+    padding-top: 16px;
+}
+.faculty-card .member-facts li {
+    font-size: 14px;
+}
+.alumni-card .member-facts {
+    border-top: 0;
+    margin-top: 8px;
+    padding-top: 0;
+}
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* ---------- Join us ---------- */
+.people-join {
+    align-items: center;
+    background: linear-gradient(135deg, #171420 0%, #2f1d6b 55%, #5227ff 100%);
+    border-radius: 26px;
+    box-shadow: 0 24px 60px rgba(41, 21, 100, 0.22);
+    display: flex;
+    gap: 28px;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 34px 38px;
+}
+.people-join-copy {
+    min-width: 0;
+}
+.people-join h2 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 8px;
+}
+.people-join p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+    max-width: 64ch;
+}
+.people-join p strong {
+    color: #ffffff;
+    font-weight: 700;
+    user-select: all;
+}
+.people-join-actions {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.people-join-btn {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.people-join-btn i,
+.people-join-btn svg {
+    color: inherit;
+}
+.people-join-btn.is-primary {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--pp-ink);
+}
+.people-join-btn:hover {
+    transform: translateY(-2px);
+}
+.people-join-btn:not(.is-primary):hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.people-join-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+@media (max-width: 900px) {
+    .people-join {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 28px 24px;
+    }
+}
