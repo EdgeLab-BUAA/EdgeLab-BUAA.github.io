@@ -1,0 +1,84 @@
+/* People-only styles; shared pages retain their existing appearance. */
+.people-page { background: #f7f8fc; }
+.people-page .bottom-social { gap: 24px; flex-wrap: wrap; }
+.people-page .bottom-social img { width: 180px; max-width: 100%; height: auto; }
+[data-people-main] { --people-accent: #5941b8; }
+[data-people-main] .people-publication-policy { max-width: 1160px; margin: 0 auto 38px; padding: 0 24px; color: #667085; font-size: 13px; line-height: 1.7; }
+[data-people-main] .people-section { margin-bottom: 56px; }
+[data-people-main] .people-section-title { display: flex; align-items: center; gap: 12px; font-size: 21px; letter-spacing: .025em; text-transform: none; padding-bottom: 16px; margin-bottom: 24px; }
+[data-people-main] .people-section-count { font-size: 12px; font-weight: 600; color: #74679c; background: #ece9f7; padding: 4px 9px; border-radius: 7px; }
+[data-people-main] .team { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+[data-people-main] .people-section-faculty .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+[data-people-main] .person-card { display: flex; flex-direction: column; position: relative; min-width: 0; min-height: 400px; padding: 24px 22px 0; border: 1px solid #e2e5ee; border-radius: 20px; background: #fff; box-shadow: 0 4px 20px rgb(24 35 65 / 4%); opacity: 1; text-align: left; scroll-margin-top: 28px; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+[data-people-main] .person-card:hover { transform: translateY(-3px); border-color: #c4b9e7; box-shadow: 0 10px 28px rgb(55 40 105 / 9%); }
+[data-people-main] .person-heading { display: flex; align-items: center; gap: 16px; }
+[data-people-main] .person-avatar,
+[data-people-main] .person-avatar-placeholder { flex: 0 0 88px; width: 88px; height: 110px; aspect-ratio: 4 / 5; border-radius: 13px; object-fit: cover; object-position: center 25%; background: #efedf8; }
+[data-people-main] .person-avatar-placeholder { color: #7662af; font-size: 26px; font-weight: 600; letter-spacing: .06em; background: linear-gradient(145deg, #e7e2f4, #f4f3fa); }
+[data-people-main] .person-card-alumni .person-avatar-placeholder { color: #4c7778; background: linear-gradient(145deg, #dfedeb, #f3f8f7); }
+[data-people-main] .person-identity { min-width: 0; }
+[data-people-main] .person-identity h3 { margin: 0 0 9px; color: #202939; font-size: 19px; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
+[data-people-main] .person-role { display: inline-block; color: #665296; background: #f1eef9; border-radius: 5px; padding: 3px 7px; margin: 0; font-size: 11px; font-weight: 600; line-height: 1.5; }
+[data-people-main] .person-card-alumni .person-role { color: #42696b; background: #eaf3f1; }
+[data-people-main] .person-enrollment { color: #7c8494; font-size: 11px; font-weight: 400; margin: 7px 0 0; }
+[data-people-main] .person-links { gap: 4px; margin-top: 9px; flex-wrap: wrap; }
+[data-people-main] .person-links:empty { display: none; }
+[data-people-main] .person-link { width: 30px; height: 30px; padding: 0; background: #f5f6fa; border-radius: 8px; }
+[data-people-main] .person-link i { color: #7b8191; font-size: 13px; }
+[data-people-main] .person-link:hover { background: #ece7fa; }
+[data-people-main] .person-link:hover i { color: var(--people-accent); }
+[data-people-main] .person-body { flex: 1; padding: 21px 0 23px; }
+[data-people-main] .person-body:empty { padding: 16px 0; }
+[data-people-main] .person-research { margin: 0 0 17px !important; }
+[data-people-main] .person-research p { margin: 5px 0 0; color: #475467; font-size: 13px; font-weight: 400; line-height: 1.7; }
+[data-people-main] .person-detail-label { color: #9097a6; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+[data-people-main] .person-notes { list-style: none; padding: 0; margin: 0; }
+[data-people-main] .person-notes li { position: relative; margin: 7px 0 0; padding-left: 12px; color: #667085; font-size: 13px; line-height: 1.75; overflow-wrap: anywhere; }
+[data-people-main] .person-notes li::before { content: ""; position: absolute; top: .75em; left: 0; width: 4px; height: 4px; border-radius: 50%; background: #b9aed4; }
+[data-people-main] .person-card-faculty { border-top: 3px solid #b6a6df; min-height: 260px; }
+[data-people-main] .person-card-faculty .person-avatar { flex-basis: 104px; width: 104px; height: 130px; }
+[data-people-main] .person-card-faculty h3 { font-size: 23px; }
+[data-people-main] .person-publications,
+[data-people-main] .person-publications-empty { border-top: 1px solid #eaeaf1; margin: 0; padding: 0; }
+[data-people-main] .person-publications summary { position: relative; cursor: pointer; list-style: none; padding: 17px 25px 18px 0; }
+[data-people-main] .person-publications summary::-webkit-details-marker { display: none; }
+[data-people-main] .publication-summary-title { display: flex; align-items: center; gap: 8px; color: var(--people-accent); font-size: 12px; font-weight: 600; }
+[data-people-main] .publication-count { display: inline-flex; align-items: center; justify-content: center; background: #eee9fa; color: var(--people-accent); border-radius: 5px; min-width: 22px; padding: 1px 5px; font-size: 11px; }
+[data-people-main] .publication-counts { display: block; margin-top: 6px; font-size: 11px; color: #7c8494; }
+[data-people-main] .publication-disclosure { position: absolute; top: 26px; right: 0; color: #7662af; font-size: 20px; line-height: 1; transition: transform .2s; }
+[data-people-main] details[open] .publication-disclosure { transform: rotate(45deg); }
+[data-people-main] .publication-scope { margin: 0 0 12px; color: #8a6c38; font-size: 11px; line-height: 1.6; font-weight: 400; }
+[data-people-main] .publication-list { list-style: none; padding: 0 0 8px; margin: 0; }
+[data-people-main] .publication-list li { padding: 13px 0; border-top: 1px solid #f0f0f5; }
+[data-people-main] .publication-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 7px; }
+[data-people-main] .publication-meta > span { color: #798195; font-size: 10px; line-height: 1.5; }
+[data-people-main] .publication-meta .authorship-badge { color: #665296; background: #f1eef9; padding: 1px 5px; border-radius: 4px; }
+[data-people-main] .publication-meta .preprint-badge { color: #8c682f; background: #fbf3e4; padding: 1px 5px; border-radius: 4px; }
+[data-people-main] .publication-list a { color: #344054; font-size: 12px; line-height: 1.75; text-decoration: none; overflow-wrap: anywhere; }
+[data-people-main] .publication-list a:hover { color: var(--people-accent); text-decoration: underline; text-underline-offset: 3px; }
+[data-people-main] .publication-list a > span { color: #9b8abb; }
+[data-people-main] .person-publications-empty { padding: 19px 0; }
+[data-people-main] .person-publications-empty > span { color: #868c99; font-size: 12px; }
+[data-people-main] .person-publications-empty p { margin: 5px 0 0; color: #9298a4; font-size: 11px; font-weight: 400; }
+[data-people-main] :is(summary, a, button):focus-visible { outline: 2px solid #7960bf; outline-offset: 4px; border-radius: 4px; }
+@media (max-width: 1050px) {
+    [data-people-main] .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+    [data-people-main] .people-section { padding: 0 20px; margin-bottom: 40px; }
+    [data-people-main] .people-publication-policy { padding: 0 22px; margin-bottom: 28px; font-size: 12px; }
+    [data-people-main] .team,
+    [data-people-main] .people-section-faculty .team { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+    [data-people-main] .person-heading { gap: 18px; }
+    [data-people-main] .person-card { padding: 22px 22px 0; min-height: 0; }
+    [data-people-main] .person-identity h3 { font-size: 21px; }
+    [data-people-main] .person-card-faculty h3 { font-size: 23px; }
+    [data-people-main] .person-notes li { font-size: 13px; }
+    .people-page .gooey-nav-shell { max-width: calc(100% - 32px); width: calc(100% - 32px); }
+    .people-page .gooey-nav-container { min-width: 0; width: 100%; flex: 0 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    [data-people-main] .person-card,
+    [data-people-main] .publication-disclosure { transition: none; }
+    [data-people-main] .person-card:hover { transform: none; }
+}
