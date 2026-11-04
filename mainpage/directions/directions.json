@@ -2,26 +2,26 @@
   "directions": [
     {
       "id": "efficient-computing",
-      "title_en": "Efficient foundation model",
-      "title_zh": "高效基础模型",
-      "intro_en": "Compression, quantization, distillation, and deployment methods for foundation models that reduce computation and memory cost while preserving capability.",
-      "intro_zh": "面向基础模型的压缩、量化、蒸馏与部署方法，在保持模型能力的同时降低计算和存储成本。",
+      "title_en": "Efficient LLM/VLM",
+      "title_zh": "高效大语言/视觉语言模型",
+      "intro_en": "Quantization, sparsity, distillation, and token compression for large language, vision-language, and generative models, cutting compute and memory cost with little loss in capability.",
+      "intro_zh": "面向大语言模型、视觉语言模型与生成模型的量化、稀疏、蒸馏与 Token 压缩方法，在几乎不损失能力的前提下降低计算与存储开销。",
       "href": "./mainpage/directions/efficient-computing.html"
     },
     {
       "id": "neuromorphic-ai",
-      "title_en": "Efficient embodied AI",
+      "title_en": "Efficient Embodied AI",
       "title_zh": "高效具身智能",
-      "intro_en": "Efficient perception, reasoning, and action learning for embodied AI systems under real-world compute, memory, and latency constraints.",
-      "intro_zh": "面向真实场景计算、存储与时延约束的高效具身智能感知、推理与行动学习方法。",
+      "intro_en": "Fast, lightweight perception, planning, and action models for robots and agents, including vision-language-action and world action models that must run in real time on limited hardware.",
+      "intro_zh": "面向机器人与智能体的轻量化感知、规划与动作模型，包括需要在受限硬件上实时运行的视觉-语言-动作模型与世界动作模型。",
       "href": "./mainpage/directions/neuromorphic-ai.html"
     },
     {
       "id": "ai4science",
-      "title_en": "Efficient AI memory",
-      "title_zh": "高效 AI 记忆",
-      "intro_en": "Efficient memory, retrieval, and long-context mechanisms that help AI systems store, access, and reuse knowledge more effectively.",
-      "intro_zh": "高效记忆、检索与长上下文机制，帮助 AI 系统更有效地存储、访问和复用知识。",
+      "title_en": "Efficient AI System",
+      "title_zh": "高效 AI 系统",
+      "intro_en": "Systems and hardware support for efficient AI: low-bit kernels and training, KV cache and memory systems, and deployment on domestic accelerators such as Ascend NPUs.",
+      "intro_zh": "为高效 AI 提供系统与硬件支撑：低比特算子与低比特训练、KV Cache 与记忆系统，以及在昇腾等国产加速器上的部署。",
       "href": "./mainpage/directions/ai4science.html"
     }
   ]

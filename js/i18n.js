@@ -44,10 +44,10 @@
     "common.project": { en: "Project", zh: "项目" },
 
     "page.home.title": { en: "Laboratory Homepage", zh: "实验室主页" },
-    "page.home.heroMainTitle": { en: "Efficient and scalable AI computing", zh: "高效可扩展的 AI 计算" },
+    "page.home.heroMainTitle": { en: "Efficient and scalable computing", zh: "高效可扩展计算" },
     "page.home.heroMainBody": {
-      en: "Our lab studies efficient AI computing, building practical learning systems that are smaller, faster, and easier to deploy.",
-      zh: "我们聚焦高效 AI 计算，致力于构建更小、更快、更易部署的实用智能学习系统。"
+      en: "Our lab studies efficient AI computing across three directions: efficient LLM/VLM, efficient embodied AI, and efficient AI systems. We make large models smaller, faster, and easier to deploy on real-world hardware.",
+      zh: "课题组聚焦高效 AI 计算，研究方向包括高效大语言/视觉语言模型、高效具身智能与高效 AI 系统，致力于让大模型更小、更快、更易于在真实硬件上部署。"
     },
     "page.home.hero2Title": {
       en: "Research for efficient, deployable, and scientific AI",
@@ -252,25 +252,25 @@
       zh: "即将上线 — 查看<a href=\"../../people/people.html\" style=\"color:#5227ff;\">全部成员列表</a>。"
     },
 
-    "page.direction.efficient-computing.pageTitle": { en: "Efficient foundation model | Laboratory Homepage", zh: "高效基础模型 | 实验室主页" },
-    "page.direction.efficient-computing.heroTitle": { en: "Efficient foundation model", zh: "高效基础模型" },
+    "page.direction.efficient-computing.pageTitle": { en: "Efficient LLM/VLM | Laboratory Homepage", zh: "高效大语言/视觉语言模型 | 实验室主页" },
+    "page.direction.efficient-computing.heroTitle": { en: "Efficient LLM/VLM", zh: "高效大语言/视觉语言模型" },
     "page.direction.efficient-computing.intro": {
-      en: "We study compression, quantization, distillation, and deployment methods for foundation models that reduce computation and memory cost while preserving capability.",
-      zh: "我们研究基础模型的压缩、量化、蒸馏与部署方法，在保持模型能力的同时降低计算和存储成本。"
+      en: "Quantization, sparsity, distillation, and token compression for large language, vision-language, and generative models, cutting compute and memory cost with little loss in capability.",
+      zh: "面向大语言模型、视觉语言模型与生成模型的量化、稀疏、蒸馏与 Token 压缩方法，在几乎不损失能力的前提下降低计算与存储开销。"
     },
 
-    "page.direction.neuromorphic-ai.pageTitle": { en: "Efficient embodied AI | Laboratory Homepage", zh: "高效具身智能 | 实验室主页" },
-    "page.direction.neuromorphic-ai.heroTitle": { en: "Efficient embodied AI", zh: "高效具身智能" },
+    "page.direction.neuromorphic-ai.pageTitle": { en: "Efficient Embodied AI | Laboratory Homepage", zh: "高效具身智能 | 实验室主页" },
+    "page.direction.neuromorphic-ai.heroTitle": { en: "Efficient Embodied AI", zh: "高效具身智能" },
     "page.direction.neuromorphic-ai.intro": {
-      en: "We develop efficient perception, reasoning, and action learning for embodied AI systems under real-world compute, memory, and latency constraints.",
-      zh: "我们面向真实场景中的计算、存储与时延约束，研究高效具身智能系统的感知、推理与行动学习方法。"
+      en: "Fast, lightweight perception, planning, and action models for robots and agents, including vision-language-action and world action models that must run in real time on limited hardware.",
+      zh: "面向机器人与智能体的轻量化感知、规划与动作模型，包括需要在受限硬件上实时运行的视觉-语言-动作模型与世界动作模型。"
     },
 
-    "page.direction.ai4science.pageTitle": { en: "Efficient AI memory | Laboratory Homepage", zh: "高效 AI 记忆 | 实验室主页" },
-    "page.direction.ai4science.heroTitle": { en: "Efficient AI memory", zh: "高效 AI 记忆" },
+    "page.direction.ai4science.pageTitle": { en: "Efficient AI System | Laboratory Homepage", zh: "高效 AI 系统 | 实验室主页" },
+    "page.direction.ai4science.heroTitle": { en: "Efficient AI System", zh: "高效 AI 系统" },
     "page.direction.ai4science.intro": {
-      en: "We explore efficient memory, retrieval, and long-context mechanisms that help AI systems store, access, and reuse knowledge more effectively.",
-      zh: "我们探索高效记忆、检索与长上下文机制，帮助 AI 系统更有效地存储、访问和复用知识。"
+      en: "Systems and hardware support for efficient AI: low-bit kernels and training, KV cache and memory systems, and deployment on domestic accelerators such as Ascend NPUs.",
+      zh: "为高效 AI 提供系统与硬件支撑：低比特算子与低比特训练、KV Cache 与记忆系统，以及在昇腾等国产加速器上的部署。"
     }
   };
 
