@@ -340,17 +340,26 @@
     </section>
 
     <!-- Footer -->
-    <div class="bottom-social">
-        <div><img src="./logo.png" alt=""></div>
-        <div>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-twitter"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-square-youtube"></i>
+    <footer class="site-footer">
+        <div class="site-footer-brand">
+            <span class="site-footer-logo"><img src="./logo.png" alt="EDGE Lab logo"></span>
+            <span class="site-footer-name">
+                <strong data-i18n="common.footer.labName">EDGE Lab · Beihang University</strong>
+                <span data-i18n="common.footer.tagline">Efficient Deep Learning for the Edge</span>
+            </span>
         </div>
-    </div>
-    <div style="background-color: #000000;"><hr class="bar"></div>
+        <address class="site-footer-address">
+            <span data-i18n="common.footer.school">School of Artificial Intelligence, Beihang University</span>
+            <span data-i18n="common.footer.address">No. 37 Xueyuan Road, Haidian District, Beijing</span>
+        </address>
+        <div class="site-footer-meta">
+            <button type="button" class="site-footer-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                <span aria-hidden="true">&uarr;</span>
+                <span data-i18n="common.footer.backToTop">Back to top</span>
+            </button>
+            <span class="site-footer-copy">&copy; 2026 EDGE Lab</span>
+        </div>
+    </footer>
    
     <script src="./js/grainient.js"></script>
     <script src="./js/i18n.js"></script>
