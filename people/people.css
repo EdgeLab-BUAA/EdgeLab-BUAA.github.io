@@ -759,3 +759,14 @@
         padding: 28px 24px;
     }
 }
+
+/* ---------- National Scholarship highlight ---------- */
+.member-facts .is-national {
+    color: #d92d20;
+    font-weight: 700;
+}
+.member-tags li.is-national {
+    background: #fef3f2;
+    box-shadow: inset 0 0 0 1px #fecdca;
+    color: #d92d20;
+}

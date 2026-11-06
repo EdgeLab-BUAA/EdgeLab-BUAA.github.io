@@ -12,7 +12,7 @@
     <header class="head-container publication-head">
         <div class="gooey-nav-shell">
             <a href="../index.html" class="gooey-logo" data-i18n-aria-label="common.logoAria" aria-label="Lab home">
-                <img src="../logo.png" alt="Company Logo">
+                <img src="../logo-header.png" alt="Company Logo">
             </a>
             <div class="gooey-nav-container">
                 <nav data-i18n-aria-label="common.navAria" aria-label="Main navigation">
@@ -33,7 +33,7 @@
         </div>
         <div class="grainient-container" aria-hidden="true"></div>
         <section class="publication-hero">
-            <p data-i18n="page.news.heroLead">Updates, announcements, and highlights from the lab</p>
+            <p data-i18n="page.news.heroLead">Lab updates, awards, and media coverage of our research</p>
             <h1 data-i18n="page.news.heroTitle">News &amp; Media</h1>
         </section>
     </header>
@@ -41,7 +41,12 @@
     <main class="news-page-main">
         <section class="latest-news-section latest-news-section--page news-timeline-section">
             <div class="latest-news-shell news-timeline-shell">
-                <div class="latest-news-stream news-timeline-stream" data-news-cards data-news-variant="timeline"></div>
+                <div class="news-filter" data-news-filter-for="news-stream" role="group" data-i18n-aria-label="page.news.filterAria" aria-label="Filter news">
+                    <button type="button" class="news-filter-btn is-active" aria-pressed="true" data-news-filter-value="all" data-i18n="page.news.filterAll">All</button>
+                    <button type="button" class="news-filter-btn" aria-pressed="false" data-news-filter-value="news" data-i18n="page.news.filterNews">News</button>
+                    <button type="button" class="news-filter-btn" aria-pressed="false" data-news-filter-value="media" data-i18n="page.news.filterMedia">Media</button>
+                </div>
+                <div class="latest-news-stream news-timeline-stream" id="news-stream" data-news-cards data-news-variant="timeline"></div>
             </div>
         </section>
     </main>

@@ -102,7 +102,11 @@
     "page.projects.placeholder": { en: "Projects coming soon.", zh: "项目内容即将上线。" },
 
     "page.news.title": { en: "News & Media | Laboratory Homepage", zh: "新闻与动态 | 实验室主页" },
-    "page.news.heroLead": { en: "Updates, announcements, and highlights from the lab", zh: "课题组的最新动态、公告与精选内容" },
+    "page.news.heroLead": { en: "Lab updates, awards, and media coverage of our research", zh: "课题组的最新动态、获奖与媒体报道" },
+    "page.news.filterAria": { en: "Filter news", zh: "筛选新闻" },
+    "page.news.filterAll": { en: "All", zh: "全部" },
+    "page.news.filterNews": { en: "News", zh: "动态" },
+    "page.news.filterMedia": { en: "Media", zh: "媒体报道" },
     "page.news.heroTitle": { en: "News & Media", zh: "新闻与动态" },
     "page.news.placeholder": { en: "News coming soon.", zh: "新闻内容即将上线。" },
     "page.news.latestLead": { en: "Updates and highlights", zh: "最新动态与精选内容" },
@@ -121,6 +125,16 @@
     "page.activities.title": { en: "Activities | Laboratory Homepage", zh: "活动 | 实验室主页" },
     "page.activities.heroLead": { en: "Workshops, team-building gatherings, and shared moments from the lab", zh: "学术活动、团队团建与课题组日常瞬间" },
     "page.activities.heroTitle": { en: "Activities", zh: "活动" },
+    "page.activities.organized": { en: "Workshops We Organize", zh: "我们组织的研讨会" },
+    "page.activities.workshops": { en: "Workshop Photos", zh: "研讨会现场" },
+    "page.activities.outdoor": { en: "Outdoor Activities", zh: "户外活动" },
+    "page.activities.meal": { en: "Meal Gatherings", zh: "课题组聚餐" },
+    "page.activities.website": { en: "Website", zh: "官网" },
+    "page.activities.loc.honolulu": { en: "Honolulu, Hawaii, USA", zh: "美国 夏威夷 檀香山" },
+    "page.activities.loc.guangzhou": { en: "Guangzhou, China", zh: "中国 广州" },
+    "page.activities.loc.melbourne": { en: "Melbourne, Australia", zh: "澳大利亚 墨尔本" },
+    "page.activities.loc.jeju": { en: "Jeju, South Korea", zh: "韩国 济州" },
+    "page.activities.loc.macao": { en: "Macao, China", zh: "中国 澳门" },
 
     "page.opening.title": { en: "Opening | Laboratory Homepage", zh: "招生招聘 | 实验室主页" },
     "page.opening.heroLead": { en: "Join us for Ph.D., master's, and research internship opportunities", zh: "欢迎申请博士、硕士与科研实习机会" },
@@ -207,8 +221,8 @@
       zh: "提交申请"
     },
     "page.opening.applicationBody": {
-      en: "Please send your PPT, resume, and academic transcript to jinyangguo@buaa.edu.cn. Applications without the PPT may not be considered. If you are passionate about research, we look forward to having you join us!",
-      zh: "请将 PPT、简历和成绩单一并发送至 jinyangguo@buaa.edu.cn。未附 PPT 的申请可能不予考虑。如果你有科研的热情和梦想，期待你的加入！"
+      en: "Please send your PPT, resume, and academic transcript to jinyangguo@buaa.edu.cn. If you are passionate about research, we look forward to having you join us!",
+      zh: "请将 PPT、简历和成绩单一并发送至 jinyangguo@buaa.edu.cn。如果你有科研的热情和梦想，期待你的加入！"
     },
 
     "page.contact.title": { en: "Contact | Laboratory Homepage", zh: "联系我们 | 实验室主页" },

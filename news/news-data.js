@@ -1,5 +1,5 @@
 window.__LAB_NEWS__ = {
-  "generated_at": "2026-11-04T14:30:00.000Z",
+  "generated_at": "2026-11-05T15:00:00.000Z",
   "items": [
     {
       "id": "N2610",
@@ -74,6 +74,19 @@ window.__LAB_NEWS__ = {
       "link": "./publications/publications.html"
     },
     {
+      "id": "M2603",
+      "type": "Media, Xinzhiyuan",
+      "type_zh": "Media, 新智元",
+      "title_en": "Skip 88% of experts, keep 97% of performance: the right way to run MoE inference",
+      "title_zh": "跳过88%专家，保住97%性能，MoE推理的正确玩法",
+      "excerpt": "",
+      "excerpt_en": "Coverage of our CVPR 2026 paper MoDES (via 36Kr)",
+      "excerpt_zh": "报道课题组 CVPR 2026 论文 MoDES（36氪转载）",
+      "date": "2026-03",
+      "image": "",
+      "link": "https://www.36kr.com/p/3709805740568709"
+    },
+    {
       "id": "N2602",
       "type": "Publication, ICLR 2026",
       "title_en": "Two papers accepted at ICLR 2026",
@@ -120,6 +133,32 @@ window.__LAB_NEWS__ = {
       "date": "2025-10",
       "image": "",
       "link": "./publications/publication-detail.html?id=P003"
+    },
+    {
+      "id": "M2508",
+      "type": "Media, QbitAI",
+      "type_zh": "Media, 量子位",
+      "title_en": "Jailbroken GPT-4o directs robots into dangerous actions: the first safety benchmark for embodied agents",
+      "title_zh": "GPT-4o遭越狱后指挥机器人做危险动作！全球首个具身智能体安全评测基准来了，大模型集体翻车",
+      "excerpt": "",
+      "excerpt_en": "Coverage of AGENTSAFE (ICML 2025 MAS Workshop, Outstanding Paper Award)",
+      "excerpt_zh": "报道 AGENTSAFE（ICML 2025 MAS Workshop 杰出论文奖）",
+      "date": "2025-08",
+      "image": "",
+      "link": "https://www.qbitai.com/2025/08/316742.html"
+    },
+    {
+      "id": "M2507",
+      "type": "Media, QbitAI",
+      "type_zh": "Media, 量子位",
+      "title_en": "About 2x lossless diffusion acceleration: a cache-learning framework that harmonizes training and inference",
+      "title_zh": "Diffusion约2倍无损加速！训练-推理协同的缓存学习框架来了｜HKUST&北航&商汤",
+      "excerpt": "",
+      "excerpt_en": "Coverage of our ICML 2025 paper HarmoniCa (via BAAI Hub)",
+      "excerpt_zh": "报道课题组 ICML 2025 论文 HarmoniCa（智源社区转载）",
+      "date": "2025-07",
+      "image": "",
+      "link": "https://hub.baai.ac.cn/view/47101"
     },
     {
       "id": "N2505A",
@@ -206,6 +245,19 @@ window.__LAB_NEWS__ = {
       "link": "./publications/publications.html"
     },
     {
+      "id": "M2501",
+      "type": "Media, QbitAI",
+      "type_zh": "Media, 量子位",
+      "title_en": "Beihang, ETH and others fully quantize diffusion models to 1 bit: 28x storage savings and 52.7x efficiency gains",
+      "title_zh": "突破瓶颈！北航ETH等首次将扩散模型完全量化至1bit，28倍存储节省+52.7倍效率提升",
+      "excerpt": "",
+      "excerpt_en": "Coverage of our NeurIPS 2024 paper BiDM",
+      "excerpt_zh": "报道课题组 NeurIPS 2024 论文 BiDM",
+      "date": "2025-01",
+      "image": "",
+      "link": "https://www.qbitai.com/2025/01/243299.html"
+    },
+    {
       "id": "N2412",
       "type": "Publication, AAAI 2025",
       "title_en": "Three papers accepted at AAAI 2025",
@@ -254,6 +306,19 @@ window.__LAB_NEWS__ = {
       "link": "https://emclr-acmmm.github.io/"
     },
     {
+      "id": "M2406",
+      "type": "Media, QbitAI",
+      "type_zh": "Media, 量子位",
+      "title_en": "1-bit LLM from HKU, Beihang and others draws attention; IEEE Spectrum says it could address AI's energy demands",
+      "title_zh": "港大北航等1bit大模型引热议，IEEE刊物评“解决AI能源需求”！作者亲自解读在此",
+      "excerpt": "",
+      "excerpt_en": "Coverage of our ICML 2024 paper BiLLM",
+      "excerpt_zh": "报道课题组 ICML 2024 论文 BiLLM",
+      "date": "2024-06",
+      "image": "",
+      "link": "https://www.qbitai.com/2024/06/152191.html"
+    },
+    {
       "id": "N2405",
       "type": "Publication, ICML 2024, ACL 2024",
       "title_en": "One paper accepted at ICML 2024 and one at ACL 2024 Findings",
@@ -264,6 +329,19 @@ window.__LAB_NEWS__ = {
       "date": "2024-05",
       "image": "",
       "link": "./publications/publications.html"
+    },
+    {
+      "id": "M2405",
+      "type": "Media, IEEE Spectrum",
+      "type_zh": "Media, IEEE Spectrum",
+      "title_en": "1-bit LLMs Could Solve AI's Energy Demands",
+      "title_zh": "1 比特大模型或可解决 AI 的能源需求",
+      "excerpt": "",
+      "excerpt_en": "IEEE Spectrum features BiLLM (ICML 2024) among 1-bit LLM approaches",
+      "excerpt_zh": "IEEE Spectrum 专题报道 1 比特大模型，介绍课题组的 BiLLM（ICML 2024）",
+      "date": "2024-05",
+      "image": "",
+      "link": "https://spectrum.ieee.org/1-bit-llm"
     },
     {
       "id": "N2404",

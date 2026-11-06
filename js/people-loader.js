@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;");
 
+  // Escape text and highlight the National Scholarship in red.
+  const NATIONAL = /(National Scholarship|国家奖学金)/g;
+  const escHl = (v) => esc(v).replace(NATIONAL, '<span class="is-national">$1</span>');
+  const isNational = (v) => /National Scholarship|国家奖学金/.test(String(v || ""));
+
   const getLang = () => i18n?.getLanguage?.() || "en";
   const t = (key, vars) => i18n?.t?.(key, vars) || key;
   const pick = (m, field, lang) =>
@@ -86,7 +91,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const renderTags = (list) =>
-    list.length ? `<ul class="member-tags">${list.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : "";
+    list.length
+      ? `<ul class="member-tags">${list.map((s) => `<li${isNational(s) ? ' class="is-national"' : ""}>${esc(s)}</li>`).join("")}</ul>`
+      : "";
 
   // Short fact rows (papers, honors, experience, co-supervision) taken from the member record.
   const renderFacts = (m, lang, { separate = false } = {}) => {
@@ -97,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const groups = separate ? items.map((x) => [x]) : [items];
       for (const g of groups) {
         rows.push(
-          `<li class="${cls}"><i class="${icon}" title="${label}" aria-hidden="true"></i><span><span class="sr-only">${label}: </span>${g.map(esc).join(" · ")}</span></li>`
+          `<li class="${cls}"><i class="${icon}" title="${label}" aria-hidden="true"></i><span><span class="sr-only">${label}: </span>${g.map(escHl).join(" · ")}</span></li>`
         );
       }
     };

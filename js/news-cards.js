@@ -50,6 +50,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
+  // Media coverage items carry "Media" as their first type tag.
+  const isMedia = (item) =>
+    (parseNewsTags(item.type_en || item.type || "")[0] || "").toLowerCase() === "media";
+
+  // A section can hide media (data-news-exclude="media") or show one kind
+  // through the filter buttons (data-news-filter="all" | "news" | "media").
+  const itemsFor = (section) => {
+    const exclude = (section.dataset.newsExclude || "").toLowerCase();
+    const filter = (section.dataset.newsFilter || "all").toLowerCase();
+    return items.filter((item) => {
+      const media = isMedia(item);
+      if (exclude === "media" && media) return false;
+      if (filter === "media") return media;
+      if (filter === "news") return !media;
+      return true;
+    });
+  };
+
   const buildHref = (rawHref) => {
     const fallback = "./news/news.html";
     const value = rawHref || fallback;
@@ -229,29 +247,49 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  const bindLoadMore = (section, limit, step) => {
+  const bindLoadMore = (section, limit, step, total) => {
     const button = section.querySelector("[data-news-load-more]");
     if (!button) return;
     button.addEventListener("click", () => {
-      const current = Number(section.dataset.newsVisibleCount || limit || items.length);
-      section.dataset.newsVisibleCount = String(Math.min(items.length, current + step));
+      const current = Number(section.dataset.newsVisibleCount || limit || total);
+      section.dataset.newsVisibleCount = String(Math.min(total, current + step));
       render();
     });
   };
 
+  // Filter buttons: <div data-news-filter-for="id-of-section"><button data-news-filter-value="media">…
+  document.querySelectorAll("[data-news-filter-for]").forEach((bar) => {
+    const section = document.getElementById(bar.dataset.newsFilterFor);
+    if (!section) return;
+    const buttons = Array.from(bar.querySelectorAll("[data-news-filter-value]"));
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        section.dataset.newsFilter = button.dataset.newsFilterValue;
+        delete section.dataset.newsVisibleCount;
+        buttons.forEach((b) => {
+          const active = b === button;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-pressed", String(active));
+        });
+        render();
+      });
+    });
+  });
+
   const render = () => {
     sections.forEach((section) => {
       const variant = section.dataset.newsVariant || "cards";
+      const list = itemsFor(section);
       const limit = Number(section.dataset.newsLimit || 0);
       const step = Number(section.dataset.newsStep || 3) || 3;
       const visibleCount = limit > 0
         ? Math.min(
-            items.length,
+            list.length,
             Number(section.dataset.newsVisibleCount || limit)
           )
-        : items.length;
-      const subset = limit > 0 ? items.slice(0, visibleCount) : items;
-      const showLoadMore = limit > 0 && items.length > limit && visibleCount < items.length;
+        : list.length;
+      const subset = limit > 0 ? list.slice(0, visibleCount) : list;
+      const showLoadMore = limit > 0 && list.length > limit && visibleCount < list.length;
       const renderItem = variant === "timeline" ? renderTimelineItem : renderCard;
 
       section.innerHTML = subset.length
@@ -265,7 +303,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         `
         : `<p class="news-cards-empty">${esc(t("dynamic.news.empty"))}</p>`;
       if (variant !== "timeline") bindHoverEffects(section);
-      bindLoadMore(section, limit, step);
+      bindLoadMore(section, limit, step, list.length);
     });
   };
 

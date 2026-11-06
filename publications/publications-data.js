@@ -16,7 +16,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "Book",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/glow-2024.jpg"
     },
     {
       "id": "P002",
@@ -51,7 +51,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "Best Paper Award",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-slmquant.png"
     },
     {
       "id": "P004",
@@ -83,7 +83,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "Outstanding Paper Award",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-agentsafe.png"
     },
     {
       "id": "P006",
@@ -115,7 +115,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-ptq-limit.png"
     },
     {
       "id": "P008",
@@ -131,7 +131,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "Spotlight",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/llmcbench.jpg"
     },
     {
       "id": "P009",
@@ -147,7 +147,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/bidm.jpg"
     },
     {
       "id": "P010",
@@ -163,7 +163,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-ddk.png"
     },
     {
       "id": "P011",
@@ -179,7 +179,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-qvd.png"
     },
     {
       "id": "P012",
@@ -195,7 +195,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-vrdistill.png"
     },
     {
       "id": "P013",
@@ -211,7 +211,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-ptsbench.png"
     },
     {
       "id": "P014",
@@ -243,7 +243,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-lta-pcs.png"
     },
     {
       "id": "P016",
@@ -291,7 +291,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-fcpts.png"
     },
     {
       "id": "P019",
@@ -323,7 +323,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-mdp-extension.png"
     },
     {
       "id": "P021",
@@ -339,7 +339,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-cbanet.png"
     },
     {
       "id": "P022",
@@ -355,7 +355,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/outlier-suppression-plus.jpg"
     },
     {
       "id": "P023",
@@ -371,7 +371,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-contrastive-kd.png"
     },
     {
       "id": "P024",
@@ -387,7 +387,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-label-transfer.png"
     },
     {
       "id": "P025",
@@ -403,7 +403,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-loss-search.png"
     },
     {
       "id": "P026",
@@ -419,7 +419,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-apsnet.png"
     },
     {
       "id": "P027",
@@ -435,7 +435,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-3d-pruning.png"
     },
     {
       "id": "P028",
@@ -451,7 +451,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-coupleface.png"
     },
     {
       "id": "P029",
@@ -467,7 +467,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-geometrymotion.png"
     },
     {
       "id": "P030",
@@ -483,7 +483,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-video-coding.png"
     },
     {
       "id": "P031",
@@ -499,7 +499,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-siamese-tracking.png"
     },
     {
       "id": "P032",
@@ -515,7 +515,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-jointpruning.png"
     },
     {
       "id": "P033",
@@ -531,7 +531,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-transformer3d-det.png"
     },
     {
       "id": "P034",
@@ -547,7 +547,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-progressive-pruning.png"
     },
     {
       "id": "P035",
@@ -563,7 +563,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-channel-pruning.png"
     },
     {
       "id": "P036",
@@ -579,7 +579,7 @@ window.__LAB_PAPERS__ = {
       "book_link": "",
       "award": "",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-multi-dim-pruning.png"
     },
     {
       "id": "P037",
@@ -596,7 +596,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICML 2025, Diffusion, Feature Caching, Diffusion Transformer, Acceleration",
       "featured": true,
-      "cover_image": "",
+      "cover_image": "imgs/harmonica.jpg",
       "intro_md_cn": "publications/md/harmonica-harmonizing-training-and-inference-for-better-feature-caching-in-diffusion-transformer-acceleration_cn.md",
       "intro_md_en": "publications/md/harmonica-harmonizing-training-and-inference-for-better-feature-caching-in-diffusion-transformer-acceleration_en.md"
     },
@@ -615,7 +615,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "TPAMI 2025, Diffusion, Quantization, Temporal Feature, PTQ",
       "featured": true,
-      "cover_image": "",
+      "cover_image": "imgs/temporal-feature-matters.jpg",
       "intro_md_cn": "publications/md/temporal-feature-matters-a-framework-for-diffusion-model-quantization_cn.md",
       "intro_md_en": "publications/md/temporal-feature-matters-a-framework-for-diffusion-model-quantization_en.md"
     },
@@ -634,7 +634,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICML 2024, LLM, Quantization, LoRA, Fine-Tuning",
       "featured": true,
-      "cover_image": "",
+      "cover_image": "imgs/ir-qlora.jpg",
       "intro_md_cn": "publications/md/accurate-lora-finetuning-quantization-of-llms-via-information-retention_cn.md",
       "intro_md_en": "publications/md/accurate-lora-finetuning-quantization-of-llms-via-information-retention_en.md"
     },
@@ -653,7 +653,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICML 2024, LLM, Quantization, Binarization, PTQ",
       "featured": true,
-      "cover_image": "",
+      "cover_image": "imgs/billm.jpg",
       "intro_md_cn": "publications/md/billm-pushing-the-limit-of-post-training-quantization-for-llms_cn.md",
       "intro_md_en": "publications/md/billm-pushing-the-limit-of-post-training-quantization-for-llms_en.md"
     },
@@ -672,7 +672,7 @@ window.__LAB_PAPERS__ = {
       "award": "Highlight Poster",
       "tags": "CVPR 2024, Diffusion, Quantization, Temporal Feature, PTQ",
       "featured": true,
-      "cover_image": "",
+      "cover_image": "imgs/tfmq-dm.jpg",
       "intro_md_cn": "publications/md/tfmq-dm-temporal-feature-maintenance-quantization-for-diffusion-models_cn.md",
       "intro_md_en": "publications/md/tfmq-dm-temporal-feature-maintenance-quantization-for-diffusion-models_en.md"
     },
@@ -691,7 +691,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "Book",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-glow-2025.png"
     },
     {
       "id": "P043",
@@ -708,7 +708,7 @@ window.__LAB_PAPERS__ = {
       "award": "Spotlight",
       "tags": "ICML 2026, Omnimodal LLM, Token Compression",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-omnifit.png"
     },
     {
       "id": "P044",
@@ -725,7 +725,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "CVPR 2026, MoE, Multimodal LLM, Acceleration",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/modes.jpg"
     },
     {
       "id": "P045",
@@ -742,7 +742,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ACL 2026, LLM Training, FP4",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-half-s.png"
     },
     {
       "id": "P046",
@@ -759,7 +759,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "AAAI 2026, LLM, Quantization",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/foem.jpg"
     },
     {
       "id": "P047",
@@ -776,7 +776,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "AAAI 2026, VLM, Compression, Benchmark",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/llmc-plus.jpg"
     },
     {
       "id": "P048",
@@ -793,7 +793,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICCV 2025, CAD Generation",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-cmt.png"
     },
     {
       "id": "P049",
@@ -810,7 +810,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICLR 2025, Diffusion, Binarization",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/binarydm.jpg"
     },
     {
       "id": "P050",
@@ -827,7 +827,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ACL 2025, LLM Reasoning",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/dynamic-parallel.png"
     },
     {
       "id": "P051",
@@ -844,7 +844,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "Survey, LLM, Quantization",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/low-bit-llm-survey.jpg"
     },
     {
       "id": "P052",
@@ -861,7 +861,7 @@ window.__LAB_PAPERS__ = {
       "award": "",
       "tags": "ICCV 2025 Workshop, Attention, Low-bit Kernels",
       "featured": true,
-      "cover_image": ""
+      "cover_image": "imgs/cover-lowbit-flashattention.png"
     }
   ]
 };
