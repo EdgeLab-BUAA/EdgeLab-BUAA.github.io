@@ -531,6 +531,25 @@ window.__LAB_PEOPLE__ = {
       "cosup_zh": "与刘祥龙教授联合指导"
     },
     {
+      "id": "MA07",
+      "name_en": "Wenyu Zhou",
+      "name_zh": "周文钰",
+      "role_en": "Alumni · Undergraduate Intern",
+      "role_zh": "校友 · 本科实习生",
+      "team": "alumni",
+      "research_en": "",
+      "research_zh": "",
+      "photo": "",
+      "email": "",
+      "github": "",
+      "scholar": "",
+      "homepage": "",
+      "note_en": "Undergraduate intern from Beihang University; IJCAI 2026 Workshop · Next: Joint Ph.D. at Fudan University & Shanghai AI Lab",
+      "note_zh": "北航本科实习生；IJCAI 2026 Workshop · 下一站：复旦大学 & 上海 AI Lab 联培博士",
+      "cosup_en": "",
+      "cosup_zh": ""
+    },
+    {
       "id": "MA01",
       "name_en": "Changyi He",
       "name_zh": "贺昌义",
